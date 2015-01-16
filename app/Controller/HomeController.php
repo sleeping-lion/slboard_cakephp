@@ -1,0 +1,30 @@
+<?php
+App::uses('SlController', 'Controller');
+
+final class HomeController extends SlController {
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this -> Auth -> allow('index');
+	}
+
+	public function index() {
+		$this -> loadModel('Notice');
+		$this -> set('notices', $this -> Notice -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1)));
+
+		$this -> loadModel('Question');
+		$this -> set('questions', $this -> Question -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1)));
+
+		$this -> loadModel('GuestBook');
+		$this -> set('guest_books', $this -> GuestBook -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1)));
+
+		$this -> loadModel('Gallery');
+		$galleries=$this -> Gallery -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1));
+		$this -> set('galleries',array_chunk($galleries,5));
+
+		$this -> loadModel('Blog');
+		$this -> set('blogs', $this -> Question -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1)));
+	}
+
+}
+?>
