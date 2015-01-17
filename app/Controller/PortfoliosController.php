@@ -15,6 +15,7 @@ class PortfoliosController extends SlController {
  */
 	public function index() {
 		$this->Portfolio->recursive = 0;
+		$this -> setSearch('Portfolio');		
 		$this->set('portfolios', $this->Paginator->paginate());
 	}
 

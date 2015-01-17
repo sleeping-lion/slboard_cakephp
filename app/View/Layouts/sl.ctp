@@ -44,11 +44,11 @@
 		<?php else: ?>
 <section id="slboard_main" class="slboard_main">
 	<div class="jumbotron hero-unit">
-		<h1>최신의 PHP 게시판 시스템 SLBoard</h1>
-		<p class="lead">PHP 5.3.0버전 부터 사용가능합니다.</p>
-		<p>2015년 1월 1일 오픈 예정입니다.</p>
-		<a class="modal_link btn btn-large btn-success" data-target="#myModal" data-toggle="modal" href="/popup.php">깨끗한 웹을 꿈꾸고 있습니다</a>
-		<a class="btn btn-large btn-primary" href="https://github.com/sleeping-lion/slboard/archive/master.zip"><?php echo _('download')?></a>
+		<h1>CakePHP 게시판 시스템 SLBoard</h1>
+		<p class="lead">CakePHP-Boostrap사용 게시판</p>
+		<p>지금 다운 받으세요~</p>
+		<a class="modal_link btn btn-large btn-success" data-target="#myModal" data-toggle="modal" href="/pages/popup">깨끗한 웹을 꿈꾸고 있습니다</a>
+		<a class="btn btn-large btn-primary" href="https://github.com/sleeping-lion/slboard_cakephp/archive/master.zip"><?php echo __('download')?></a>
 	</div>
 </section>		
 		<?php endif ?>

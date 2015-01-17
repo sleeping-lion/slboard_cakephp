@@ -21,6 +21,7 @@ class GuestBooksController extends SlController {
  */
 	public function index() {
 		$this->GuestBook->recursive = 0;
+		$this -> setSearch('GuestBook');
 		$this->set('guestBooks', $this->Paginator->paginate());
 	}
 

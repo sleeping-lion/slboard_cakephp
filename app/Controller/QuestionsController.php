@@ -20,6 +20,7 @@ class QuestionsController extends SlController {
  */
 	public function index() {
 		$this->Question->recursive = 0;
+		$this -> setSearch('Question');
 		$this->set('questions', $this->Paginator->paginate());
 	}
 

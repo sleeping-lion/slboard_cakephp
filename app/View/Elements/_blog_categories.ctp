@@ -1,3 +1,4 @@
+
 <article id="sl_blog_categories" class="box sl_aside">
   <div class="box_header">
     <h2><?php echo __('Blog') ?></h2>
@@ -10,9 +11,8 @@
 		<ul>
 			<li <?php if(empty($this->request->query['blog_category_id'])): ?>class="active"<?php endif ?>><a href=""><?php echo _('all') ?></a></li>
     	<?php if(isset($asideBlogCategories)): ?>
-
     	<?php foreach($asideBlogCategories as $blogCategory): ?> 		
-    	<?php if($blogCategory['BlogCategory']['blog_category_id']): ?>
+    	<?php if(empty($blogCategory['BlogCategory']['blog_category_id'])): ?>
 			<li>
       	<?php if($blogCategory['BlogCategory']['leaf']): ?>
       	<a href=""><?php echo $blogCategory['BlogCategory']['title'] ?><?php if($blogCategory['BlogCategory']['leaf']): ?>(<?php echo $blogCategory['BlogCategory']['blogs_count'] ?>)<?php endif ?></a>
@@ -21,9 +21,9 @@
       	<?php endif ?>
       	<ul>
     			<?php foreach($asideBlogCategories as $blogSubCategory): ?>
-      		<?php if($blogCategory['BlogCategory']['blog_category_id']==$blogSubCategory['BlogCategory']['id']): ?>
-      		<li <?php if($this->params['blog_category_id']==$blogSubCategory['BlogCategory']['id']): ?>class="active"<?php endif ?>>
-      			<a href="/blogs/index.php?blog_category_id=<?php echo $blogSubCategory['BlogCategory']['id'] ?>"><?php echo $blogSubCategory['BlogCategory']['title'] ?>(<?php echo $blogSubCategory['BlogCategory']['blogs_count'] ?>)</a>
+      		<?php if($blogCategory['BlogCategory']['id']==$blogSubCategory['BlogCategory']['blog_category_id']): ?>
+      		<li <?php if(isset($this->request->query['blog_category_id'])): ?><?php if($this->request->query['blog_category_id']==$blogSubCategory['BlogCategory']['id']): ?>class="active"<?php endif ?><?php endif ?>>
+      		<?php echo $this->Html->link($blogSubCategory['BlogCategory']['title'].'('.$blogSubCategory['BlogCategory']['blogs_count'].')',array('controller'=>'blogs','action'=>'index','?'=>array('blog_category_id'=>$blogSubCategory['BlogCategory']['id']))) ?>
       		</li>
       		<?php endif ?>
       		<?php endforeach ?>

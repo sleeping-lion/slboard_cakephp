@@ -15,6 +15,7 @@ class NoticesController extends SlController {
 	 */
 	public function index() {
 		$this -> Notice -> recursive = 0;
+		$this -> setSearch('Notice');
 		$this -> set('notices', $this -> Paginator -> paginate());
 	}
 
@@ -30,12 +31,12 @@ class NoticesController extends SlController {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		$options = array('conditions' => array('Notice.' . $this -> Notice -> primaryKey => $id));
-		$notice=$this -> Notice -> find('first', $options);
-		$this -> set('notice',$notice);
-		
-		if($this->addImpression($id)) {
-			$this->Notice->id = $id;
-			$this->Notice->saveField('count',$notice['Notice']['count']+1);
+		$notice = $this -> Notice -> find('first', $options);
+		$this -> set('notice', $notice);
+
+		if ($this -> addImpression($id)) {
+			$this -> Notice -> id = $id;
+			$this -> Notice -> saveField('count', $notice['Notice']['count'] + 1);
 		}
 	}
 

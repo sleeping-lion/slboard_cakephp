@@ -9,11 +9,6 @@ App::uses('SlController', 'Controller');
  */
 class FaqsController extends SlController {
 
-	public function beforeFilter() {
-		parent::beforeFilter();
-		$this -> Auth -> allow('index', 'view');
-	}
-
 	protected function _getCategory() {
 		$this -> loadModel('FaqCategory');
 		$faqCategories = $this -> FaqCategory -> find('list');

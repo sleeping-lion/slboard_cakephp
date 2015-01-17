@@ -9,9 +9,45 @@ App::uses('AppController', 'Controller');
  */
 class SlController extends AppController {
 	public $layout = 'sl';
+	
+	protected function setSearch($modelAilas,$modleContentAlias=null) {
+		$conditions=array();
+		$search_type=null;
+		$search_text=null;
+		
+		if(empty($modleContentAlias)) {
+			$modleContentAlias=$modelAilas.'Content';
+		}
+		
+		if(isset($this->request->query['search_type']) AND isset($this->request->query['search_text'])) {
+			$search_type=$this->request->query['search_type'];
+			$search_text=$this->request->query['search_text'];
+
+			$search_model_condition=array($modelAilas.'.title LIKE' => '%'.$search_text.'%');
+			$search_modelContent_condition=array($modleContentAlias.'.content LIKE' => '%'.$search_text.'%');
+
+			switch($search_type) {
+				case 'title' :
+   			 $this->Paginator->settings = array('conditions' => $search_model_condition);
+					break;
+				case 'content' :
+   			 $this->Paginator->settings = array('conditions' => $search_modelContent_condition);
+					break;
+				case 'title+content':
+   			 $this->Paginator->settings = array('conditions' => array('OR'=>$search_model_condition,$search_modelContent_condition));
+					break;
+			}
+		}
+		
+		$this->set('searchTypeOption',array('title'=>__('title'),'content'=>__('content'),'title+content'=>__('title+content')));
+		$this->set('searchType',$search_type);
+		$this->set('searchText',$search_text);
+	}	
 
 	public function beforeFilter() {
 		parent::beforeFilter();
+		
+
 
 		$this -> loadModel('BlogCategory');
 		$this -> set('asideBlogCategories', $this -> BlogCategory -> find('all', array('conditions'=>array('enable'=>true),'recursive' => -1)));
@@ -19,7 +55,7 @@ class SlController extends AppController {
 		$this -> loadModel('Tag');
 		$this -> set('asideTags', $this -> Tag -> find('all'));
 
-		$this -> Auth -> allow('index', 'show');
+		$this -> Auth -> allow('index', 'view');
 	}
 
 	protected function getImpressionCount($id) {

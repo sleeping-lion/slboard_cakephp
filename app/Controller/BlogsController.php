@@ -55,6 +55,7 @@ class BlogsController extends SlController {
 		}
 
 		$this -> Blog -> recursive = 0;
+		$this -> setSearch('Blog');
 		$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id));
 
 		if (count($blog))
@@ -94,24 +95,40 @@ class BlogsController extends SlController {
 	public function add() {
 		if ($this -> request -> is('post')) {
 			$this -> Blog -> create();
+			
+			
 			if ($this -> Blog -> saveAll($this -> request -> data)) {
 				$blog_id=$this -> Blog -> getLastInsertID();
 				$this -> loadModel('Tag');
 				$tag_a = explode(',', $this -> request -> data['Tag']['tags']);
 				$tag_a = array_unique($tag_a);
-
+								
 				foreach ($tag_a as $index => $value) {
-					$tag[$index]['Tag']['name'] = $value;
-					$tag[$index]['Blog']['id']=$blog_id;
-					$tag[$index]['Tagging']['taggable_type']=$this->modelClass;
+					if($this->Tag->find('count',array('conditions'=>array('name'=>$value)))) {
+						$tag_e=$this->Tag->find('first',array('conditions'=>array('name'=>$value)));
+						$tag_ids[]=$tag_e['Tag']['id'];
+					} else {
+						$tag[$index]['Tag']['name'] = $value;
+						$tag[$index]['Blog']['id']=$blog_id;
+						$tag[$index]['Tagging']['taggable_type']=$this->modelClass;
+					}
 				}
+
+				
+				if(isset($tag_ids)) {
+					$tag[]=array('Blog'=>array('id'=>$blog_id),'Tag'=>array('id'=>array_values($tag_ids)));
+				}
+				
+				echo '<pre>';
+				print_r($tag);
+				echo '</pre>';
+				//exit;
 				
 				if ($this -> Tag -> saveAll($tag)) {
-					
+					$this -> Session -> setFlash(__('The post has been saved.'), 'success');
+					return $this -> redirect(array('action' => 'index'));	
 				}
-				exit ;				
-				return $this -> redirect(array('action' => 'index'));
-				
+				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			} else {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}

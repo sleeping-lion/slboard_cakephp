@@ -1,3 +1,4 @@
+<?php $this -> Html -> script(array('index.js'), array('inline' => false)); ?>
 <section id="main_main">
 	<section class="row">	
 		<?php echo $this->element('_notices') ?>

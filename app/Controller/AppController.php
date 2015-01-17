@@ -46,7 +46,10 @@ class AppController extends Controller {
 
 	public function beforeFilter() {
 		$this->Auth->flash['element'] = 'auth';
-		$this -> paginate=array('paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));
+		$this -> paginate=array('paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));		
+		
+		if(isset($this->request->query['no_layout']))
+			$this->layout=false;
 		
 		$this -> Auth -> loginRedirect = array('controller' => 'home', 'action' => 'index');
 		$this -> Auth -> logoutRedirect = array('controller' => 'users', 'action' => 'login');

@@ -8,12 +8,6 @@ App::uses('SlController', 'Controller');
  * @property SessionComponent $Session
  */
 class GalleriesController extends SlController {
-	public function beforeFilter() {
-		parent::beforeFilter();
-		
-		$this -> paginate=array('paramType' => 'querystring','limit'=>60,'order'=>array('id' => 'desc'));
-		$this -> Auth -> allow('index', 'view');
-	}
 
 	protected function _getCategory() {
 		$this -> loadModel('GalleryCategory');
