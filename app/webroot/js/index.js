@@ -5,5 +5,7 @@ $(document).ready(function(){
   	$('#myModal').load($(this).attr('href')+'?no_layout=true',function(){
   		$('#myModal').modal();
   		});
-	});	
+	});
+	
+  $('.scrollable').scrollable({circular: true, mousewheel: true}).navigator().autoscroll({interval: 3000});	
 });

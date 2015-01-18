@@ -4,7 +4,7 @@
 	<ul>
 		<?php foreach ($notices as $index => $notice): ?>
 		<li>
-			<?php echo $this -> Html -> link($notice['Notice']['title'], array('controller' => 'notices', 'action' => 'view',$notice['Notice']['id'])) ?>
+			<?php echo $this -> Html -> link($this->Text->truncate($notice['Notice']['title'],30), array('controller' => 'notices', 'action' => 'view',$notice['Notice']['id'])) ?>
 			<span class="sl_created_at"><?php echo $this->App->getFormatDate($notice['Notice']['created_at']) ?></span>			
 		</li>
 		<?php endforeach ?>

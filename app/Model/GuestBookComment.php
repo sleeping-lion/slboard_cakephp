@@ -58,20 +58,5 @@ class GuestBookComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'GuestBook' => array(
-			'className' => 'GuestBook',
-			'foreignKey' => 'guest_book_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public $belongsTo = array('User','GuestBook' =>array('counterCache' => true));
 }

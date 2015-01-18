@@ -23,7 +23,7 @@ final class HomeController extends SlController {
 		$this -> set('galleries',array_chunk($galleries,5));
 
 		$this -> loadModel('Blog');
-		$this -> set('blogs', $this -> Question -> find('all', array('order'=>'id desc','limit' => 5, 'recursive' => -1)));
+		$this -> set('blogs', $this -> Blog -> find('all', array('conditions'=>array('photo is not null'),'order'=>'id desc','limit' => 5, 'recursive' => -1)));
 	}
 
 }

@@ -58,20 +58,5 @@ class BlogComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Blog' => array(
-			'className' => 'Blog',
-			'foreignKey' => 'blog_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public $belongsTo = array('User','Blog'=>array('counterCache' => true));
 }

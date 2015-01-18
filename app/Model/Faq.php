@@ -104,22 +104,7 @@ class Faq extends SlModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'FaqCategory' => array(
-			'className' => 'FaqCategory',
-			'foreignKey' => 'faq_category_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		) /*,
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		) */
-	);
+	public $belongsTo = array('FaqCategory' =>array('counterCache' => true));
 
 /**
  * hasOne associations

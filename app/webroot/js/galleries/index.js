@@ -22,7 +22,7 @@ $(document).ready(function() {
       $("#sl_gallery_menu form:first").attr('action','/galleries/delete/'+data.Gallery.id);
       document.title=data.Gallery.title+''+'';
       if (history && history.pushState) {
-      history.pushState('','gallery_'+galleryId,'/galleries/'+galleryId);
+      history.pushState('','gallery_'+galleryId,'/galleries?id='+galleryId);
             }
           });
     return false;

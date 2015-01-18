@@ -4,7 +4,7 @@
 	<ul>
 		<?php foreach ($questions as $index => $question): ?>
 		<li>
-			<?php echo $this -> Html -> link($question['Question']['title'], array('controller' => 'questions', 'action' => 'view',$question['Question']['id'])) ?>
+			<?php echo $this -> Html -> link($this->Text->truncate($question['Question']['title'],30), array('controller' => 'questions', 'action' => 'view',$question['Question']['id'])) ?>
 			<span class="sl_created_at"><?php echo $this->App->getFormatDate($question['Question']['created_at']) ?></span>					
 		</li>
 		<?php endforeach ?>

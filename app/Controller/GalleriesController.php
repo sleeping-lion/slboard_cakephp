@@ -11,21 +11,21 @@ class GalleriesController extends SlController {
 
 	protected function _getCategory() {
 		$this -> loadModel('GalleryCategory');
-		$galleryCategories = $this -> GalleryCategory -> find('list');
-		if (count($galleryCategories)) {				
-			$this -> set('galleryCategories', $galleryCategories);
-			if(isset($this->request->query['gallery_category_id'])) {
-				if (!$this -> GalleryCategory -> exists($this->request->query['gallery_category_id'])) 
-					throw new NotFoundException(__('Invalid post'));
-				
-				$gallery_category_id=$this->request->query['gallery_category_id'];
-			} else {
-				$gallery_category_id = key($galleryCategories);
-			}
-			$this -> set('galleryCategoryId', $gallery_category_id);
-		} else {
+		$galleryCategories = $this -> GalleryCategory -> find('list',array('recursive'=>-1));
+		if (!count($galleryCategories))
 			throw new Exception(__('Insert Gallery Category First'));
+
+		if (isset($this -> request -> query['gallery_category_id'])) {
+			if (!$this -> GalleryCategory -> exists($this -> request -> query['gallery_category_id']))
+				throw new NotFoundException(__('Invalid post'));
+
+			$gallery_category_id = $this -> request -> query['gallery_category_id'];
+		} else {
+			$gallery_category_id = key($galleryCategories);
 		}
+
+		$this -> set('galleryCategories', $galleryCategories);
+		$this -> set('galleryCategoryId', $gallery_category_id);
 		return $galleryCategories;
 	}
 
@@ -59,9 +59,9 @@ class GalleriesController extends SlController {
 
 		if (count($gallery))
 			$this -> set('gallery', $gallery);
-		$galleries=$this -> Paginator -> paginate();
-		
-		$this -> set('galleries',array_chunk($galleries,6));
+		$galleries = $this -> Paginator -> paginate();
+
+		$this -> set('galleries', array_chunk($galleries, 6));
 		$this -> set('galleryCategoryId', $gallery_category_id);
 	}
 
@@ -73,20 +73,19 @@ class GalleriesController extends SlController {
 	 * @return void
 	 */
 	public function view($id = null) {
-		$this -> layout = false;
 		if (!$this -> Gallery -> exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		$options = array('conditions' => array('Gallery.' . $this -> Gallery -> primaryKey => $id));
 		$gallery = $this -> Gallery -> find('first', $options);
 		$this -> set('gallery', $gallery);
-		$this -> set('_serialize','gallery');
-		
-		if($this->addImpression($id)) {
-			$this->Gallery->id = $id;
-			$this->Gallery->saveField('count',$gallery['Gallery']['count']+1);
+		$this -> set('_serialize', 'gallery');
+
+		if ($this -> addImpression($id)) {
+			$this -> Gallery -> id = $id;
+			$this -> Gallery -> saveField('count', $gallery['Gallery']['count'] + 1);
 		}
-		
+
 		return $gallery;
 	}
 

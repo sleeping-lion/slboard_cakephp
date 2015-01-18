@@ -58,20 +58,5 @@ class QuestionComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Question' => array(
-			'className' => 'Question',
-			'foreignKey' => 'question_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public $belongsTo = array('User','Question' =>array('counterCache' => true));
 }

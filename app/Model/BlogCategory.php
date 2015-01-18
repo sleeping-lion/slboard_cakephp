@@ -69,48 +69,13 @@ class BlogCategory extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'BlogType' => array(
-			'className' => 'BlogType',
-			'foreignKey' => 'blog_type_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	public $belongsTo = array('BlogCategory'=>array('counterCache' => true));
 
 /**
  * hasMany associations
  *
  * @var array
  */
-	public $hasMany = array(
-		'BlogCategoryRel' => array(
-			'className' => 'BlogCategoryRel',
-			'foreignKey' => 'blog_category_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Blog' => array(
-			'className' => 'Blog',
-			'foreignKey' => 'blog_category_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
+	public $hasMany = array('BlogCategory','Blog');
 
 }

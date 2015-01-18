@@ -4,7 +4,7 @@
 	<ul>
 		<?php foreach ($guest_books as $index => $quest_book): ?>
 		<li>
-			<?php echo $this -> Html -> link($quest_book['GuestBook']['title'], array('controller' => 'guest_books', 'action' => 'view',$quest_book['GuestBook']['id'])) ?>
+			<?php echo $this -> Html -> link($this->Text->truncate($quest_book['GuestBook']['title'],30), array('controller' => 'guest_books', 'action' => 'view',$quest_book['GuestBook']['id'])) ?>
 			<span class="sl_created_at"><?php echo $this->App->getFormatDate($quest_book['GuestBook']['created_at']) ?></span>				
 		</li>		
 		<?php endforeach ?>
