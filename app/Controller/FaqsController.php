@@ -59,7 +59,7 @@ class FaqsController extends SlController {
 
 		if (count($faq))
 			$this -> set('faq', $faq);
-
+		
 		$this -> set('faqs', $this -> Paginator -> paginate());
 		$this -> set('faqCategoryId', $faq_category_id);
 	}

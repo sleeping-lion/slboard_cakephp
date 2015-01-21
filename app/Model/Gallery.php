@@ -5,7 +5,16 @@ App::uses('SlModel', 'Model');
  *
  */
 class Gallery extends SlModel {
-	public $actsAs = array('Upload.Upload' => array('photo' => array('fields' => array('dir' => 'id'), 'thumbnailSizes' => array('xvga' => '1024x768','small'=>'400x300','thumb' => '100x100'))));
+	public $actsAs = array('Upload.Upload' => array('photo' => array('fields' => array('dir' => 'id'), 'thumbnailSizes' => array('xvga' => '1024x768','small'=>'400x300','thumb' => '100x100'))),
+    'Sitemap.Sitemap' => array(
+        'primaryKey' => 'id', //Default primary key field
+        'loc' => 'buildUrl', //Default function called that builds a url, passes parameters (Model $Model, $primaryKey)
+        'lastmod' => 'updated_at', //Default last modified field, can be set to FALSE if no field for this
+        'changefreq' => 'daily', //Default change frequency applied to all model items of this type, can be set to FALSE to pass no value
+        'priority' => '0.9', //Default priority applied to all model items of this type, can be set to FALSE to pass no value
+        'conditions' => array(), //Conditions to limit or control the returned results for the sitemap
+    )
+);	
 /**
  * Validation rules
  *

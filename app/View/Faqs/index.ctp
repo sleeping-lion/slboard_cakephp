@@ -11,24 +11,48 @@
 			<?php endforeach ?>
 			<?php unset($value) ?>
 		<?php else: ?>	
-		<li><?php echo _('no_data') ?></li>
+		<li><?php echo __('No Category') ?></li>
 		<?php endif ?>
 	</ol>
 	<article>
 		<?php if(count($faqs)): ?>			
 		<?php foreach($faqs as $index=>$value): ?>		
-		<div class="panel panel-default">
-  		<h3 class="panel-heading<?php if(isset($this->request->query['id'])): ?><?php if(!strcmp($this->request->query['id'],$value['Faq']['id'])): ?><?php echo ' on' ?><?php endif ?><?php endif ?>">
-  			<?php echo $this->Html->link($value['Faq']['title'],array('controller'=>'faqs','action'=>'index','?'=>array('id'=>$value['Faq']['id']))) ?>
+		<div class="panel <?php if(isset($faq)): ?><?php if($faq['Faq']['id']==$value['Faq']['id']): ?>panel-primary<?php else: ?>panel-default<?php endif ?><?php else: ?>panel-default<?php endif ?>">
+  		<h3 class="panel-heading">
+  		<?php echo $this->Html->link($value['Faq']['title'],array('controller'=>'faqs','action'=>'index','?'=>array('id'=>$value['Faq']['id']))) ?>
   		</h3>
-  		<?php if(isset($this->request->query['id'])): ?>
-			<?php if(strcmp($this->request->query['id'],$value['Faq']['id'])): ?>
-			<div class="panel-body" style="display:none"></div>
+  		<?php if(isset($faq)): ?>
+			<?php if($faq['Faq']['id']==$value['Faq']['id']): ?>
+			<div class="panel-body">
+				<div class="faq_content">
+				<?php echo nl2br($faq['FaqContent']['content']) ?>
+				</div>
+				<div class="sl_faq_menu">
+					<?php echo $this -> Html -> link(__('Edit'),array('action'=>'edit',$value['Faq']['id']),array('class'=>'btn btn-default')) ?>
+					<?php echo $this -> Form-> postLink(__('Delete'),array('action' => 'delete',$value['Faq']['id']),array('class'=>'btn btn-default','confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				</div>
+			</div>
 			<?php else: ?>
-			<div class="panel-body"><?php echo nl2br($faq['FaqContent']['content']) ?></div>
+			<div class="panel-body" style="display:none">
+				<div class="faq_content">
+					
+				</div>
+				<div class="sl_faq_menu">
+					<?php echo $this -> Html -> link(__('Edit'),array('action'=>'edit',$value['Faq']['id']),array('class'=>'btn btn-default')) ?>
+					<?php echo $this -> Form-> postLink(__('Delete'),array('action' => 'delete',$value['Faq']['id']),array('class'=>'btn btn-default','confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				</div>				
+			</div>				
 			<?php endif ?>
-			<?php else:?>
-			<div class="panel-body" style="display:none"></div>
+			<?php else: ?>
+			<div class="panel-body" style="display:none">
+				<div class="faq_content">
+					
+				</div>
+				<div class="sl_faq_menu">
+					<?php echo $this -> Html -> link(__('Edit'),array('action'=>'edit',$value['Faq']['id']),array('class'=>'btn btn-default')) ?>
+					<?php echo $this -> Form-> postLink(__('Delete'),array('action' => 'delete',$value['Faq']['id']),array('class'=>'btn btn-default','confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				</div>				
+			</div>
 			<?php endif ?>
   	</div>
   	<?php endforeach ?>

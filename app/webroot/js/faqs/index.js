@@ -53,10 +53,10 @@ $(document).ready(function() {
 		
 		$.getJSON('/faqs/view/'+gid+'.json',function(data){
 			
-			$("#sl_faq_index article div.panel").removeClass('panel-primary');
+			$("#sl_faq_index article div.panel-primary").removeClass('panel-primary').addClass('panel-default');			
 			$("#sl_faq_index article div.panel-body").hide();	
 			panel.addClass('panel-primary');
-			panel.find('.panel-body').html('<p>'+nl2br(data.FaqContent.content)+'</p>').slideDown();			
+			panel.find('.panel-body .faq_content').html(nl2br(data.FaqContent.content)).parent().slideDown();			
 		});
 
 		return false;
