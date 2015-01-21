@@ -3,7 +3,7 @@
 /app/Config/database.php
 /app/tmp
 /lib/Cake/Console/Templates/skel/tmp/
-#/plugins
+/plugins
 /vendors
 /build
 /dist
@@ -27,4 +27,4 @@ ehthumbs.db
 Thumbs.db
 app/webroot/files
 app/tmp
-plugins
+#lugins
