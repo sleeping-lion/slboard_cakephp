@@ -1,6 +1,5 @@
 <?php $this->Html->addCrumb(__('Blogs'), array('controller' => 'blogs', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Blogs')); ?>
-
 <section id="sl_blog_index" itemscope itemprop="blogPosts" itemtype="http://schema.org/Blog">
 	<ol class="nav nav-tabs sl_categories">
 		<?php if(isset($blogCategories)): ?>
@@ -10,14 +9,14 @@
 		  </li>
 			<?php endforeach ?>
 		<?php else: ?>
-		<li><?php echo _('no_data') ?></li>
+		<li><?php echo _('No Article') ?></li>
 		<?php endif ?>
 	</ol>
 	<?php if(count($blogs)): ?>
 	<?php foreach ($blogs as $blog): ?>
 	<article class="media" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
 		<?php if(isset($blog['Blog']['photo'])): ?>
-		<?php echo $this -> Html -> link($this->Html->image('/files/blog/photo/'.$blog['Blog']['id'].'/thumb_'.$blog['Blog']['photo'], array('alt' =>$blog['Blog']['title'])), array('action' => 'index','?'=>array('id'=>$blog['Blog']['id'])),array('escape'=>false,'class'=>'pull-left')) ?>
+		<?php echo $this -> Html -> link($this->Html->image('/files/blog/photo/'.$blog['Blog']['id'].'/thumb_'.$blog['Blog']['photo'], array('alt' =>$blog['Blog']['title'])), array('action' => 'view',$blog['Blog']['id']),array('escape'=>false,'class'=>'pull-left')) ?>
 		<?php endif ?>
 		<div class="media-body">
 			<h4 class="media-heading" itemprop="name"><?php echo $this -> Html -> link($blog['Blog']['title'], array('controller' => 'blogs', 'action' => 'view', $blog['Blog']['id'])); ?></h4>

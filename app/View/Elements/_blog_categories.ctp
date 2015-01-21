@@ -32,9 +32,9 @@
      <?php endif ?>
      <?php endforeach ?>     	
     	<?php else: ?>
-			<li><?php echo __('no_article') ?></li>
+			<li><?php echo __('No Article') ?></li>
     	<?php endif ?>
 		</ul>
-		<?php echo $this -> Html -> link(__('link_more'),array('controller'=>'blogs','action'=>'index')) ?>
+		<?php echo $this -> Html -> link(__('more'),array('controller'=>'blogs','action'=>'index')) ?>
 	</div> 
 </article>

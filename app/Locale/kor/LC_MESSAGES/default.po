@@ -3,126 +3,140 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-01-15 07:16+0900\n"
-"PO-Revision-Date: 2015-01-15 07:18+0900\n"
+"Project-Id-Version: slboard\n"
+"POT-Creation-Date: 2015-01-21 08:09+0000\n"
+"PO-Revision-Date: 2015-01-21 18:37+0900\n"
 "Last-Translator: \n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language-Team: sl <admin@sleepinglion.pe.kr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 1.5.5\n"
+"Language: korean\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
-#: Controller/AppController.php:110
+#: Controller/AppController.php:113
 msgid "You Do not Have Auth."
 msgstr ""
 
-#: Controller/BlogsController.php:18
+#: Controller/BlogsController.php:19;39
 msgid "Insert Blog Category First"
 msgstr ""
 
-#: Controller/BlogsController.php:39;67;102;130
+#: Controller/BlogsController.php:23;43;70;99;164;192
+#: Controller/CkeditorAssetsController.php:53
 #: Controller/ContactsController.php:36;72;97;127;161;188
-#: Controller/FaqsController.php:24;53;81;120;151;181;215;242
-#: Controller/GalleriesController.php:23;52;81;124;153
+#: Controller/FaqsController.php:19;48;76;120;151;181;215;242
+#: Controller/GalleriesController.php:20;48;77;126;155
 #: Controller/GalleryCategoriesController.php:31;63;88;118;150;175
 #: Controller/GuestBookCommentsController.php:31;66;94;124;159;187
 #: Controller/GuestBookContentsController.php:31;63;88;118;150;175
-#: Controller/GuestBooksController.php:36;76;101
-#: Controller/IntroController.php:52;84;109;139;171;196
-#: Controller/NoticesController.php:30;62;88
-#: Controller/PortfoliosController.php:30;62;87
+#: Controller/GuestBooksController.php:37;78;103
+#: Controller/IntroController.php:55 Controller/NoticesController.php:31;69;95
+#: Controller/PortfoliosController.php:31;68;93
 #: Controller/QuestionCommentsController.php:31;66;94;124;159;187
-#: Controller/QuestionsController.php:35;69;96
+#: Controller/QuestionsController.php:36;76;103
 #: Controller/SettingsController.php:38;70;95;125;157;182
-#: Controller/UsersController.php:153;185;210;240;272;297
+#: Controller/UsersController.php:155;187;212;242;274;299
 msgid "Invalid post"
 msgstr ""
 
-#: Controller/BlogsController.php:83;107
+#: Controller/BlogsController.php:143;169
+#: Controller/CkeditorAssetsController.php:31
 #: Controller/ContactsController.php:51;76;142;165
 #: Controller/FaqsController.php:99;127;196;219
-#: Controller/GalleriesController.php:105;131
+#: Controller/GalleriesController.php:107;133
 #: Controller/GalleryCategoriesController.php:46;67;133;154
 #: Controller/GuestBookCommentsController.php:46;70;139;163
 #: Controller/GuestBookContentsController.php:46;67;133;154
-#: Controller/GuestBooksController.php:57;80
-#: Controller/IntroController.php:67;88;154;175
-#: Controller/NoticesController.php:45;67
-#: Controller/PortfoliosController.php:45;66
+#: Controller/GuestBooksController.php:59;82
+#: Controller/NoticesController.php:52;74
+#: Controller/PortfoliosController.php:51;72
 #: Controller/QuestionCommentsController.php:46;70;139;163
-#: Controller/QuestionsController.php:50;73
+#: Controller/QuestionsController.php:57;80
 #: Controller/SettingsController.php:53;74;140;161
-#: Controller/UsersController.php:168;189;255;276
+#: Controller/UsersController.php:170;191;257;278
 msgid "The post has been saved."
 msgstr ""
 
-#: Controller/BlogsController.php:86;110
+#: Controller/BlogsController.php:146;148;172
+#: Controller/CkeditorAssetsController.php:38
 #: Controller/ContactsController.php:54;79;145;168
 #: Controller/FaqsController.php:102;130;199;222
-#: Controller/GalleriesController.php:108;134
+#: Controller/GalleriesController.php:110;136
 #: Controller/GalleryCategoriesController.php:49;70;136;157
 #: Controller/GuestBookCommentsController.php:49;73;142;166
 #: Controller/GuestBookContentsController.php:49;70;136;157
-#: Controller/GuestBooksController.php:41;60;83
-#: Controller/IntroController.php:70;91;157;178
-#: Controller/NoticesController.php:48;70
-#: Controller/PortfoliosController.php:48;69
+#: Controller/GuestBooksController.php:62;85
+#: Controller/NoticesController.php:55;77
+#: Controller/PortfoliosController.php:54;75
 #: Controller/QuestionCommentsController.php:49;73;142;166
-#: Controller/QuestionsController.php:53;76
+#: Controller/QuestionsController.php:60;83
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/UsersController.php:171;192;279
+#: Controller/SlController.php:72 Controller/UsersController.php:173;194;281
 msgid "The post could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/BlogsController.php:134
+#: Controller/BlogsController.php:196
+#: Controller/CkeditorAssetsController.php:57
 #: Controller/ContactsController.php:101;192
 #: Controller/FaqsController.php:155;246
-#: Controller/GalleriesController.php:157
+#: Controller/GalleriesController.php:159
 #: Controller/GalleryCategoriesController.php:92;179
 #: Controller/GuestBookCommentsController.php:98;191
 #: Controller/GuestBookContentsController.php:92;179
-#: Controller/GuestBooksController.php:105
-#: Controller/IntroController.php:113;200 Controller/NoticesController.php:92
-#: Controller/PortfoliosController.php:91
+#: Controller/GuestBooksController.php:107 Controller/NoticesController.php:99
+#: Controller/PortfoliosController.php:97
 #: Controller/QuestionCommentsController.php:98;191
-#: Controller/QuestionsController.php:100
+#: Controller/QuestionsController.php:107
 #: Controller/SettingsController.php:99;186
-#: Controller/UsersController.php:214;301
+#: Controller/UsersController.php:216;303
 msgid "The post has been deleted."
 msgstr ""
 
-#: Controller/BlogsController.php:136
+#: Controller/BlogsController.php:198
+#: Controller/CkeditorAssetsController.php:59
 #: Controller/ContactsController.php:103;194
 #: Controller/FaqsController.php:157;248
-#: Controller/GalleriesController.php:159
+#: Controller/GalleriesController.php:161
 #: Controller/GalleryCategoriesController.php:94;181
 #: Controller/GuestBookCommentsController.php:100;193
 #: Controller/GuestBookContentsController.php:94;181
-#: Controller/GuestBooksController.php:107
-#: Controller/IntroController.php:115;202 Controller/NoticesController.php:94
-#: Controller/PortfoliosController.php:93
+#: Controller/GuestBooksController.php:109
+#: Controller/NoticesController.php:101 Controller/PortfoliosController.php:99
 #: Controller/QuestionCommentsController.php:100;193
-#: Controller/QuestionsController.php:102
+#: Controller/QuestionsController.php:109
 #: Controller/SettingsController.php:101;188
-#: Controller/UsersController.php:216;303
+#: Controller/UsersController.php:218;305
 msgid "The post could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/FaqsController.php:32
+#: Controller/FaqsController.php:27
 msgid "Insert Faq Category First"
 msgstr ""
 
-#: Controller/GalleriesController.php:31
+#: Controller/GalleriesController.php:16
 msgid "Insert Gallery Category First"
 msgstr ""
 
-#: Controller/UsersController.php:258
+#: Controller/SlController.php:42
+msgid "title"
+msgstr ""
+
+#: Controller/SlController.php:42
+msgid "content"
+msgstr ""
+
+#: Controller/SlController.php:42
+msgid "title+content"
+msgstr ""
+
+#: Controller/UsersController.php:260
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:320
+#: Controller/UsersController.php:322
 msgid "Invalid username or password, try again"
 msgstr ""
 
@@ -145,11 +159,14 @@ msgid "Edit Blog Category"
 msgstr ""
 
 #: View/BlogCategories/admin_index.ctp:34 View/BlogComments/index.ctp:18
-#: View/Blogs/index.ctp:18 View/Contacts/admin_index.ctp:34
-#: View/Contacts/index.ctp:34 View/Faqs/admin_index.ctp:29
-#: View/Galleries/index.ctp:52 View/GalleryCategories/admin_index.ctp:34
+#: View/Blogs/index.ctp:30 View/CkeditorAssets/index.ctp:55
+#: View/Contacts/admin_index.ctp:34 View/Contacts/index.ctp:34
+#: View/Elements/_blog_categories.ctp:35 View/Elements/_blogs.ctp:14
+#: View/Elements/_guest_books.ctp:13 View/Elements/_notices.ctp:13
+#: View/Elements/_questions.ctp:13 View/Faqs/admin_index.ctp:29
+#: View/Galleries/index.ctp:55 View/GalleryCategories/admin_index.ctp:34
 #: View/GuestBooks/admin_index.ctp:29 View/GuestBooks/index.ctp:31
-#: View/Intro/index.ctp:58 View/Notices/admin_index.ctp:29
+#: View/Intro/index.ctp:63 View/Notices/admin_index.ctp:29
 #: View/Notices/index.ctp:29 View/Portfolios/admin_index.ctp:29
 #: View/Portfolios/index.ctp:17 View/Questions/admin_index.ctp:34
 #: View/Questions/index.ctp:34
@@ -202,16 +219,16 @@ msgid "Edit Blog"
 msgstr ""
 
 #: View/BlogComments/admin_index.ctp:34 View/BlogComments/index.ctp:22
-#: View/Blogs/admin_index.ctp:34 View/Blogs/index.ctp:22
+#: View/Blogs/admin_index.ctp:34 View/Blogs/index.ctp:34
 msgid "New Blog"
 msgstr ""
 
 #: View/BlogComments/admin_view.ctp:2;3 View/BlogComments/view.ctp:2;3
 #: View/Blogs/admin_view.ctp:2;3 View/Blogs/view.ctp:2;3
-#: View/Elements/_blog_categories.ctp:3 View/Elements/_blogs.ctp:2
+#: View/Elements/_blog_categories.ctp:4 View/Elements/_blogs.ctp:2
 #: View/Elements/header.ctp:17
 msgid "Blog"
-msgstr ""
+msgstr "블로그"
 
 #: View/BlogComments/view.ctp:9 View/Blogs/view.ctp:9
 #: View/GuestBooks/view.ctp:11 View/Notices/admin_view.ctp:11
@@ -220,11 +237,66 @@ msgstr ""
 msgid "created_at"
 msgstr ""
 
-#: View/BlogComments/view.ctp:45 View/Blogs/view.ctp:45
+#: View/BlogComments/view.ctp:45 View/Blogs/view.ctp:46
 #: View/GuestBooks/view.ctp:18 View/Notices/admin_view.ctp:18
 #: View/Notices/view.ctp:18 View/Portfolios/admin_view.ctp:18
 #: View/Portfolios/view.ctp:18 View/Questions/view.ctp:16
 msgid "List"
+msgstr ""
+
+#: View/Blogs/view.ctp:49 View/CkeditorAssets/index.ctp:30
+#: View/Galleries/index.ctp:30 View/GuestBooks/view.ctp:21
+#: View/Notices/admin_view.ctp:21 View/Notices/view.ctp:21
+#: View/Portfolios/admin_view.ctp:21 View/Portfolios/view.ctp:21
+#: View/Questions/view.ctp:19
+msgid "Edit"
+msgstr ""
+
+#: View/Blogs/view.ctp:50 View/CkeditorAssets/index.ctp:31
+#: View/Galleries/index.ctp:31 View/GuestBooks/view.ctp:22
+#: View/Notices/admin_view.ctp:22 View/Notices/view.ctp:22
+#: View/Portfolios/admin_view.ctp:22 View/Portfolios/view.ctp:22
+#: View/Questions/view.ctp:20
+msgid "Delete"
+msgstr ""
+
+#: View/Blogs/view.ctp:50 View/CkeditorAssets/index.ctp:31
+#: View/Galleries/index.ctp:31 View/GuestBooks/view.ctp:22
+#: View/Notices/view.ctp:22 View/Portfolios/view.ctp:22
+#: View/Questions/view.ctp:20
+msgid "Are you sure you wish to delete this article?"
+msgstr ""
+
+#: View/CkeditorAssets/add.ctp:1
+msgid "Ckeditor Assets"
+msgstr ""
+
+#: View/CkeditorAssets/add.ctp:2;3
+msgid "Add Ckeditor Asset"
+msgstr ""
+
+#: View/CkeditorAssets/add.ctp:9
+msgid "Save Ckeditor Asset"
+msgstr ""
+
+#: View/CkeditorAssets/index.ctp:3;4 View/Galleries/add.ctp:1
+#: View/Galleries/admin_add.ctp:1 View/Galleries/admin_edit.ctp:1
+#: View/Galleries/admin_index.ctp:1;2 View/Galleries/admin_view.ctp:1
+#: View/Galleries/edit.ctp:1 View/Galleries/index.ctp:3;4
+msgid "Galleries"
+msgstr ""
+
+#: View/CkeditorAssets/index.ctp:14 View/Galleries/index.ctp:14
+msgid "No Category"
+msgstr ""
+
+#: View/CkeditorAssets/index.ctp:66 View/Galleries/index.ctp:66
+msgid "No Aticle"
+msgstr ""
+
+#: View/CkeditorAssets/index.ctp:70 View/Galleries/admin_index.ctp:48
+#: View/Galleries/index.ctp:70
+msgid "New Gallery"
 msgstr ""
 
 #: View/Contacts/add.ctp:1 View/Contacts/edit.ctp:1
@@ -274,41 +346,36 @@ msgstr ""
 #: View/Elements/_questions.ctp:2 View/Elements/header.ctp:19
 #: View/Questions/admin_view.ctp:2;3 View/Questions/view.ctp:2;3
 msgid "Question"
-msgstr "질문,답변"
+msgstr "질문, 답변"
 
 #: View/Contacts/edit.ctp:2;3
 msgid "Edit Contact"
 msgstr ""
 
-#: View/Elements/_blog_categories.ctp:35 View/Elements/_guest_books.ctp:13
-#: View/Elements/_notices.ctp:13 View/Elements/_questions.ctp:13
-msgid "no_article"
-msgstr ""
-
-#: View/Elements/_blogs.ctp:4 View/Elements/_galleries.ctp:18
+#: View/Elements/_blogs.ctp:16 View/Elements/_galleries.ctp:18
 #: View/Elements/_guest_books.ctp:15 View/Elements/_notices.ctp:15
 #: View/Elements/_questions.ctp:15
 msgid "more"
-msgstr ""
+msgstr "더보기"
 
 #: View/Elements/_galleries.ctp:2 View/Elements/header.ctp:18
 #: View/Galleries/admin_view.ctp:2;3
 msgid "Gallery"
-msgstr ""
+msgstr "사진첩"
 
 #: View/Elements/_guest_books.ctp:2 View/Elements/header.ctp:22
 #: View/Faqs/admin_view.ctp:2;3 View/Faqs/view.ctp:2;3
 #: View/GuestBooks/admin_view.ctp:2;3
 msgid "Guest Book"
-msgstr ""
+msgstr "방명록"
 
 #: View/Elements/_notices.ctp:2 View/Elements/header.ctp:21
 #: View/Elements/info.ctp:4 View/Notices/admin_view.ctp:2;3
 #: View/Notices/view.ctp:2;3 View/Portfolios/admin_view.ctp:2;3
 msgid "Notice"
-msgstr ""
+msgstr "공지사항"
 
-#: View/Elements/header.ctp:5 View/Users/edit.ctp:3;19
+#: View/Elements/header.ctp:5 View/Users/edit.ctp:3;18
 msgid "Edit User"
 msgstr ""
 
@@ -318,51 +385,39 @@ msgstr ""
 
 #: View/Elements/header.ctp:8
 msgid "New User"
-msgstr ""
+msgstr "회원가입"
 
 #: View/Elements/header.ctp:9 View/Users/admin_login.ctp:6;14
 msgid "Login"
-msgstr ""
+msgstr "로그인"
 
 #: View/Elements/header.ctp:13
 msgid "Home Title"
 msgstr ""
 
-#: View/Elements/header.ctp:15 View/Intro/index.ctp:1
+#: View/Elements/header.ctp:15 View/Intro/index.ctp:3
 msgid "Intro"
-msgstr ""
+msgstr "소개"
 
 #: View/Elements/header.ctp:16
 msgid "Contact"
-msgstr ""
+msgstr "문의"
 
 #: View/Elements/header.ctp:20
 msgid "Faq"
-msgstr ""
+msgstr "FAQ"
 
 #: View/Elements/header.ctp:23 View/Portfolios/view.ctp:2;3
 msgid "Portfolio"
-msgstr ""
+msgstr "포트폴리오"
 
 #: View/Elements/search.ctp:4
-msgid "Title"
-msgstr ""
+msgid "insert search word"
+msgstr "검색어를 넣어주세요"
 
 #: View/Elements/search.ctp:5
-msgid "Content"
-msgstr ""
-
-#: View/Elements/search.ctp:6
-msgid "Title or Content"
-msgstr ""
-
-#: View/Elements/search.ctp:8
-msgid "insert search word"
-msgstr ""
-
-#: View/Elements/search.ctp:9
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: View/Faqs/add.ctp:1 View/Faqs/index.ctp:2;3
 msgid "Faqs"
@@ -416,13 +471,6 @@ msgstr ""
 msgid "New Faq"
 msgstr ""
 
-#: View/Galleries/add.ctp:1 View/Galleries/admin_add.ctp:1
-#: View/Galleries/admin_edit.ctp:1 View/Galleries/admin_index.ctp:1;2
-#: View/Galleries/admin_view.ctp:1 View/Galleries/edit.ctp:1
-#: View/Galleries/index.ctp:3;4
-msgid "Galleries"
-msgstr ""
-
 #: View/Galleries/add.ctp:2;3 View/Galleries/admin_add.ctp:2;3
 msgid "Add Gallery"
 msgstr ""
@@ -434,38 +482,6 @@ msgstr ""
 
 #: View/Galleries/admin_edit.ctp:2;3 View/Galleries/edit.ctp:2;3
 msgid "Edit Gallery"
-msgstr ""
-
-#: View/Galleries/admin_index.ctp:48 View/Galleries/index.ctp:64
-msgid "New Gallery"
-msgstr ""
-
-#: View/Galleries/index.ctp:13
-msgid "No Category"
-msgstr ""
-
-#: View/Galleries/index.ctp:29 View/GuestBooks/view.ctp:21
-#: View/Notices/admin_view.ctp:21 View/Notices/view.ctp:21
-#: View/Portfolios/admin_view.ctp:21 View/Portfolios/view.ctp:21
-#: View/Questions/view.ctp:19
-msgid "Edit"
-msgstr ""
-
-#: View/Galleries/index.ctp:30 View/GuestBooks/view.ctp:22
-#: View/Notices/admin_view.ctp:22 View/Notices/view.ctp:22
-#: View/Portfolios/admin_view.ctp:22 View/Portfolios/view.ctp:22
-#: View/Questions/view.ctp:20
-msgid "Delete"
-msgstr ""
-
-#: View/Galleries/index.ctp:30 View/GuestBooks/view.ctp:22
-#: View/Notices/view.ctp:22 View/Portfolios/view.ctp:22
-#: View/Questions/view.ctp:20
-msgid "Are you sure you wish to delete this article?"
-msgstr ""
-
-#: View/Galleries/index.ctp:60
-msgid "No Aticle"
 msgstr ""
 
 #: View/GalleryCategories/admin_add.ctp:1
@@ -512,6 +528,10 @@ msgstr ""
 msgid "RMS Admin Login Page"
 msgstr ""
 
+#: View/Layouts/sl.ctp:51
+msgid "download"
+msgstr ""
+
 #: View/Notices/add.ctp:2 View/Notices/admin_add.ctp:2
 #: View/Notices/admin_edit.ctp:2 View/Notices/admin_index.ctp:1
 #: View/Notices/admin_view.ctp:1 View/Notices/edit.ctp:2
@@ -551,7 +571,7 @@ msgstr ""
 msgid "Add Portfolio"
 msgstr ""
 
-#: View/Portfolios/add.ctp:10
+#: View/Portfolios/add.ctp:11
 msgid "Save Portfolio"
 msgstr ""
 
@@ -582,10 +602,11 @@ msgstr ""
 #: gallery_category_id Model/GalleryCategory.php:validation galleries_count
 #: Model/GuestBook.php:validation guest_book_comments_count
 #: Model/GuestBookComment.php:validation guest_book_id
-#: Model/Impression.php:validation tag_id Model/Notice.php:validation user_id
-#: Model/Portfolio.php:validation Model/QuestionComment.php:validation
-#: question_id Model/Setting.php:validation theme_id
-#: Model/Tagging.php:validation
+#: Model/Impression.php:validation impressionable_id
+#: Model/Notice.php:validation user_id Model/Portfolio.php:validation
+#: Model/QuestionComment.php:validation question_id
+#: Model/Setting.php:validation theme_id Model/Tagging.php:validation
+#: tag_id;validation taggable_id
 msgid "numeric"
 msgstr ""
 
@@ -601,14 +622,14 @@ msgstr ""
 #: Model/GalleryCategory.php:validation Model/GuestBook.php:validation
 #: Model/GuestBookComment.php:validation guest_book_id;validation
 #: Model/GuestBookContent.php:validation Model/Impression.php:validation
-#: tag_id Model/Intro.php:validation Model/Notice.php:validation
+#: impressionable_id Model/Intro.php:validation Model/Notice.php:validation
 #: Model/NoticeContent.php:validation Model/Portfolio.php:validation
 #: Model/PortfolioContent.php:validation Model/Question.php:validation
 #: Model/QuestionComment.php:validation question_id;validation
 #: Model/QuestionContent.php:validation Model/Setting.php:validation theme_id
 #: Model/SlContentModel.php:validation Model/Tag.php:validation name
-#: Model/Tagging.php:validation Model/User.php:validation password;validation
-#: role Model/UserPhoto.php:validation photo
+#: Model/Tagging.php:validation tag_id;validation taggable_id
+#: Model/User.php:validation password;validation role
 msgid "notEmpty"
 msgstr ""
 

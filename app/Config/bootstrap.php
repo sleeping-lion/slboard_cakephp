@@ -64,7 +64,7 @@ Cache::config('default', array('engine' => 'File'));
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
  * advanced ways of loading plugins
  */
- CakePlugin::loadAll(); // Loads all plugins at once
+ CakePlugin::loadAll(array('Upload','Sitemap' => array('routes' => TRUE, 'bootstrap' => TRUE))); // Loads all plugins at once
  //
  //kePlugin::load('Upload'); //Loads a single plugin named DebugKit
 

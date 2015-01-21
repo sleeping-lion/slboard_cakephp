@@ -78,7 +78,7 @@ class BlogsController extends SlController {
 
 		$this -> Blog -> recursive = 0;
 		$this -> setSearch('Blog');
-		$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id));
+		$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id),'order'=>'Blog.id desc');
 
 		if (count($blog))
 			$this -> set('blog', $blog);

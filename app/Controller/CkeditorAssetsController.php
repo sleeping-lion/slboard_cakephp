@@ -27,18 +27,41 @@ class CkeditorAssetsController extends SlController {
 	public function add() {
 		if ($this -> request -> is('post')) {
 			$this -> CkeditorAsset -> create();
+			
+			$this -> request -> data['CkeditorAsset']['CKEditorFuncNum']=$this->params->query['CKEditorFuncNum'];
+			$this -> request -> data['CkeditorAsset']['data_file_name']=$_FILES['upload'];
+			
+			//$this -> request -> data['data_file_name']=
 			if ($this -> CkeditorAsset -> save($this -> request -> data)) {
-				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
-				//return $this->redirect(array('action' => 'index'));
-				$url='/files/cheditor_assets/photo/'.$this -> CkeditorAsset->getLastInsertID();
-
-				echo '<script type="text/javascript">window.parent.CKEDITOR.tools.callFunction(' . $this->request->data['CkeditorAsset']['CKEditorFuncNum'] . ',"' . $url . '","' . $this->request->data['CkeditorAsset']['CKEditorFuncNum']. '")</script>';
+			//	$this -> Session -> setFlash(__('The post has been saved.'), 'success');
+				$ckeditorAsset=$this->view($this -> CkeditorAsset->getLastInsertID());
+				$url='/files/ckeditor_asset/photo/'.$this -> CkeditorAsset->getLastInsertID().'/'.$ckeditorAsset['CkeditorAsset']['data_file_name'];
+				echo '<script type="text/javascript">window.parent.CKEDITOR.tools.callFunction(' . $this->request->data['CkeditorAsset']['CKEditorFuncNum'] . ',"' . $url . '","' .__('File Uploaded Successfully'). '")</script>';
 				exit;
 			} else {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}
 		}
 	}
+	
+	/**
+	 * view method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+	public function view($id = null) {
+		if (!$this -> CkeditorAsset -> exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$options = array('conditions' => array('CkeditorAsset.' . $this -> CkeditorAsset -> primaryKey => $id));
+		$ckeditorAsset = $this -> CkeditorAsset -> find('first', $options);
+		$this -> set('ckeditorAsset', $ckeditorAsset);
+		$this -> set('_serialize', 'ckeditorAsset');
+		
+		return $ckeditorAsset;
+	}	
 
 /**
  * delete method

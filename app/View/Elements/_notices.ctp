@@ -10,7 +10,7 @@
 		<?php endforeach ?>
   </ul>
   <?php else: ?>
-  <p><?php echo __('no_article') ?></p>
+  <p><?php echo __('No Article') ?></p>
   <?php endif ?>
   <?php echo $this -> Html -> link(__('more'), array('controller' => 'notices', 'action' => 'index'),array('class'=>'more')) ?>
 </article>
