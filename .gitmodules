@@ -5,3 +5,6 @@
 	path = Plugin/Upload
 	url = git://github.com/josegonzalez/cakephp-upload.git
 	branch = master
+[submodule "app/Plugin/Recaptcha"]
+	path = app/Plugin/Recaptcha
+	url = git@github.com:CakeDC/recaptcha.git
