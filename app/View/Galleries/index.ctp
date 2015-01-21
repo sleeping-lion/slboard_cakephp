@@ -3,7 +3,8 @@
 <?php $this -> Html -> addCrumb(__('Galleries'), array('controller' => 'galleries', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Galleries')); ?>
 
-<section id="sl_gallery_index" class="table-responsive">
+<section id="sl_gallery_index">
+	<article class="table-responsive">	
 	<?php if(isset($galleryCategories)): ?>
 	<ol class="nav nav-tabs sl_categories">
 		<?php if(count($galleryCategories)): ?>			
@@ -15,7 +16,7 @@
 		<?php endif ?>
 	</ol>
 	<?php endif ?>
-		
+	</article>
 	<article <?php if(isset($gallery)): ?>itemscope itemtype="http://schema.org/ImageObject"<?php endif ?>>
 	<?php if(isset($gallery)):  ?>
  	<div id="sl_gallery_left">

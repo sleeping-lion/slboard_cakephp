@@ -32,7 +32,7 @@
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<?php echo $this->element ('admin/header');?>
+<?php echo $this->element ('Admin/header');?>
 <section id="mom">
 	<section id="main" class="container">
 		<?php if($this->params['controller']!='home'): ?>
@@ -60,7 +60,7 @@
 		<?php echo $this->element('aside'); ?>		
 	</section>
 </section>
-<?php echo $this-> element ('admin/footer');?>
+<?php echo $this-> element ('Admin/footer');?>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
 <?php echo $this->Html->script(array('jquery.tools.min.js','bootstrap.min.js','common.js')); ?>
 <?php echo $this -> fetch('script'); ?>

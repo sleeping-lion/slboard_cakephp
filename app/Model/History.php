@@ -4,7 +4,7 @@ App::uses('SlModel', 'Model');
  * Notices Model
  *
  */
-class Notice extends SlModel {
+class History extends SlModel {
 
 public $actsAs = array(
     'Sitemap.Sitemap' => array(
@@ -57,6 +57,16 @@ public $actsAs = array(
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'content' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),		
 		'enable' => array(
 			'boolean' => array(
 				'rule' => array('boolean'),

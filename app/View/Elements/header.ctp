@@ -12,7 +12,17 @@
 	<nav class="container">
 	<h1><a href="/" title="홈으로"><?php echo __('Home Title'); ?></a></h1>
 		<ul class="nav nav-pills">
-			<li <?php if(!strcmp($this->params['controller'],'intro')): ?><?php echo 'class="active"' ?><?php endif ?>><?php echo $this->Html->link(__('Intro'), array('controller' => 'intro','action'=>'index'))?></li>
+  <li role="presentation" class="dropdown" <?php if(!strcmp($this->params['controller'],'intro')): ?><?php echo 'class="active"' ?><?php endif ?>>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+      <?php echo __('Intro') ?> <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+			<li><?php echo $this->Html->link(__('Install'), array('controller' => 'pages','action'=>'install'))?></li>    	
+			<li><?php echo $this->Html->link(__('Intro'), array('controller' => 'intro','action'=>'index'))?></li>
+			<li><?php echo $this->Html->link(__('Histroy'), array('controller' => 'histories','action'=>'index'))?></li>			
+    </ul>
+  </li>
+
 			<li <?php if(!strcmp($this->params['controller'],'contacts')): ?><?php echo 'class="active"' ?><?php endif ?>><?php echo $this->Html->link(__('Contact'), array('controller' => 'contacts','action'=>'add'))?></li>
 			<li <?php if(!strcmp($this->params['controller'],'blogs')): ?><?php echo 'class="active"' ?><?php endif ?>><?php echo $this->Html->link(__('Blog'), array('controller' => 'blogs','action'=>'index')); ?></li>			
 			<li <?php if(!strcmp($this->params['controller'],'galleries')): ?><?php echo 'class="active"' ?><?php endif ?>><?php echo $this->Html->link(__('Gallery'), array('controller' => 'galleries','action'=>'index'))?></li>

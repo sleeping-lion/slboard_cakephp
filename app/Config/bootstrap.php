@@ -64,7 +64,7 @@ Cache::config('default', array('engine' => 'File'));
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
  * advanced ways of loading plugins
  */
- CakePlugin::load(array('Upload','Sitemap' => array('routes' => TRUE, 'bootstrap' => TRUE))); // Loads all plugins at once
+ CakePlugin::load(array('Recaptcha','Upload','Sitemap' => array('routes' => TRUE, 'bootstrap' => TRUE))); // Loads all plugins at once
  //
  //kePlugin::load('Upload'); //Loads a single plugin named DebugKit
 
@@ -92,6 +92,12 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
+//Configure::write('Recaptcha.publicKey', 'your-public-api-key');
+//Configure::write('Recaptcha.privateKey', 'your-private-api-key');
+
+Configure::write('Recaptcha.publicKey', '6Ldrj-kSAAAAAAe_ftLzsQL7Qf2mGmSCA8Wuf0ic');
+Configure::write('Recaptcha.privateKey', '6Ldrj-kSAAAAAIKqAbAAxmSdy4uWLNVdETIb_ej_');
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'

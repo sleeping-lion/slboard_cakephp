@@ -1,5 +1,5 @@
 <aside class="visible-lg">
-	<?php echo $this->element ('_blog_categories');?>
-	<?php echo $this->element ('_tag_cloud');?>
+	<?php echo $this->element ('BlogCategories/index');?>
+	<?php echo $this->element ('TagClouds/index');?>
 	<div class="clearfix"></div>
 </aside>

@@ -4,12 +4,14 @@
 <?php echo $this -> Form -> create('Question'); ?>
 <?php if(!$this->Session->check('Auth.User')): ?>
 <?php 
-echo $this -> Form -> input('name', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
-echo $this -> Form -> input('password', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
+echo $this -> Form -> input('name', array('div' => array('class' => 'form-group'), 'class' => 'form-control','required'=>'required'));
+echo $this -> Form -> input('password', array('div' => array('class' => 'form-group'), 'class' => 'form-control','required'=>'required'));
 ?>
 <?php endif ?>
 <?php
 echo $this -> Form -> input('title', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 echo $this -> Form -> input('QuestionContent.content', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
-echo $this -> Form -> end(array('label' => __('Save Question'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary'));
 ?>
+<?php echo $this->Recaptcha->display() ?>
+<br />
+<?php echo $this -> Form -> end(array('label' => __('Save Question'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')) ?>

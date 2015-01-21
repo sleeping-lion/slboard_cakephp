@@ -47,8 +47,6 @@ class SlController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		
-
-
 		$this -> loadModel('BlogCategory');
 		$this -> set('asideBlogCategories', $this -> BlogCategory -> find('all', array('conditions'=>array('enable'=>true),'recursive' => -1)));
 

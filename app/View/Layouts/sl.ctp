@@ -24,7 +24,10 @@
 		echo $this->Html->meta('icon');
 		echo $this->Html->css(array('bootstrap.min.css','index.css'));
 		echo $this-> fetch('css');
+		echo $this->Html->meta('keywords','php,게시판,공개게시판,cakephp,rails');
 	?>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta name="author" content="Sleeping-Lion" />
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 <![endif]-->
