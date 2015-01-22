@@ -16,6 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `acos`
+--
+
+DROP TABLE IF EXISTS `acos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_acos_lft_rght` (`lft`,`rght`),
+  KEY `idx_acos_alias` (`alias`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acos`
+--
+
+LOCK TABLES `acos` WRITE;
+/*!40000 ALTER TABLE `acos` DISABLE KEYS */;
+INSERT INTO `acos` VALUES (1,NULL,NULL,NULL,'controllers',1,38),(2,1,NULL,NULL,'Users',2,5),(3,2,NULL,NULL,'Groups',3,4),(4,1,NULL,NULL,'Notices',6,7),(5,1,NULL,NULL,'GuestBooks',8,11),(6,5,NULL,NULL,'GuestBookComments',9,10),(7,1,NULL,NULL,'Questions',12,15),(8,7,NULL,NULL,'QuestionComments',13,14),(9,1,NULL,NULL,'Faqs',16,19),(10,9,NULL,NULL,'FaqCategories',17,18),(11,1,NULL,NULL,'Blogs',20,25),(12,11,NULL,NULL,'BlogCategories',21,22),(13,11,NULL,NULL,'BlogComments',23,24),(14,1,NULL,NULL,'CkeditorAssets',26,27),(15,1,NULL,NULL,'Galleries',28,31),(16,15,NULL,NULL,'GalleryCategories',29,30),(17,1,NULL,NULL,'Contacts',32,33),(18,1,NULL,NULL,'Portfolios',34,35),(19,1,NULL,NULL,'Histories',36,37);
+/*!40000 ALTER TABLE `acos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ad_positions`
 --
 
@@ -41,8 +72,70 @@ CREATE TABLE `ad_positions` (
 
 LOCK TABLES `ad_positions` WRITE;
 /*!40000 ALTER TABLE `ad_positions` DISABLE KEYS */;
-INSERT INTO `ad_positions` VALUES (1,'광고 표시안함','none',1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(2,'위에 표시','top',1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(3,'아래에 표시','bottom',1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `ad_positions` VALUES (1,'광고 표시안함','none',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,'위에 표시','top',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,'아래에 표시','bottom',1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `ad_positions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `aros`
+--
+
+DROP TABLE IF EXISTS `aros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(10) DEFAULT NULL,
+  `model` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `foreign_key` int(10) DEFAULT NULL,
+  `alias` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lft` int(10) DEFAULT NULL,
+  `rght` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_aros_lft_rght` (`lft`,`rght`),
+  KEY `idx_aros_alias` (`alias`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `aros`
+--
+
+LOCK TABLES `aros` WRITE;
+/*!40000 ALTER TABLE `aros` DISABLE KEYS */;
+INSERT INTO `aros` VALUES (1,NULL,'Group',1,'admins',1,2),(2,NULL,'Group',2,'managers',3,4),(3,NULL,'Group',3,'users',5,6),(4,NULL,'Group',4,'viewers',7,8);
+/*!40000 ALTER TABLE `aros` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `aros_acos`
+--
+
+DROP TABLE IF EXISTS `aros_acos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aros_acos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `aro_id` int(10) NOT NULL,
+  `aco_id` int(10) NOT NULL,
+  `_create` varchar(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `_read` varchar(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `_update` varchar(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `_delete` varchar(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ARO_ACO_KEY` (`aro_id`,`aco_id`),
+  KEY `idx_aco_id` (`aco_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `aros_acos`
+--
+
+LOCK TABLES `aros_acos` WRITE;
+/*!40000 ALTER TABLE `aros_acos` DISABLE KEYS */;
+INSERT INTO `aros_acos` VALUES (1,1,1,'1','1','1','1'),(2,2,1,'1','1','1','1'),(3,2,2,'-1','-1','-1','-1'),(4,3,17,'1','1','0','0'),(5,4,17,'1','1','0','0');
+/*!40000 ALTER TABLE `aros_acos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -75,7 +168,7 @@ CREATE TABLE `blog_categories` (
 
 LOCK TABLES `blog_categories` WRITE;
 /*!40000 ALTER TABLE `blog_categories` DISABLE KEYS */;
-INSERT INTO `blog_categories` VALUES (1,1,NULL,'내소개',1,0,1,0,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(2,1,NULL,'리눅스',0,0,1,0,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(3,1,NULL,'웹개발',0,0,1,0,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(4,1,NULL,'제작작품',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(5,1,NULL,'방명록',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(6,1,1,'소개',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(7,1,1,'일기',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(8,1,1,'생각',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(9,1,1,'사진첩',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(10,1,2,'설치',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(11,1,2,'응용프로그램',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(12,1,2,'기본명령어',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(13,1,2,'서버',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(14,1,2,'html',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(15,1,3,'스타일시트',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(16,1,3,'자바스크립트',0,0,1,1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `blog_categories` VALUES (1,1,NULL,'내소개',1,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,NULL,'리눅스',0,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,NULL,'웹개발',0,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,1,NULL,'제작작품',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(5,1,NULL,'방명록',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(6,1,1,'소개',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(7,1,1,'일기',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(8,1,1,'생각',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(9,1,1,'사진첩',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(10,1,2,'설치',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(11,1,2,'응용프로그램',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(12,1,2,'기본명령어',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(13,1,2,'서버',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(14,1,2,'html',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(15,1,3,'스타일시트',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(16,1,3,'자바스크립트',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `blog_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -134,7 +227,7 @@ CREATE TABLE `blog_contents` (
 
 LOCK TABLES `blog_contents` WRITE;
 /*!40000 ALTER TABLE `blog_contents` DISABLE KEYS */;
-INSERT INTO `blog_contents` VALUES (1,'그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.\n    잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.','2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `blog_contents` VALUES (1,'그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.\n    잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.','2015-01-22 09:00:20','2015-01-22 09:00:20');
 /*!40000 ALTER TABLE `blog_contents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,8 +261,33 @@ CREATE TABLE `blogs` (
 
 LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
-INSERT INTO `blogs` VALUES (1,1,1,'잠자는-사자의 집이 다시 개장했습니다','설명 읗믄ㅇ힘낭흐민ㅇㅎ ',NULL,0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `blogs` VALUES (1,1,1,'잠자는-사자의 집이 다시 개장했습니다','설명 읗믄ㅇ힘낭흐민ㅇㅎ ',NULL,0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cake_sessions`
+--
+
+DROP TABLE IF EXISTS `cake_sessions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cake_sessions` (
+  `id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `data` text COLLATE utf8_unicode_ci,
+  `expires` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cake_sessions`
+--
+
+LOCK TABLES `cake_sessions` WRITE;
+/*!40000 ALTER TABLE `cake_sessions` DISABLE KEYS */;
+INSERT INTO `cake_sessions` VALUES ('m63h6i7uv1g744rdci4je7bmn2','Config|a:3:{s:9:\"userAgent\";s:32:\"14c4320a4dd79968e0277dab13566fa4\";s:4:\"time\";i:1421944606;s:9:\"countdown\";i:10;}Message|a:0:{}Auth|a:1:{s:4:\"User\";a:27:{s:2:\"id\";s:1:\"2\";s:8:\"group_id\";s:1:\"3\";s:5:\"email\";s:15:\"admin@gmail.com\";s:4:\"name\";s:8:\"12351235\";s:5:\"photo\";N;s:11:\"description\";s:11:\"12351235235\";s:14:\"alternate_name\";N;s:6:\"gender\";b:1;s:10:\"birth_date\";N;s:10:\"death_date\";N;s:3:\"url\";N;s:9:\"job_title\";N;s:20:\"reset_password_token\";N;s:22:\"reset_password_sent_at\";N;s:19:\"remember_created_at\";N;s:13:\"sign_in_count\";s:1:\"0\";s:18:\"current_sign_in_at\";N;s:15:\"last_sign_in_at\";N;s:18:\"current_sign_in_ip\";N;s:15:\"last_sign_in_ip\";N;s:17:\"user_photos_count\";s:1:\"0\";s:5:\"admin\";b:0;s:5:\"intro\";b:0;s:6:\"enable\";b:1;s:10:\"created_at\";s:19:\"0000-00-00 00:00:00\";s:10:\"updated_at\";s:19:\"0000-00-00 00:00:00\";s:5:\"Group\";a:6:{s:2:\"id\";s:1:\"3\";s:5:\"title\";s:4:\"user\";s:11:\"users_count\";s:1:\"0\";s:6:\"enable\";b:1;s:10:\"created_at\";s:19:\"2015-01-22 09:00:19\";s:10:\"updated_at\";s:19:\"2015-01-22 09:00:19\";}}}',1421944606);
+/*!40000 ALTER TABLE `cake_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -284,7 +402,7 @@ CREATE TABLE `faq_categories` (
 
 LOCK TABLES `faq_categories` WRITE;
 /*!40000 ALTER TABLE `faq_categories` DISABLE KEYS */;
-INSERT INTO `faq_categories` VALUES (1,1,'내소개',1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(2,1,'리눅스',1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(3,1,'웹개발',1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `faq_categories` VALUES (1,1,'내소개',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'리눅스',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,'웹개발',1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `faq_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -402,7 +520,7 @@ CREATE TABLE `gallery_categories` (
 
 LOCK TABLES `gallery_categories` WRITE;
 /*!40000 ALTER TABLE `gallery_categories` DISABLE KEYS */;
-INSERT INTO `gallery_categories` VALUES (1,1,'일상',0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(2,1,'멍멍이',0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(3,1,'가족들',0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(4,1,'풍경',0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52'),(5,1,'기타',0,1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `gallery_categories` VALUES (1,1,'일상',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'멍멍이',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,'가족들',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,1,'풍경',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(5,1,'기타',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `gallery_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -430,7 +548,7 @@ CREATE TABLE `groups` (
 
 LOCK TABLES `groups` WRITE;
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
-INSERT INTO `groups` VALUES (1,'admin',0,1,'2015-01-18 10:40:51','2015-01-18 10:40:51'),(2,'manage',0,1,'2015-01-18 10:40:51','2015-01-18 10:40:51'),(3,'user',0,1,'2015-01-18 10:40:51','2015-01-18 10:40:51'),(4,'viewer',0,1,'2015-01-18 10:40:51','2015-01-18 10:40:51');
+INSERT INTO `groups` VALUES (1,'admin',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,'manage',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,'user',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,'viewer',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -477,7 +595,7 @@ CREATE TABLE `guest_book_contents` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -486,7 +604,6 @@ CREATE TABLE `guest_book_contents` (
 
 LOCK TABLES `guest_book_contents` WRITE;
 /*!40000 ALTER TABLE `guest_book_contents` DISABLE KEYS */;
-INSERT INTO `guest_book_contents` VALUES (1,'351325123\r\n51\r\n235\r\n12351235'),(2,'3512351235');
 /*!40000 ALTER TABLE `guest_book_contents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -511,7 +628,7 @@ CREATE TABLE `guest_books` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_guest_books_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -520,7 +637,6 @@ CREATE TABLE `guest_books` (
 
 LOCK TABLES `guest_books` WRITE;
 /*!40000 ALTER TABLE `guest_books` DISABLE KEYS */;
-INSERT INTO `guest_books` VALUES (1,NULL,'123512351235','2351236',NULL,NULL,0,1,1,'2015-01-19 01:19:51','2015-01-19 01:19:51'),(2,NULL,'123512','12351235','4b60437317e777c25556cab66328928516e72f6e','379265800.33602652027794144',0,0,1,'2015-01-18 16:58:14','2015-01-18 16:58:14');
 /*!40000 ALTER TABLE `guest_books` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -583,7 +699,7 @@ CREATE TABLE `impressions` (
   KEY `controlleraction_ip_index` (`controller_name`,`action_name`,`ip_address`),
   KEY `controlleraction_session_index` (`controller_name`,`action_name`,`session_hash`),
   KEY `index_impressions_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -592,7 +708,6 @@ CREATE TABLE `impressions` (
 
 LOCK TABLES `impressions` WRITE;
 /*!40000 ALTER TABLE `impressions` DISABLE KEYS */;
-INSERT INTO `impressions` VALUES (1,'GuestBook',1,NULL,'guestBooks','view',NULL,NULL,'::1',NULL,NULL,'http://localhost:20005/guest_books','2015-01-19 01:53:50','2015-01-19 01:53:50'),(2,'Notice',1,NULL,'notices','show',NULL,'871e7b1fe75f293cdef92c979194b2084ed914c63b15735bcd8ebb69e38a19eb','127.0.0.1','362c7414ade1f2a191e9816d610f82a5',NULL,'http://localhost:3000/notices','2015-01-18 16:55:38','2015-01-18 16:55:38'),(3,'Notice',1,NULL,'notices','show',NULL,'871e7b1fe75f293cdef92c979194b2084ed914c63b15735bcd8ebb69e38a19eb','127.0.0.1','362c7414ade1f2a191e9816d610f82a5',NULL,'http://localhost:3000/notices','2015-01-18 16:55:38','2015-01-18 16:55:38'),(4,'GuestBook',1,NULL,'guest_books','show',NULL,'c8ab2882a4667bc75c336392d510a8fd2921a60c21a2d711f2bef0eb5ebd6d18','127.0.0.1','362c7414ade1f2a191e9816d610f82a5',NULL,'http://localhost:3000/guest_books','2015-01-18 16:58:06','2015-01-18 16:58:06'),(5,'GuestBook',2,NULL,'guest_books','show',NULL,'f5fb323d01db227e9aeab557a5e78b1b538ec97c1ed46a5e0676f0a7f2fa1149','127.0.0.1','362c7414ade1f2a191e9816d610f82a5',NULL,'http://localhost:3000/guest_books/new','2015-01-18 16:58:14','2015-01-18 16:58:14');
 /*!40000 ALTER TABLE `impressions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -647,7 +762,7 @@ CREATE TABLE `notices` (
 
 LOCK TABLES `notices` WRITE;
 /*!40000 ALTER TABLE `notices` DISABLE KEYS */;
-INSERT INTO `notices` VALUES (1,1,'잠자는-사자의 집이 다시 개장했습니다.',1,0,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `notices` VALUES (1,1,'잠자는-사자의 집이 다시 개장했습니다.',1,0,'2015-01-22 09:00:20','2015-01-22 09:00:20');
 /*!40000 ALTER TABLE `notices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -813,7 +928,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20120516001638'),('20120516002154'),('20120517002149'),('20120522094638'),('20120523094638'),('20120620234229'),('20120624164124'),('20121214055337'),('20121216002147'),('20121216002148'),('20121216002149'),('20121216023255'),('20121223094638'),('20121223140414'),('20130101002147'),('20130725114929'),('20131202102153'),('20131202102154'),('20140505080019'),('20140505080020'),('20140505080021');
+INSERT INTO `schema_migrations` VALUES ('20120516001638'),('20120516002154'),('20120517002149'),('20120522094638'),('20120523094638'),('20120620234229'),('20120624164124'),('20121214055337'),('20121216002147'),('20121216002148'),('20121216002149'),('20121216023255'),('20121223094638'),('20121223140414'),('20130101002147'),('20130725114929'),('20131202102154'),('20140505080019'),('20140505080020'),('20140505080021');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -902,32 +1017,6 @@ LOCK TABLES `tags` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `themes`
---
-
-DROP TABLE IF EXISTS `themes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `themes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `enable` tinyint(1) NOT NULL DEFAULT '1',
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `themes`
---
-
-LOCK TABLES `themes` WRITE;
-/*!40000 ALTER TABLE `themes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `themes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `user_photos`
 --
 
@@ -944,7 +1033,7 @@ CREATE TABLE `user_photos` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_user_photos_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -953,7 +1042,7 @@ CREATE TABLE `user_photos` (
 
 LOCK TABLES `user_photos` WRITE;
 /*!40000 ALTER TABLE `user_photos` DISABLE KEYS */;
-INSERT INTO `user_photos` VALUES (1,1,'sl.jpg','jjh',1,'2015-01-18 10:40:52','2015-01-18 10:40:52');
+INSERT INTO `user_photos` VALUES (1,1,'sl.jpg','jjh',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,2,'jjg.jpg','',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `user_photos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -996,7 +1085,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `index_users_on_email` (`email`),
   UNIQUE KEY `index_users_on_reset_password_token` (`reset_password_token`),
   KEY `index_users_on_group_id` (`group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1005,7 +1094,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,1,'toughjjh@gmail.com','정종호','$2a$10$5ISp4URyzcaYPF/HmiIcse0/.dbZNxo1aSz7jQdizzdm/Yd9sB7oy','--- !ruby/object:File {}\n','깨끗한 웹세상을 꿈꾸는 웹프로그래머 잠자는-사자입니다.','잠자는-사자',0,NULL,NULL,'http://www.sleepinglion.pe.kr','웹프로그래머',NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,1,1,1,'2015-01-18 10:40:51','2015-01-18 10:40:51');
+INSERT INTO `users` VALUES (1,1,'toughjjh@gmail.com','정종호','$2a$10$dY349x8ohIa1wUBrkDLe8udnAyekLNi10QVsA5PjTfeCAVEVGKG8.','--- !ruby/object:File {}\n','깨끗한 웹세상을 꿈꾸는 웹프로그래머 잠자는-사자입니다.','잠자는-사자',0,NULL,NULL,'http://www.sleepinglion.pe.kr','웹프로그래머',NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,1,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'admin@gmail.com','12351235','$2a$10$ENlhieWh2L/nh7Bs5CElMedgJ9HuI5Z/QIZi9c6lHQ1XoZfHzxX0S',NULL,'12351235235',NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,0,0,1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1018,4 +1107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-20 21:33:04
+-- Dump completed on 2015-01-22 21:39:17
