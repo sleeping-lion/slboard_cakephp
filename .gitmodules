@@ -8,3 +8,7 @@
 [submodule "app/Plugin/Recaptcha"]
 	path = app/Plugin/Recaptcha
 	url = git@github.com:CakeDC/recaptcha.git
+[submodule "app/Plugin/Upload"]
+	path = app/Plugin/Upload
+	url = git://github.com/josegonzalez/cakephp-upload.git
+	branch = master
