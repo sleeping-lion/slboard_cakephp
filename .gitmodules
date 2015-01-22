@@ -12,3 +12,6 @@
 	path = app/Plugin/Upload
 	url = git://github.com/josegonzalez/cakephp-upload.git
 	branch = master
+[submodule "app/Plugin/Sitemap"]
+	path = app/Plugin/Sitemap
+	url = git://github.com/loadsys/CakePHP-Sitemap.git
