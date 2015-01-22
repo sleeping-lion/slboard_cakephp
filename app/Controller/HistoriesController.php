@@ -16,7 +16,7 @@ class HistoriesController extends SlController {
 	public function index() {
 		$this -> History -> recursive = 0;
 		$this -> setSearch('History');
-		$this -> set('notices', $this -> Paginator -> paginate());
+		$this -> set('histories', $this -> Paginator -> paginate());
 	}
 
 	/**

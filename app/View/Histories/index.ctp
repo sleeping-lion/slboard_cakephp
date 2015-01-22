@@ -1,6 +1,7 @@
 <?php $this -> Html -> addCrumb(__('Histories'), array('controller' => 'histories', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Histories')); ?>
-<section id="sl_notice_index" class="table-responsive">
+<section id="sl_history_index">
+	<article class="table-responsive">
 	<table width="100%" cellpadding="0" cellspacing="0" class="table table-striped">
 		<colgroup>
 			<col />
@@ -15,15 +16,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(count($notices)): ?>
-    	<?php foreach ($notices as $notice): ?>
+			<?php if(count($histories)): ?>
+    	<?php foreach ($histories as $history): ?>
     		<tr>
-        		<td class="sl_t_id"><?php echo $notice['Notice']['id']; ?></td>
-        		<td class="sl_t_title"><?php echo $this -> Html -> link($notice['Notice']['title'], array('controller' => 'notices', 'action' => 'view', $notice['Notice']['id'])); ?></td>
-        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($notice['Notice']['created_at'], 3); ?></td>
+        		<td class="sl_t_id"><?php echo $history['History']['id']; ?></td>
+        		<td class="sl_t_title"><?php echo $this -> Html -> link($history['History']['title'], array('controller' => 'notices', 'action' => 'view', $history['History']['id'])); ?></td>
+        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($history['History']['created_at'], 3); ?></td>
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($notices); ?>
+    		<?php unset($histories); ?>
     		<?php else: ?>
     		<tr>
     			<td colspan="3"><?php echo __('No Article') ?></td>
@@ -31,6 +32,7 @@
     		<?php endif ?> 
 		</tbody>
 	</table>
+	</article>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
 		<?php echo $this -> Html -> link(__('New History'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>

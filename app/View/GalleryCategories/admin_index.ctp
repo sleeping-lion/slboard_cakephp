@@ -1,6 +1,7 @@
 <?php $this -> Html -> addCrumb(__('Gallery Categories'), array('controller' => 'gallery_categories', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Gallery Categories')); ?>
-<section id="sl_notice_index" class="table-responsive">
+<section id="sl_gallery_category_index">
+	<article class="table-responsive">	
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
       <col width="100px" />
@@ -25,7 +26,7 @@
         			<?php echo $this -> Html -> link($galleryCategory['GalleryCategory']['title'], array('controller' => 'notices', 'action' => 'view', $galleryCategory['GalleryCategory']['id'])); ?>
         		</td>
         		<td></td>
-        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($galleryCategory['GalleryCategory']['created'], 3); ?></p></td>
+        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($galleryCategory['GalleryCategory']['created_at'], 3); ?></p></td>
     		</tr>
     		<?php endforeach; ?>
     		<?php unset($notices); ?>
@@ -36,8 +37,9 @@
     		<?php endif ?>    		
 		</tbody>
 	</table>
+	</article>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Notice'), array('action' => 'add')); ?>
+		<?php echo $this -> Html -> link(__('New Gallery Category'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

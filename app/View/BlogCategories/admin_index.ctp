@@ -1,6 +1,7 @@
 <?php $this -> Html -> addCrumb(__('Blog Categories'), array('controller' => 'blog_categories', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Blog Categories')); ?>
-<section id="sl_notice_index" class="table-responsive">
+<section id="sl_blog_category_index">
+	<article class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
       <col width="100px" />
@@ -25,10 +26,10 @@
         			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'notices', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
         		</td>
         		<td></td>
-        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created'], 3); ?></p></td>
+        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($notices); ?>
+    		<?php unset($blogCategories); ?>
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>
@@ -36,9 +37,10 @@
     		<?php endif ?>    		
 		</tbody>
 	</table>
+	</article>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Notice'), array('action' => 'add')); ?>
-		<?php echo $this -> App -> pagination($this -> Paginator); ?>
+		<?php echo $this -> Html -> link(__('New Blog Category'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>		
+		<?php echo $this -> App -> pagination($this -> Paginator); ?>		
 	</div>
 </section>
 

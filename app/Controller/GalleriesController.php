@@ -162,5 +162,16 @@ class GalleriesController extends SlController {
 		}
 		return $this -> redirect(array('action' => 'index'));
 	}
-
+	
+	
+	/**
+ * index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->layout='admin';
+		$this->Gallery->recursive = 0;
+		$this->set('galleries', $this->Paginator->paginate());
+	}
 }

@@ -1,18 +1,13 @@
 <?php
 App::uses('SlController', 'Controller');
 /**
- * Contacts Controller
+ * BlogCategories Controller
  *
- * @property Contact $Contact
+ * @property BlogCategory $BlogCategory
  * @property PaginatorComponent $Paginator
  * @property SessionComponent $Session
  */
-class ContactsController extends SlController {
-
-	public function beforeFilter() {
-		parent::beforeFilter();
-		$this -> Auth -> allow('add','complete');
-	}
+class BlogCategoriesController extends SlController {
 
 /**
  * index method
@@ -20,8 +15,8 @@ class ContactsController extends SlController {
  * @return void
  */
 	public function index() {
-		$this->Contact->recursive = 0;
-		$this->set('contacts', $this->Paginator->paginate());
+		$this->BlogCategory->recursive = -1;
+		$this->set('blogCategories', $this->Paginator->paginate());
 	}
 
 /**
@@ -32,11 +27,11 @@ class ContactsController extends SlController {
  * @return void
  */
 	public function view($id = null) {
-		if (!$this->Contact->exists($id)) {
+		if (!$this->BlogCategory->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
-		$options = array('conditions' => array('Contact.' . $this->Contact->primaryKey => $id));
-		$this->set('contact', $this->Contact->find('first', $options));
+		$options = array('conditions' => array('BlogCategory.' . $this->BlogCategory->primaryKey => $id));
+		$this->set('blogCategory', $this->BlogCategory->find('first', $options));
 	}
 
 /**
@@ -46,18 +41,14 @@ class ContactsController extends SlController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Contact->create();
-			if ($this->Contact->saveAll($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved.'),'success');
-				return $this->redirect(array('action' => 'complete'));
+			$this->BlogCategory->create();
+			if ($this->BlogCategory->save($this->request->data)) {
+				$this->Session->setFlash(__('The post has been saved.'));
+				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'),'error');
+				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
 			}
 		}
-	}
-
-	public function complete() {
-		
 	}
 
 /**
@@ -68,19 +59,19 @@ class ContactsController extends SlController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->Contact->exists($id)) {
+		if (!$this->BlogCategory->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Contact->save($this->request->data)) {
+			if ($this->BlogCategory->save($this->request->data)) {
 				$this->Session->setFlash(__('The post has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Contact.' . $this->Contact->primaryKey => $id));
-			$this->request->data = $this->Contact->find('first', $options);
+			$options = array('conditions' => array('BlogCategory.' . $this->BlogCategory->primaryKey => $id));
+			$this->request->data = $this->BlogCategory->find('first', $options);
 		}
 	}
 
@@ -92,12 +83,12 @@ class ContactsController extends SlController {
  * @return void
  */
 	public function delete($id = null) {
-		$this->Contact->id = $id;
-		if (!$this->Contact->exists()) {
+		$this->BlogCategory->id = $id;
+		if (!$this->BlogCategory->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		$this->request->allowMethod('post', 'delete');
-		if ($this->Contact->delete()) {
+		if ($this->BlogCategory->delete()) {
 			$this->Session->setFlash(__('The post has been deleted.'));
 		} else {
 			$this->Session->setFlash(__('The post could not be deleted. Please, try again.'));

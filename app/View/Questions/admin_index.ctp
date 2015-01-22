@@ -25,7 +25,7 @@
         			<?php echo $this -> Html -> link($question['Question']['title'], array('controller' => 'questions', 'action' => 'view', $question['Question']['id'])); ?>
         		</td>
         		<td></td>
-        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($question['Question']['created'], 3); ?></p></td>
+        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($question['Question']['created_at'], 3); ?></p></td>
     		</tr>
     		<?php endforeach; ?>
     		<?php unset($questions); ?>
@@ -37,7 +37,7 @@
 		</tbody>
 	</table>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add')); ?>
+		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

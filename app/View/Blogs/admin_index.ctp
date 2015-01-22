@@ -1,6 +1,7 @@
 <?php $this->Html->addCrumb(__('Blogs'), array('controller' => 'blogs', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Blogs')); ?>
-<section id="sl_blog_index" class="table-responsive">
+<section id="sl_blog_index">
+	<article class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
       <col width="100px" />
@@ -24,14 +25,15 @@
         			<?php echo $this -> Html -> link($blog['Blog']['title'], array('controller' => 'blogs', 'action' => 'view', $blog['Blog']['id'])); ?>
         		</td>
         		<td></td>
-        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blog['Blog']['created'], 3); ?></p></td>
+        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blog['Blog']['created_at'], 3); ?></p></td>
     		</tr>
     		<?php endforeach; ?>
     		<?php unset($blogs); ?>
 		</tbody>
 	</table>
+	</article>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Blog'), array('action' => 'add')); ?>
+		<?php echo $this -> Html -> link(__('New Blog'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 		<?php echo $this -> App-> pagination($this -> Paginator); ?>
 	</div>
 </section>

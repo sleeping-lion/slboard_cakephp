@@ -1,6 +1,7 @@
-<?php $this -> Html -> addCrumb(__('Questions'), array('controller' => 'questions', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Questions')); ?>
-<section id="sl_question_index" class="table-responsive">
+<?php $this -> Html -> addCrumb(__('Contacts'), array('controller' => 'contacts', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Contacts')); ?>
+<section id="sl_contact_index">
+	<article class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
       <col width="100px" />
@@ -13,22 +14,22 @@
       	<th><?php echo $this -> Paginator -> sort('id', _('Id')); ?></th>
 				<th><?php echo $this -> Paginator -> sort('title', _('title')); ?></th>
 				<th><?php echo $this -> Paginator -> sort('count', _('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', _('created')); ?></th>
+				<th><?php echo $this -> Paginator -> sort('created', _('created_at')); ?></th>
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(count($questions)): ?>
-    	<?php foreach ($questions as $question): ?>
+			<?php if(count($contacts)): ?>
+    	<?php foreach ($contacts as $contact): ?>
     		<tr>
-        		<td><?php echo $question['Question']['id']; ?></td>
+        		<td><?php echo $contact['Contact']['id']; ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($question['Question']['title'], array('controller' => 'questions', 'action' => 'view', $question['Question']['id'])); ?>
+        			<?php echo $this -> Html -> link($contact['Contact']['title'], array('controller' => 'questions', 'action' => 'view', $contact['Contact']['id'])); ?>
         		</td>
         		<td></td>
-        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($question['Question']['created'], 3); ?></p></td>
+        		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($contact['Contact']['created_at'], 3); ?></p></td>
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($questions); ?>
+    		<?php unset($contacts); ?>
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>
@@ -36,8 +37,9 @@
     		<?php endif ?>
 		</tbody>
 	</table>
+	</article>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add')); ?>
+		<?php echo $this -> Html -> link(__('New Contact'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>	
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

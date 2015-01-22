@@ -21,7 +21,7 @@ class UsersController extends SlController {
 		 * 한번 호출후엔 다시 위의 두줄을 나오게 하고 밑에의 $this -> initAcl()를 주석 처리한다. 
 		 * 두번 호출하면 두번 입력됨!!!  =  그럼 다시 처음부터 테이블 지우고 위 과정 시행
 		 */				
-		// $this -> initAcl();
+		//$this -> initAcl();
 	}
 	
 	private function createAro() {
@@ -74,6 +74,8 @@ class UsersController extends SlController {
 		$aco -> save(array('parent_id' => 1, 'alias' => 'Contacts')); // 17
 		$aco -> create();
 		$aco -> save(array('parent_id' => 1, 'alias' => 'Portfolios')); // 18
+		$aco -> create();
+		$aco -> save(array('parent_id' => 1, 'alias' => 'Histories')); // 19
 	}
 
 	private function initAcl() {
