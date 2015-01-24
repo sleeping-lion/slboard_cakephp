@@ -47,36 +47,6 @@ INSERT INTO `acos` VALUES (1,NULL,NULL,NULL,'controllers',1,38),(2,1,NULL,NULL,'
 UNLOCK TABLES;
 
 --
--- Table structure for table `ad_positions`
---
-
-DROP TABLE IF EXISTS `ad_positions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ad_positions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `position` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `enable` tinyint(1) NOT NULL DEFAULT '1',
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `index_ad_positions_on_title` (`title`),
-  UNIQUE KEY `index_ad_positions_on_position` (`position`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ad_positions`
---
-
-LOCK TABLES `ad_positions` WRITE;
-/*!40000 ALTER TABLE `ad_positions` DISABLE KEYS */;
-INSERT INTO `ad_positions` VALUES (1,'광고 표시안함','none',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,'위에 표시','top',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,'아래에 표시','bottom',1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
-/*!40000 ALTER TABLE `ad_positions` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `aros`
 --
 
@@ -168,7 +138,7 @@ CREATE TABLE `blog_categories` (
 
 LOCK TABLES `blog_categories` WRITE;
 /*!40000 ALTER TABLE `blog_categories` DISABLE KEYS */;
-INSERT INTO `blog_categories` VALUES (1,1,NULL,'내소개',1,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,NULL,'리눅스',0,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,NULL,'웹개발',0,0,1,0,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,1,NULL,'제작작품',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(5,1,NULL,'방명록',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(6,1,1,'소개',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(7,1,1,'일기',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(8,1,1,'생각',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(9,1,1,'사진첩',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(10,1,2,'설치',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(11,1,2,'응용프로그램',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(12,1,2,'기본명령어',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(13,1,2,'서버',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(14,1,2,'html',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(15,1,3,'스타일시트',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(16,1,3,'자바스크립트',0,0,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
+INSERT INTO `blog_categories` VALUES (1,1,NULL,'내소개',1,0,1,0,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(2,1,NULL,'리눅스',0,0,1,0,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(3,1,NULL,'웹개발',0,0,1,0,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(4,1,NULL,'제작작품',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(5,1,NULL,'방명록',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(6,1,1,'소개',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(7,1,1,'일기',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(8,1,1,'생각',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(9,1,1,'사진첩',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(10,1,2,'설치',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(11,1,2,'응용프로그램',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(12,1,2,'기본명령어',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(13,1,2,'서버',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(14,1,2,'html',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(15,1,3,'스타일시트',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(16,1,3,'자바스크립트',0,0,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `blog_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,7 +197,7 @@ CREATE TABLE `blog_contents` (
 
 LOCK TABLES `blog_contents` WRITE;
 /*!40000 ALTER TABLE `blog_contents` DISABLE KEYS */;
-INSERT INTO `blog_contents` VALUES (1,'그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.\n    잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.','2015-01-22 09:00:20','2015-01-22 09:00:20');
+INSERT INTO `blog_contents` VALUES (1,'그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.\n    잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.','2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `blog_contents` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -261,7 +231,7 @@ CREATE TABLE `blogs` (
 
 LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
-INSERT INTO `blogs` VALUES (1,1,1,'잠자는-사자의 집이 다시 개장했습니다','설명 읗믄ㅇ힘낭흐민ㅇㅎ ',NULL,0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
+INSERT INTO `blogs` VALUES (1,1,1,'잠자는-사자의 집이 다시 개장했습니다','설명 읗믄ㅇ힘낭흐민ㅇㅎ ',NULL,0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -286,7 +256,7 @@ CREATE TABLE `cake_sessions` (
 
 LOCK TABLES `cake_sessions` WRITE;
 /*!40000 ALTER TABLE `cake_sessions` DISABLE KEYS */;
-INSERT INTO `cake_sessions` VALUES ('m63h6i7uv1g744rdci4je7bmn2','Config|a:3:{s:9:\"userAgent\";s:32:\"14c4320a4dd79968e0277dab13566fa4\";s:4:\"time\";i:1421944606;s:9:\"countdown\";i:10;}Message|a:0:{}Auth|a:1:{s:4:\"User\";a:27:{s:2:\"id\";s:1:\"2\";s:8:\"group_id\";s:1:\"3\";s:5:\"email\";s:15:\"admin@gmail.com\";s:4:\"name\";s:8:\"12351235\";s:5:\"photo\";N;s:11:\"description\";s:11:\"12351235235\";s:14:\"alternate_name\";N;s:6:\"gender\";b:1;s:10:\"birth_date\";N;s:10:\"death_date\";N;s:3:\"url\";N;s:9:\"job_title\";N;s:20:\"reset_password_token\";N;s:22:\"reset_password_sent_at\";N;s:19:\"remember_created_at\";N;s:13:\"sign_in_count\";s:1:\"0\";s:18:\"current_sign_in_at\";N;s:15:\"last_sign_in_at\";N;s:18:\"current_sign_in_ip\";N;s:15:\"last_sign_in_ip\";N;s:17:\"user_photos_count\";s:1:\"0\";s:5:\"admin\";b:0;s:5:\"intro\";b:0;s:6:\"enable\";b:1;s:10:\"created_at\";s:19:\"0000-00-00 00:00:00\";s:10:\"updated_at\";s:19:\"0000-00-00 00:00:00\";s:5:\"Group\";a:6:{s:2:\"id\";s:1:\"3\";s:5:\"title\";s:4:\"user\";s:11:\"users_count\";s:1:\"0\";s:6:\"enable\";b:1;s:10:\"created_at\";s:19:\"2015-01-22 09:00:19\";s:10:\"updated_at\";s:19:\"2015-01-22 09:00:19\";}}}',1421944606);
+INSERT INTO `cake_sessions` VALUES ('qtcp7al147aj4bjbut7sl19hn0','Config|a:3:{s:9:\"userAgent\";s:32:\"14c4320a4dd79968e0277dab13566fa4\";s:4:\"time\";i:1422140289;s:9:\"countdown\";i:10;}Message|a:0:{}Auth|a:1:{s:8:\"redirect\";s:14:\"/histories/add\";}',1422140289);
 /*!40000 ALTER TABLE `cake_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -402,7 +372,7 @@ CREATE TABLE `faq_categories` (
 
 LOCK TABLES `faq_categories` WRITE;
 /*!40000 ALTER TABLE `faq_categories` DISABLE KEYS */;
-INSERT INTO `faq_categories` VALUES (1,1,'내소개',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'리눅스',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,'웹개발',1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
+INSERT INTO `faq_categories` VALUES (1,1,'내소개',1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(2,1,'리눅스',1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(3,1,'웹개발',1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `faq_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -476,6 +446,7 @@ CREATE TABLE `galleries` (
   `content` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `location` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `count` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
@@ -520,7 +491,7 @@ CREATE TABLE `gallery_categories` (
 
 LOCK TABLES `gallery_categories` WRITE;
 /*!40000 ALTER TABLE `gallery_categories` DISABLE KEYS */;
-INSERT INTO `gallery_categories` VALUES (1,1,'일상',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'멍멍이',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,1,'가족들',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,1,'풍경',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(5,1,'기타',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
+INSERT INTO `gallery_categories` VALUES (1,1,'일상',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(2,1,'멍멍이',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(3,1,'가족들',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(4,1,'풍경',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(5,1,'기타',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `gallery_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -548,7 +519,7 @@ CREATE TABLE `groups` (
 
 LOCK TABLES `groups` WRITE;
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
-INSERT INTO `groups` VALUES (1,'admin',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,'manage',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(3,'user',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(4,'viewer',0,1,'2015-01-22 09:00:19','2015-01-22 09:00:19');
+INSERT INTO `groups` VALUES (1,'admin',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(2,'manage',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(3,'user',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02'),(4,'viewer',0,1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -653,6 +624,8 @@ CREATE TABLE `histories` (
   `year` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `count` int(11) NOT NULL DEFAULT '0',
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
@@ -681,12 +654,12 @@ CREATE TABLE `impressions` (
   `impressionable_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `impressionable_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `controller_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `action_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `view_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `request_hash` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ip_address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `session_hash` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `controller_name` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `action_name` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `view_name` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `request_hash` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ip_address` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `session_hash` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `message` text COLLATE utf8_unicode_ci,
   `referrer` text COLLATE utf8_unicode_ci,
   `created_at` datetime NOT NULL,
@@ -762,7 +735,7 @@ CREATE TABLE `notices` (
 
 LOCK TABLES `notices` WRITE;
 /*!40000 ALTER TABLE `notices` DISABLE KEYS */;
-INSERT INTO `notices` VALUES (1,1,'잠자는-사자의 집이 다시 개장했습니다.',1,0,'2015-01-22 09:00:20','2015-01-22 09:00:20');
+INSERT INTO `notices` VALUES (1,1,'잠자는-사자의 집이 다시 개장했습니다.',1,0,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `notices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -803,6 +776,7 @@ CREATE TABLE `portfolios` (
   `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
   `count` int(11) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
@@ -928,7 +902,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20120516001638'),('20120516002154'),('20120517002149'),('20120522094638'),('20120523094638'),('20120620234229'),('20120624164124'),('20121214055337'),('20121216002147'),('20121216002148'),('20121216002149'),('20121216023255'),('20121223094638'),('20121223140414'),('20130101002147'),('20130725114929'),('20131202102154'),('20140505080019'),('20140505080020'),('20140505080021');
+INSERT INTO `schema_migrations` VALUES ('20120516001638'),('20120516002154'),('20120517002149'),('20120522094638'),('20120523094638'),('20120620234229'),('20120624164124'),('20121214055337'),('20121216002147'),('20121216002148'),('20121216002149'),('20121216023255'),('20121223094638'),('20121223140414'),('20130725114929'),('20131202102154'),('20140505080019'),('20140505080020'),('20140505080021');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1033,7 +1007,7 @@ CREATE TABLE `user_photos` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_user_photos_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1042,7 +1016,7 @@ CREATE TABLE `user_photos` (
 
 LOCK TABLES `user_photos` WRITE;
 /*!40000 ALTER TABLE `user_photos` DISABLE KEYS */;
-INSERT INTO `user_photos` VALUES (1,1,'sl.jpg','jjh',1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,2,'jjg.jpg','',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `user_photos` VALUES (1,1,'sl.jpg','jjh',1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `user_photos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1085,7 +1059,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `index_users_on_email` (`email`),
   UNIQUE KEY `index_users_on_reset_password_token` (`reset_password_token`),
   KEY `index_users_on_group_id` (`group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1094,7 +1068,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,1,'toughjjh@gmail.com','정종호','$2a$10$dY349x8ohIa1wUBrkDLe8udnAyekLNi10QVsA5PjTfeCAVEVGKG8.','--- !ruby/object:File {}\n','깨끗한 웹세상을 꿈꾸는 웹프로그래머 잠자는-사자입니다.','잠자는-사자',0,NULL,NULL,'http://www.sleepinglion.pe.kr','웹프로그래머',NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,1,1,1,'2015-01-22 09:00:19','2015-01-22 09:00:19'),(2,1,'admin@gmail.com','12351235','$2a$10$ENlhieWh2L/nh7Bs5CElMedgJ9HuI5Z/QIZi9c6lHQ1XoZfHzxX0S',NULL,'12351235235',NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,0,0,1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
+INSERT INTO `users` VALUES (1,1,'toughjjh@gmail.com','정종호','$2a$10$HJ7xfujcGyHOLihHEqAg4OoGJxNEuML0pbsqZhhUOMxmRPTVL8k/6','--- !ruby/object:File {}\n','깨끗한 웹세상을 꿈꾸는 웹프로그래머 잠자는-사자입니다.','잠자는-사자',0,NULL,NULL,'http://www.sleepinglion.pe.kr','웹프로그래머',NULL,NULL,NULL,0,NULL,NULL,NULL,NULL,0,1,1,1,'2015-01-24 18:51:02','2015-01-24 18:51:02');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1107,4 +1081,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-22 21:39:17
+-- Dump completed on 2015-01-25  3:59:39
