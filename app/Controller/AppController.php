@@ -109,9 +109,9 @@ class AppController extends Controller {
 			return false;
 		}
 
-		if (!$allow) {
-			$this -> Session -> setFlash(__('You Do not Have Auth.'), 'error');
-		}
+		//if (!$allow) {
+		//	$this -> Session -> setFlash(__('You Do not Have Auth.'), 'error');
+		//}
 		return $allow;
 	}	
 	

@@ -9,7 +9,7 @@
   </div>
 	<div class="box_content">
 		<ul>
-			<li <?php if(empty($this->request->query['blog_category_id'])): ?>class="active"<?php endif ?>><a href=""><?php echo _('all') ?></a></li>
+			<li <?php if(empty($this->request->query['blog_category_id'])): ?>class="active"<?php endif ?>><a href=""><?php echo __('All') ?></a></li>
     	<?php if(isset($asideBlogCategories)): ?>
     	<?php foreach($asideBlogCategories as $blogCategory): ?> 		
     	<?php if(empty($blogCategory['BlogCategory']['blog_category_id'])): ?>

@@ -3,7 +3,7 @@
 		<?php if($this->Session->check('Auth.User')): ?>		
 			
 		<li><?php echo $this -> Html -> link(__('Edit User'),array('controller'=>'users','action'=>'edit',$this->Session->Read('Auth.User.id'))) ?></li>
-		<li><?php echo $this -> Html -> link(__('logout'),'/logout') ?></li>
+		<li><?php echo $this -> Html -> link(__('Logout'),'/logout') ?></li>
 		<?php else: ?>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users','action'=>'add')) ?></li>
 		<li><?php echo $this->Html->link(__('Login'), array('controller' => 'users','action'=>'login')) ?></li>

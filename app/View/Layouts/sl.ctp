@@ -24,7 +24,7 @@
 		echo $this->Html->meta('icon');
 		echo $this->Html->css(array('bootstrap.min.css','index.css'));
 		echo $this-> fetch('css');
-		echo $this->Html->meta('keywords','php,게시판,공개게시판,cakephp,rails');
+		echo $this->Html->meta('keywords','slboard,php,게시판,무료게시판,공개게시판,cakephp,rails');
 	?>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta name="author" content="Sleeping-Lion" />
@@ -58,7 +58,7 @@
 		<section class="sub_main">
 			<?php echo $this->Session->flash('auth')?>			
 			<?php echo $this->Session->flash()?>
-			<?php echo $this->element('ad') ?>
+			<?php // echo $this->element('ad') ?>
 			<?php echo $this->fetch('content')?>
 		</section>
 		<?php echo $this->element('aside')?>		

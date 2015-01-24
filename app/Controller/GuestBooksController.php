@@ -67,7 +67,7 @@ class GuestBooksController extends SlController {
 				}
 			} else {
 				// display the raw API error
-				$this -> Session -> setFlash($this -> Recaptcha -> error);
+				$this -> Session -> setFlash($this -> Recaptcha -> error, 'error');
 			}
 		}
 	}

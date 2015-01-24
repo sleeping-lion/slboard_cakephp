@@ -20,7 +20,7 @@
     	<?php foreach ($histories as $history): ?>
     		<tr>
         		<td class="sl_t_id"><?php echo $history['History']['id']; ?></td>
-        		<td class="sl_t_title"><?php echo $this -> Html -> link($history['History']['title'], array('controller' => 'notices', 'action' => 'view', $history['History']['id'])); ?></td>
+        		<td class="sl_t_title"><?php echo $this -> Html -> link($history['History']['title'], array('controller' => 'histories', 'action' => 'view', $history['History']['id'])); ?></td>
         		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($history['History']['created_at'], 3); ?></td>
     		</tr>
     		<?php endforeach; ?>

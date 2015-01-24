@@ -35,7 +35,7 @@
     		<?php unset($questions); ?>
     		<?php else: ?>
     		<tr>
-    			<td colspan="4"><?php echo __('No Article') ?></td>
+    			<td colspan="5"><?php echo __('No Article') ?></td>
     		</tr>
     		<?php endif ?>
 		</tbody>
