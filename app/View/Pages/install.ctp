@@ -17,8 +17,12 @@
 		<ol>
 			<li>운영환경을 준비합니다.</li>
 			<li>SLBoard를 다운 받어 해당경로를 설정합니다.</li>
-			<li>sql파일을 이용하여 테이블을 생성합니다.</li>
-			<li>config파일에 접속 정보를 설정합니다.</li>
+			<li>sql파일을 이용하여 테이블을 생성합니다.
+				slboard.sql
+				</li>
+			<li>config파일에 접속 정보를 설정합니다.
+				app/Config/database.php
+				</li>
 			<li>plugin프로그램을 설치합니다.</li>			
 		</ol>
 		<p>
