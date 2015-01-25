@@ -11,7 +11,7 @@ class FaqsController extends SlController {
 
 	protected function _getCategory() {
 		$this -> loadModel('FaqCategory');
-		$faqCategories = $this -> FaqCategory -> find('list');
+		$faqCategories = $this -> FaqCategory -> find('list',array('recursive'=>-1,'conditions'=>array('enable'=>true)));
 		if (count($faqCategories)) {
 			$this -> set('faqCategories', $faqCategories);
 			if (isset($this -> request -> query['faq_category_id'])) {

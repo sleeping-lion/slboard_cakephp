@@ -12,7 +12,7 @@ $(document).ready(function() {
   $("#sl_gallery_slide .item a").click(function(){
     var galleryId=$.uri.setUri($(this).attr('href')).param('id');
     $.getJSON('/galleries/view/'+galleryId+'.json',{'json':true},function(data){
-      $("#sl_gallery_left a").attr('href','/galleries/view/'+data.Gallery.id).attr('title',data.Gallery.title);
+      $("#sl_gallery_left a").attr('href','/files/gallery/photo/'+data.Gallery.id+'/'+data.Gallery.photo).attr('title',data.Gallery.title);
       $("#sl_gallery_left span").text(data.Gallery.title).css('bottom',-30);
       $("#sl_gallery_left img").attr('src','/files/gallery/photo/'+data.Gallery.id+'/small_'+data.Gallery.photo).animate({ opacity: "1" }, 400,function(){	
         $("#sl_gallery_left span").animate({bottom:0,opacity:'0.8'},400);

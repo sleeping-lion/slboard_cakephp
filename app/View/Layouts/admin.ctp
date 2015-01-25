@@ -19,7 +19,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title><?php echo __('Homepage Title') ?></title>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css(array('bootstrap.min.css','admin/index'));

@@ -9,6 +9,10 @@ App::uses('AppController', 'Controller');
  */
 class SlController extends AppController {
 	public $layout = 'sl';
+	
+	protected function searchUserCondition($modelAilas=null,$modelUserAlias='User') {
+		return array('conditions' => array($modelUserAlias.'.name'=>$search_text));
+	}
 
 	protected function setSearch($modelAilas, $modleContentAlias = null, $hasCategory = false, $modleCategoryAlias = null) {
 		$conditions = array();
@@ -39,15 +43,15 @@ class SlController extends AppController {
 				case 'content' :
 					$this -> Paginator -> settings = array('conditions' => $search_modelContent_condition);
 					break;
-				case 'title+content' :
-					$this -> Paginator -> settings = array('conditions' => array('OR' => $search_model_condition, $search_modelContent_condition));
+				case 'username' :
+					$this -> Paginator -> settings = $this->searchUserCondition($modelAilas);
 					break;
 			}
 		} else {
 			$this -> Paginator -> settings = array('conditions' => $search_model_condition);
 		}
 
-		$this -> set('searchTypeOption', array('title' => __('title'), 'content' => __('content'), 'title+content' => __('title+content')));
+		$this -> set('searchTypeOption', array('title' => __('title'), 'content' => __('content'), 'username' => __('writer')));
 		$this -> set('searchType', $search_type);
 		$this -> set('searchText', $search_text);
 	}

@@ -1,5 +1,5 @@
 <?php
-App::uses('SlController', 'Controller');
+App::uses('SlAnonController', 'Controller');
 /**
  * GuestBooks Controller
  *
@@ -7,15 +7,7 @@ App::uses('SlController', 'Controller');
  * @property PaginatorComponent $Paginator
  * @property SessionComponent $Session
  */
-class GuestBooksController extends SlController {
-
-	public $components = array('Recaptcha.Recaptcha');
-
-	public function beforeFilter() {
-		parent::beforeFilter();
-		$this -> Auth -> allow('index', 'view', 'add', 'edit');
-	}
-
+class GuestBooksController extends SlAnonController {
 	/**
 	 * index method
 	 *

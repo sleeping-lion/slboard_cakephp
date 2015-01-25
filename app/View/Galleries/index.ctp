@@ -1,5 +1,5 @@
-<?php $this -> Html -> script(array('plugin/jquery.easing.1.3.pack.js','plugin/jquery.fancybox.1.3.4.js','plugin/jquery.uri.js','galleries/index.js'), array('inline' => false)); ?>
-<?php $this -> Html -> css(array('plugin/jquery.fancybox-1.3.4.css'),array('inline' => false)); ?>
+<?php $this -> Html -> script(array('plugin/jquery.easing.1.3.pack.js','plugin/jquery.fancybox.pack.js','plugin/jquery.uri.js','galleries/index.js'), array('inline' => false)); ?>
+<?php $this -> Html -> css(array('plugin/jquery.fancybox.css'),array('inline' => false)); ?>
 <?php $this -> Html -> addCrumb(__('Galleries'), array('controller' => 'galleries', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Galleries')); ?>
 
@@ -22,7 +22,7 @@
  	<div id="sl_gallery_left">
 		<span class="none" itemprop="genre"><?php echo $gallery['Gallery']['title'] ?></span>
 		<?php echo $this -> Html -> link($this->Html->image('/files/gallery/photo/'.$gallery['Gallery']['id'].'/small_'.$gallery['Gallery']['photo'], array('alt' =>$gallery['Gallery']['title'])).
-		'<span id="gallery'.$gallery['Gallery']['id'].'_img'.$gallery['Gallery']['id'].'_span" class="image_caption" itemprop="name">'.$gallery['Gallery']['title'].'</span>', array('action' => 'view',$gallery['Gallery']['id']),array('escape'=>false,'class'=>'simple_image')) ?>
+		'<span id="gallery'.$gallery['Gallery']['id'].'_img'.$gallery['Gallery']['id'].'_span" class="image_caption" itemprop="name">'.$gallery['Gallery']['title'].'</span>','/files/gallery/photo/'.$gallery['Gallery']['id'].'/'.$gallery['Gallery']['photo'],array('escape'=>false,'class'=>'simple_image')) ?>
 	</div>
 	<div id="sl_gallery_right">
 		<div itemprop="description"><?php echo nl2br($gallery['Gallery']['content']) ?></div>

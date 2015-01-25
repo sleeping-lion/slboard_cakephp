@@ -11,7 +11,7 @@ class GalleriesController extends SlController {
 
 	protected function _getCategory() {
 		$this -> loadModel('GalleryCategory');
-		$galleryCategories = $this -> GalleryCategory -> find('list',array('recursive'=>-1));
+		$galleryCategories = $this -> GalleryCategory -> find('list',array('recursive'=>-1,'conditions'=>array('enable'=>true)));
 		if (!count($galleryCategories))
 			throw new Exception(__('Insert Gallery Category First'));
 

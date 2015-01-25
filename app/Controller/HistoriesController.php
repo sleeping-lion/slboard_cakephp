@@ -32,7 +32,7 @@ class HistoriesController extends SlController {
 		}
 		$options = array('conditions' => array('History.' . $this -> History -> primaryKey => $id));
 		$history = $this -> History -> find('first', $options);
-		$this -> set('notice', $history);
+		$this -> set('history', $history);
 
 		if ($this -> addImpression($id)) {
 			$this -> History -> id = $id;
