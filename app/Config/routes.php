@@ -32,6 +32,7 @@ Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'log
 Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 
+Router::connect('/tags/:tag',array('controller'=>'blogs','action'=>'index'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

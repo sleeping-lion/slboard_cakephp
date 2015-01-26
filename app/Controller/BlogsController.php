@@ -11,9 +11,7 @@ class BlogsController extends SlController {
 
 	protected function _getCategoriedCategory() {
 		$this -> loadModel('BlogCategory');
-		$blogCategories = $this -> BlogCategory -> find('list', array('fields' => array('BlogCategory.id','BlogCategory.title', 'BlogCategory2.title'),
-		'joins' => array(array('table' => 'blog_categories', 'alias' => 'BlogCategory2', 'type' => 'left', 'conditions' => array('BlogCategory.blog_category_id = BlogCategory2.id','BlogCategory2.leaf'=>false))), 'conditions' => array('BlogCategory.leaf' => true),'order'=>array('BlogCategory.blog_category_id desc,BlogCategory2.id desc'), 'recursive' => -1));
-
+		$blogCategories = $this -> BlogCategory -> find('list', array('fields' => array('BlogCategory.id', 'BlogCategory.title', 'BlogCategory2.title'), 'joins' => array( array('table' => 'blog_categories', 'alias' => 'BlogCategory2', 'type' => 'left', 'conditions' => array('BlogCategory.blog_category_id = BlogCategory2.id', 'BlogCategory2.leaf' => false))), 'conditions' => array('BlogCategory.leaf' => true), 'order' => array('BlogCategory.blog_category_id desc,BlogCategory2.id desc'), 'recursive' => -1));
 
 		if (!count($blogCategories))
 			throw new Exception(__('Insert Blog Category First'));
@@ -57,35 +55,40 @@ class BlogsController extends SlController {
 	 * @return void
 	 */
 	public function index() {
-		$blogCategories = $this -> _getCategory();
-
-		if (isset($this -> request -> query['id'])) {
-			$blog = $this -> view($this -> request -> query['id']);
-			$blog_category_id = $blog['Blog']['blog_category_id'];
+		if (isset($this -> params['tag'])) {
+			//@blogs = Blog.tagged_with(params[:tag]).page(params[:page]).per(20)
+			//@blog_categories=BlogCategory.where(:leaf=>true).where(:enable=>true)
+			// @meta_keywords=params[:tag]+','+t(:meta_keywords)
 		} else {
-			if (isset($this -> request -> query['blog_category_id'])) {
-				if ($this -> BlogCategory -> exists($this -> request -> query['blog_category_id'])) {
-					$blog_category_id = $this -> request -> query['blog_category_id'];
-				} else {
-					throw new NotFoundException(__('Invalid post'));
-				}
+			$blogCategories = $this -> _getCategory();
+
+			if (isset($this -> request -> query['id'])) {
+				$blog = $this -> view($this -> request -> query['id']);
+				$blog_category_id = $blog['Blog']['blog_category_id'];
 			} else {
-				$blog_category_id = key($blogCategories);
+				if (isset($this -> request -> query['blog_category_id'])) {
+					if ($this -> BlogCategory -> exists($this -> request -> query['blog_category_id'])) {
+						$blog_category_id = $this -> request -> query['blog_category_id'];
+					} else {
+						throw new NotFoundException(__('Invalid post'));
+					}
+				} else {
+					$blog_category_id = key($blogCategories);
+				}
+
+				$blog = $this -> Blog -> find('first', array('conditions' => array('Blog.blog_category_id' => $blog_category_id)));
 			}
 
-			$blog = $this -> Blog -> find('first', array('conditions' => array('Blog.blog_category_id' => $blog_category_id)));
+			$this -> Blog -> recursive = 0;
+			$this -> setSearch('Blog');
+			$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id), 'order' => 'Blog.id desc');
 		}
-
-		$this -> Blog -> recursive = 0;
-		$this -> setSearch('Blog');
-		$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id),'order'=>'Blog.id desc');
-
 		if (count($blog))
 			$this -> set('blog', $blog);
 
 		$this -> set('blogs', $this -> Paginator -> paginate());
 		$this -> set('blogCategoryId', $blog_category_id);
-		
+
 		//$this->render('index_default');
 	}
 
