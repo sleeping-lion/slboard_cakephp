@@ -58,5 +58,5 @@ class QuestionComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array('User','Question' =>array('counterCache' => true));
+	public $belongsTo = array('User','Question' =>array('counterCache' => 'question_comments_count'));
 }

@@ -55,6 +55,7 @@ class FaqsController extends SlController {
 		}
 
 		$this -> Faq -> recursive = 0;
+		$this -> setSearch('Faq');
 		$this -> paginate = array('conditions' => array('faq_category_id' => $faq_category_id));
 
 		if (count($faq))
@@ -62,6 +63,8 @@ class FaqsController extends SlController {
 		
 		$this -> set('faqs', $this -> Paginator -> paginate());
 		$this -> set('faqCategoryId', $faq_category_id);
+		
+		//$this->render('index_default');		
 	}
 
 	/**

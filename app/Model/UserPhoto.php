@@ -26,5 +26,5 @@ class UserPhoto extends AppModel {
  * @var array
  */	
 
-	public $belongsTo = array('User' => array('counterCache' => true));
+	public $belongsTo = array('User' => array('counterCache' =>  'user_photos_count'));
 }

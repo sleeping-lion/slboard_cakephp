@@ -58,5 +58,5 @@ class GuestBookComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array('User','GuestBook' =>array('counterCache' => true));
+	public $belongsTo = array('User','GuestBook' =>array('counterCache' => 'guset_book_comments_count'));
 }

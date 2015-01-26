@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Notices'), array('controller' => 'notices', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Noitces')); ?>
+<?php $this -> Html -> addCrumb(__('Blogs'), array('controller' => 'blogs', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Blogs')); ?>
 <section id="sl_notice_index">
 	<article class="table-responsive">
 	<table width="100%" cellpadding="0" cellspacing="0" class="table table-striped">
@@ -20,17 +20,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(count($notices)): ?>
-    	<?php foreach ($notices as $notice): ?>
+			<?php if(count($blogs)): ?>
+    	<?php foreach ($blogs as $blog): ?>
     		<tr>
-        		<td class="sl_t_id"><?php echo $notice['Notice']['id'] ?></td>
-        		<td class="sl_t_title"><?php echo $this -> Html -> link($this->Text->truncate($notice['Notice']['title'],50), array('controller' => 'notices', 'action' => 'view', $notice['Notice']['id'])) ?></td>
-        		<td class="sl_t_name"><?php echo $notice['User']['name'] ?></td>
-        		<!-- <td class="sl_t_count"><?php echo $notice['Notice']['count'] ?></td> -->
-        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($notice['Notice']['created_at'], 3); ?></td>
+        		<td class="sl_t_id"><?php echo $blog['Blog']['id'] ?></td>
+        		<td class="sl_t_title"><?php echo $this -> Html -> link($this->Text->truncate($blog['Blog']['title'],50), array('controller' => 'faqs', 'action' => 'view', $blog['Blog']['id'])) ?></td>
+        		<td class="sl_t_name"><?php echo $blog['User']['name'] ?></td>
+        		<!-- <td class="sl_t_count"><?php echo $blog['Blog']['count'] ?></td> -->
+        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($blog['Blog']['created_at'], 3); ?></td>
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($notices); ?>
+    		<?php unset($blogs); ?>
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>
@@ -41,7 +41,7 @@
 	</article>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
-		<?php echo $this -> Html -> link(__('New Notice'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
+		<?php echo $this -> Html -> link(__('New Blog'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
 		<?php echo $this-> element ('search') ?>		
 	</div>
 </section>

@@ -49,7 +49,6 @@ class GuestBooksController extends SlAnonController {
 	public function add() {
 		if ($this -> request -> is('post')) {
 			if ($this -> Session -> read('Auth.User') OR $this -> Recaptcha -> verify()) {
-
 				$this -> GuestBook -> create();
 				if ($this -> GuestBook -> saveAll($this -> request -> data)) {
 					$this -> Session -> setFlash(__('The post has been saved.'), 'success');

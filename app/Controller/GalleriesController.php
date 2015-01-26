@@ -8,6 +8,10 @@ App::uses('SlController', 'Controller');
  * @property SessionComponent $Session
  */
 class GalleriesController extends SlController {
+	
+	protected function getModelContentAlias($modelAilas) {
+		return $modelAilas;
+	}	
 
 	protected function _getCategory() {
 		$this -> loadModel('GalleryCategory');

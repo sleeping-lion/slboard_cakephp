@@ -121,7 +121,7 @@ class Blog extends SlModel {
  *
  * @var array
  */
-	public $belongsTo = array('User','BlogCategory'=>array('counterCache' => true));
+	public $belongsTo = array('User','BlogCategory'=>array('counterCache' => 'blogs_count'));
 	public $hasAndBelongsToMany = array('Tag'=> array(
             'className' => 'Tag',
             'joinTable' => 'taggings',

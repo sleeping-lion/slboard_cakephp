@@ -1,6 +1,6 @@
-<?php $this -> Html -> addCrumb(__('Notices'), array('controller' => 'notices', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Noitces')); ?>
-<section id="sl_notice_index">
+<?php $this -> Html -> addCrumb(__('Galleries'), array('controller' => 'galleries', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Galleries')); ?>
+<section id="sl_gallery_index">
 	<article class="table-responsive">
 	<table width="100%" cellpadding="0" cellspacing="0" class="table table-striped">
 		<colgroup>
@@ -20,17 +20,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(count($notices)): ?>
-    	<?php foreach ($notices as $notice): ?>
+			<?php if(count($galleries)): ?>
+    	<?php foreach ($galleries as $gallery): ?>
     		<tr>
-        		<td class="sl_t_id"><?php echo $notice['Notice']['id'] ?></td>
-        		<td class="sl_t_title"><?php echo $this -> Html -> link($this->Text->truncate($notice['Notice']['title'],50), array('controller' => 'notices', 'action' => 'view', $notice['Notice']['id'])) ?></td>
-        		<td class="sl_t_name"><?php echo $notice['User']['name'] ?></td>
-        		<!-- <td class="sl_t_count"><?php echo $notice['Notice']['count'] ?></td> -->
-        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($notice['Notice']['created_at'], 3); ?></td>
+        		<td class="sl_t_id"><?php echo $gallery['Gallery']['id'] ?></td>
+        		<td class="sl_t_title"><?php echo $this -> Html -> link($this->Text->truncate($gallery['Gallery']['title'],50), array('controller' => 'notices', 'action' => 'view', $gallery['Gallery']['id'])) ?></td>
+        		<td class="sl_t_name"><?php echo $gallery['User']['name'] ?></td>
+        		<!-- <td class="sl_t_count"><?php echo $gallery['Gallery']['count'] ?></td> -->
+        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($gallery['Gallery']['created_at'], 3); ?></td>
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($notices); ?>
+    		<?php unset($galleries); ?>
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>

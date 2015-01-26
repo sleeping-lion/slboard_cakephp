@@ -32,17 +32,6 @@ Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'log
 Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 
-/*
- Router::connect('/admin/:controller', array('action' => 'index', 'prefix' => 'admin', 'admin' => true));
- Router::connect('/admin/:controller/index/*', array('action' => 'index', 'prefix' => 'admin', 'admin' => true));
- Router::connect('/admin/:controller/add/*', array('action' => 'add', 'prefix' => 'admin', 'admin' => true));
- Router::connect('/admin/:controller/view/:id', array('action' => 'view', 'prefix' => 'admin', 'admin' => true), array('pass' => array('id', 'admin'), 'id' => '[0-9]+'));
- Router::connect('/admin/:controller/edit/:id', array('action' => 'edit', 'prefix' => 'admin', 'admin' => true), array('pass' => array('id', 'admin'), 'id' => '[0-9]+'));
- Router::connect('/admin/:controller/delete/:id', array('action' => 'delete', 'prefix' => 'admin', 'admin' => true), array('pass' => array('id', 'admin'), 'id' => '[0-9]+'));
-
- */
-
-Router::connect('/users/login', array('controller' => 'home', 'action' => 'logout'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

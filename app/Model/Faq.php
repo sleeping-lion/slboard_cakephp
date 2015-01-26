@@ -104,7 +104,7 @@ class Faq extends SlModel {
  *
  * @var array
  */
-	public $belongsTo = array('FaqCategory' =>array('counterCache' => true));
+	public $belongsTo = array('User','FaqCategory' =>array('counterCache' =>  'faqs_count'));
 
 /**
  * hasOne associations

@@ -85,6 +85,8 @@ class BlogsController extends SlController {
 
 		$this -> set('blogs', $this -> Paginator -> paginate());
 		$this -> set('blogCategoryId', $blog_category_id);
+		
+		//$this->render('index_default');
 	}
 
 	/**

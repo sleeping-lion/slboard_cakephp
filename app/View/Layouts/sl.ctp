@@ -46,14 +46,8 @@
 		</div>
 		<?php else: ?>
 <section id="slboard_main" class="slboard_main">
-	<div class="jumbotron hero-unit">
-		<h1>CakePHP 게시판 시스템 SLBoard</h1>
-		<p class="lead">CakePHP-Boostrap사용 게시판</p>
-		<p>지금 다운 받으세요~</p>
-		<a class="modal_link btn btn-large btn-success" data-target="#myModal" data-toggle="modal" href="/pages/popup">깨끗한 웹을 꿈꾸고 있습니다</a>
-		<a class="btn btn-large btn-primary" href="https://github.com/sleeping-lion/slboard_cakephp/archive/master.zip"><?php echo __('download')?></a>
-	</div>
-</section>		
+<?php echo $this->element('jumbotron')?>	
+</section>
 		<?php endif ?>
 		<section class="sub_main">
 			<?php echo $this->Session->flash('auth')?>			

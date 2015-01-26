@@ -58,5 +58,5 @@ class BlogComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array('User','Blog'=>array('counterCache' => true));
+	public $belongsTo = array('User','Blog'=>array('counterCache' =>  'blogs_count'));
 }

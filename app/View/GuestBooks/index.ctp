@@ -23,7 +23,7 @@
     		<tr>
         		<td><?php echo $guestBook['GuestBook']['id']; ?></td>
         		<td>
-            		<?php echo $this -> Html -> link($guestBook['GuestBook']['title'], array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
+            		<?php echo $this -> Html -> link($this->Text->truncate($guestBook['GuestBook']['title'],50), array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
         		</td>
         		<td><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></td>
         		<td><p class="sl_registered_date"><?=$this -> App -> getFormatDate($guestBook['GuestBook']['created_at'], 3); ?></p></td>
@@ -40,7 +40,7 @@
 	</article>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
-		<?php echo $this -> Html -> link(__('New GuestBook'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
+		<?php echo $this -> Html -> link(__('New GuestBook'), array('action' => 'add'),array('rel'=>'nofollow','class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
 		<?php echo $this-> element ('search') ?>		
 	</div>
 </section>

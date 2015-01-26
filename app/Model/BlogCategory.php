@@ -69,13 +69,13 @@ class BlogCategory extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array('BlogCategory'=>array('counterCache' => true));
+	//public $belongsTo = array('BlogCategory'=>array('counterCache' =>  'blog_categoires_count'));
 
 /**
  * hasMany associations
  *
  * @var array
  */
-	public $hasMany = array('BlogCategory','Blog');
+	public $hasMany = array('Blog');
 
 }

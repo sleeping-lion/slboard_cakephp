@@ -25,7 +25,7 @@
     		<tr>
         		<td><?php echo $question['Question']['id']; ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($question['Question']['title'], array('controller' => 'questions', 'action' => 'view', $question['Question']['id'])); ?>
+        			<?php echo $this -> Html -> link($this->Text->truncate( $question['Question']['title'],50), array('controller' => 'questions', 'action' => 'view', $question['Question']['id'])); ?>
         		</td>
         		<td><?php if($question['Question']['user_id']): ?><?php echo $question['User']['name'] ?><?php else: ?><?php echo $question['Question']['name'] ?><?php endif ?></td>        		
         		<td><?php echo $question['Question']['count'] ?></td>
@@ -43,7 +43,7 @@
 	</article>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
-		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>		
+		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add'),array('rel'=>'nofollow','class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>		
 		<?php echo $this-> element ('search') ?>
 	</div>
 </section>

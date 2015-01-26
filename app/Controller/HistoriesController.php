@@ -8,6 +8,10 @@ App::uses('SlController', 'Controller');
  * @property SessionComponent $Session
  */
 class HistoriesController extends SlController {
+	
+	protected function getModelContentAlias($modelAilas) {
+		return $modelAilas;
+	}
 	/**
 	 * index method
 	 *

@@ -17,6 +17,6 @@ class SlAnonController extends SlController {
 	}
 
 	protected function searchUserCondition($modelAilas=null,$search_text,$modelUserAlias='User') {
-		return array('OR'=>array($modelUserAlias.'.name LIKE'=>'%'.$search_text.'%'),array($modelAilas.'.name LIKE'=>'%'.$search_text.'%'));
+		return array('OR'=>array($modelUserAlias.'.name LIKE'=>'%'.$search_text.'%',$modelAilas.'.name LIKE'=>'%'.$search_text.'%'));
 	}
 }

@@ -106,7 +106,7 @@ class Gallery extends SlModel {
  * @var array
  */	
 
-	public $belongsTo = array('GalleryCategory'=>array('counterCache' => true));
+	public $belongsTo = array('GalleryCategory'=>array('counterCache' =>  'gallery_categoires_count'));
 	
 	public function beforeSave($options = array()) {		
 		$this -> data[$this -> alias]['user_id']=CakeSession::read('Auth.User.id');

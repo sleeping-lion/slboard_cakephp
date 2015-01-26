@@ -1,4 +1,3 @@
-
 <section id="sl_blog_comment_index">	
 	<?php if(count($blog['BlogComment'])): ?>
 	<?php foreach ($blog['BlogComment'] as $blogComment): ?>
@@ -18,6 +17,5 @@
 	<?php endif ?>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
-		<?php echo $this -> Html -> link(__('New Blog Comment'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")); ?>
 	</div>
 </section>
