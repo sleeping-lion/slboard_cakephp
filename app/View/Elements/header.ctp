@@ -1,8 +1,7 @@
 <header>
 	<ul id="top_menu">
-		<?php if($this->Session->check('Auth.User')): ?>		
-			
-		<li><?php echo $this -> Html -> link($this->Session->Read('Auth.User.name').__('Welcome'),array('controller'=>'users','action'=>'edit',$this->Session->Read('Auth.User.id'))) ?></li>
+		<?php if($this->Session->check('Auth.User')): ?>
+		<li><?php echo $this -> Html -> link($this->Session->Read('Auth.User.name'),array('controller'=>'users','action'=>'edit',$this->Session->Read('Auth.User.id'))) ?><?php echo __('Welcome') ?></li>
 		<li><?php echo $this -> Html -> link(__('Logout'),'/logout') ?></li>
 		<?php else: ?>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users','action'=>'add')) ?></li>

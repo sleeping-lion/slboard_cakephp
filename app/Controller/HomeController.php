@@ -25,6 +25,5 @@ final class HomeController extends SlController {
 		$this -> loadModel('Blog');
 		$this -> set('blogs', $this -> Blog -> find('all', array('conditions'=>array('photo is not null'),'order'=>'id desc','limit' => 5, 'recursive' => -1)));
 	}
-
 }
 ?>

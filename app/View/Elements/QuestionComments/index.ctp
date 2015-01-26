@@ -1,9 +1,9 @@
 
-<section id="sl_blog_comment_index">	
-	<?php if(count($blog['BlogComment'])): ?>
-	<?php foreach ($blog['BlogComment'] as $blogComment): ?>
+<section id="sl_question_comment_index">	
+	<?php if(count($question['QuestionComment'])): ?>
+	<?php foreach ($question['QuestionComment'] as $questionComments): ?>
 	<article class="media" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
-		<?php if(isset($blogComment['photo'])): ?>
+		<?php if(isset($question['QuestionComment']['photo'])): ?>
 		<?php echo $this -> Html -> link($this->Html->image('/files/blog/photo/'.$blog['Blog']['id'].'/thumb_'.$blog['Blog']['photo'], array('alt' =>$blog['Blog']['title'])), array('action' => 'index','?'=>array('id'=>$blog['Blog']['id'])),array('escape'=>false,'class'=>'pull-left')) ?>
 		<?php endif ?>
 		<div class="media-body">
@@ -18,6 +18,5 @@
 	<?php endif ?>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
-		<?php echo $this -> Html -> link(__('New Blog Comment'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")); ?>
 	</div>
 </section>

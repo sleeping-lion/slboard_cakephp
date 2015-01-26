@@ -46,12 +46,11 @@ class AppController extends Controller {
 
 	public function beforeFilter() {
 		$this->Auth->flash['element'] = 'auth';
-		$this -> paginate=array('paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));		
 		
 		if(isset($this->request->query['no_layout']))
 			$this->layout=false;
 		
-		$this -> Auth -> loginRedirect = array('controller' => 'home', 'action' => 'index');
+		$this -> Auth -> loginRedirect = array('controller' => 'users', 'action' => 'login');
 		$this -> Auth -> logoutRedirect = array('controller' => 'users', 'action' => 'login');
 		
 		$this -> Auth -> allow('display', 'login', 'logout', 'admin_login', 'admin_logout');
@@ -118,29 +117,4 @@ class AppController extends Controller {
 	public function isOwnedBy($post, $user) {
 		return $this -> field('id', array('id' => $post, 'user_id' => $user)) !== false;
 	}
-
-	public function admin_index() {
-		$this -> layout = 'admin';
-		$this -> index();
-	}
-
-	public function admin_view($id = null) {
-		$this -> layout = 'admin';
-		$this -> view($id);
-	}
-
-	public function admin_add() {
-		$this -> layout = 'admin';
-		$this -> add();
-	}
-
-	public function admin_edit($id = null) {
-		$this -> layout = 'admin';
-		$this -> edit($id);
-	}
-
-	public function admin_delete($id) {
-		$this -> layout = 'admin';
-		$this -> delete($id);
-	}	
 }

@@ -33,7 +33,7 @@
     		<?php unset($notices); ?>
     		<?php else: ?>
     		<tr>
-    			<td colspan="3"><?php echo __('No Article') ?></td>
+    			<td colspan="4"><?php echo __('No Article') ?></td>
     		</tr>
     		<?php endif ?> 
 		</tbody>

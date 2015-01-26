@@ -14,6 +14,8 @@ class UsersController extends SlController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this -> Auth -> allow('admin_login','admin_logout','login', 'add', 'logout');
+		
+
 		/* 
 		 * 새로 권한 입력하려면 여기를 이용
 		 * 수정후에  aco,aro,aros_acos 테이블의 모든 데이터를 지운후 각 테이블 auto_increment도 1로 맞춘다.
@@ -76,6 +78,10 @@ class UsersController extends SlController {
 		$aco -> save(array('parent_id' => 1, 'alias' => 'Portfolios')); // 18
 		$aco -> create();
 		$aco -> save(array('parent_id' => 1, 'alias' => 'Histories')); // 19
+		$aco -> create();
+		$aco -> save(array('parent_id' => 1, 'alias' => 'Home')); //20	
+		$aco -> create();
+		$aco -> save(array('parent_id' => 1, 'alias' => 'Intro')); //21			
 	}
 
 	private function initAcl() {
@@ -120,7 +126,7 @@ class UsersController extends SlController {
 	public function login() {
 		if ($this -> Session -> read('Auth.User')) {
 			//	$this -> Session -> setFlash('You are logged in! no Auth');
-			return $this -> redirect($this->Auth->loginRedirect);
+			return $this -> redirect(array('controller'=>'home','action'=>'index'));
 		}
 		
 		if ($this -> request -> is('post')) {
@@ -198,7 +204,9 @@ class UsersController extends SlController {
 		} else {
 			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 			$this->request->data = $this->User->find('first', $options);
-		}
+			
+
+		}				
 	}
 
 /**

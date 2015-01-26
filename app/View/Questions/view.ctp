@@ -11,6 +11,8 @@
       <div class="sl_content_text" itemprop="text"><?php echo nl2br($question['QuestionContent']['content']); ?></div>
     </div>
   </div>
+	<?php echo $this->element('QuestionComments/index')?>
+	<?php echo $this->element('QuestionComments/add')?>
 	<div id="sl_content_bottom_buttons">
 		<div class="pull-left">
 			<?php echo $this -> Html -> link(__('List'), array('action' => 'index'),array('class'=>"btn btn-default")) ?>

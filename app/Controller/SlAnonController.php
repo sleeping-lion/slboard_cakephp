@@ -16,7 +16,7 @@ class SlAnonController extends SlController {
 		$this -> Auth -> allow('index', 'view', 'add', 'edit');
 	}
 
-	protected function searchUserCondition($modelAilas=null,$modelUserAlias='User') {
-		return array('conditions' => array('OR'=>array($modelUserAlias.'.name'=>$search_text),array($modelAilas.'.name'=>$search_text)));
+	protected function searchUserCondition($modelAilas=null,$search_text,$modelUserAlias='User') {
+		return array('OR'=>array($modelUserAlias.'.name LIKE'=>'%'.$search_text.'%'),array($modelAilas.'.name LIKE'=>'%'.$search_text.'%'));
 	}
 }

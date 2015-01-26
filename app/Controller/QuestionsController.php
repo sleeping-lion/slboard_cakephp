@@ -47,7 +47,7 @@ class QuestionsController extends SlAnonController {
 	 */
 	public function add() {
 		if ($this -> request -> is('post')) {
-			if ($this -> Recaptcha -> verify()) {
+			if ($this -> Session -> read('Auth.User') OR $this -> Recaptcha -> verify()) {
 				$this -> Question -> create();
 				if ($this -> Question -> saveAll($this -> request -> data)) {
 					$this -> Session -> setFlash(__('The post has been saved.'), 'success');
@@ -60,6 +60,7 @@ class QuestionsController extends SlAnonController {
 				$this -> Session -> setFlash($this -> Recaptcha -> error, 'error');
 			}
 		}
+
 	}
 
 	/**

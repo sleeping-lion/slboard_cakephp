@@ -10,8 +10,8 @@ App::uses('AppController', 'Controller');
 class SlController extends AppController {
 	public $layout = 'sl';
 	
-	protected function searchUserCondition($modelAilas=null,$modelUserAlias='User') {
-		return array('conditions' => array($modelUserAlias.'.name'=>$search_text));
+	protected function searchUserCondition($modelAilas=null,$search_text,$modelUserAlias='User') {
+		return array($modelUserAlias.'.name'=>$search_text);
 	}
 
 	protected function setSearch($modelAilas, $modleContentAlias = null, $hasCategory = false, $modleCategoryAlias = null) {
@@ -38,17 +38,17 @@ class SlController extends AppController {
 
 			switch($search_type) {
 				case 'title' :
-					$this -> Paginator -> settings = array('conditions' => $search_model_condition);
+					$this -> Paginator -> settings = array('conditions' => $search_model_condition,'paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));
 					break;
 				case 'content' :
-					$this -> Paginator -> settings = array('conditions' => $search_modelContent_condition);
+					$this -> Paginator -> settings = array('conditions' => $search_modelContent_condition,'paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));
 					break;
 				case 'username' :
-					$this -> Paginator -> settings = $this->searchUserCondition($modelAilas);
+					$this -> Paginator -> settings = array('conditions'=> $this->searchUserCondition($modelAilas,$search_text),'paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));
 					break;
 			}
 		} else {
-			$this -> Paginator -> settings = array('conditions' => $search_model_condition);
+			$this -> Paginator -> settings = array('conditions' => $search_model_condition,'paramType' => 'querystring','limit'=>10,'order'=>array('id' => 'desc'));
 		}
 
 		$this -> set('searchTypeOption', array('title' => __('title'), 'content' => __('content'), 'username' => __('writer')));
@@ -85,4 +85,28 @@ class SlController extends AppController {
 		}
 	}
 
+	public function admin_index() {
+		$this -> layout = 'admin';
+		$this -> index();
+	}
+
+	public function admin_view($id = null) {
+		$this -> layout = 'admin';
+		$this -> view($id);
+	}
+
+	public function admin_add() {
+		$this -> layout = 'admin';
+		$this -> add();
+	}
+
+	public function admin_edit($id = null) {
+		$this -> layout = 'admin';
+		$this -> edit($id);
+	}
+
+	public function admin_delete($id) {
+		$this -> layout = 'admin';
+		$this -> delete($id);
+	}
 }

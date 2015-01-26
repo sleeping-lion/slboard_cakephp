@@ -12,6 +12,8 @@ echo $this -> Form -> input('password', array('div' => array('class' => 'form-gr
 echo $this -> Form -> input('title', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 echo $this -> Form -> input('GuestBookContent.content', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 ?>
+<?php if (!$this -> Session -> read('Auth.User')): ?>
 <?php echo $this->Recaptcha->display() ?>
+<?php endif ?>
 <br />
 <?php echo $this -> Form -> end(array('label' => __('Save GuestBook'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>
