@@ -1,12 +1,12 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlAnonModel', 'Model');
 /**
  * GuestBookComment Model
  *
  * @property GuestBook $GuestBook
  * @property User $User
  */
-class GuestBookComment extends AppModel {
+class GuestBookComment extends SlAnonModel {
 
 /**
  * Display field
@@ -39,6 +39,16 @@ class GuestBookComment extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'user_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),		
 		'content' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
@@ -58,5 +68,5 @@ class GuestBookComment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array('User','GuestBook' =>array('counterCache' => 'guset_book_comments_count'));
+	public $belongsTo = array('User','GuestBook' =>array('counterCache' => 'guest_book_comments_count'));
 }

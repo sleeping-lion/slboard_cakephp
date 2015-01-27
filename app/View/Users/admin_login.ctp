@@ -13,14 +13,6 @@
     		</fieldset>
 			<?php echo $this -> Form -> end(array('label' => __('Login'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>
 		</div>
-				<?php if($notice): ?>
-	<div id="current_notice">
-		<h3><?php echo h($notice['Notice']['title']) ?></h3>
-		<div id="notice_content">
-			<?php echo nl2br($notice['NoticeContent']['content']) ?>
-		</div>
-	</div>
-	<?php endif ?>
 	</div>
 	<div class="col-lg-3 col-md-6 col-xs-12">&nbsp;</div>
 </section>

@@ -6,6 +6,10 @@ final class HomeController extends SlController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this -> Auth -> allow('index');
+		
+		if($this->Session->Read('Auth.User.group_id')==1) {
+			$this->Auth->allow('admin_index');	
+		}
 	}
 
 	public function index() {

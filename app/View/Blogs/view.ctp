@@ -6,7 +6,7 @@
 		<div class="sl_content_header box_header">
 			<h2 itemprop="name"><?php echo $blog['User']['name'] ?></h2>
 			<span class="none" itemprop="genre"><?php echo $blog['Blog']['blog_category_id'] ?></span>
-			<p>작성자 :   &nbsp;&nbsp;&nbsp; <?php echo __('created_at') ?> : <span itemprop="dateCreated"><?php echo $blog['Blog']['created_at'] ?></span><span class="none" itemprop="dateModified"><?php echo $blog['Blog']['updated_at'] ?></span></p>			
+			<p>작성자 :   &nbsp;&nbsp;&nbsp; <?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $blog['Blog']['created_at'] ?></span><span class="none" itemprop="dateModified"><?php echo $blog['Blog']['updated_at'] ?></span></p>			
 		</div>
 		<div class="sl_content_main">
 			<div class="sl_content_text" itemprop="text"><?php echo nl2br($blog['BlogContent']['content']); ?></div>

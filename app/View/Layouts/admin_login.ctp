@@ -2,22 +2,21 @@
 <html>
 <head>
 	<title><?php echo __('Homepage Title') ?></title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<?php
-	echo $this -> Html -> meta('icon');
-	echo $this -> fetch('meta');
-	// CDN
-	// echo $this -> html -> css(array('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css', 'index'));
-	
-	// LOCAL
-	//	echo $this->fetch('css')
-	echo $this -> html -> css(array('/css/bootstrap.min.css', 'admin'));
+		echo $this->Html->meta('icon');
+		echo $this->Html->css(array('bootstrap.min.css','index.css'));
+		echo $this-> fetch('css');
+		echo $this->Html->meta('keywords','slboard,php,게시판,무료게시판,공개게시판,cakephp,rails');
 	?>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta name="author" content="Sleeping-Lion" />
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<![endif]-->
+</head>
+<body>
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 <body id="admin_login_page">

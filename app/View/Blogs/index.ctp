@@ -19,7 +19,7 @@
 		<?php echo $this -> Html -> link($this->Html->image('/files/blog/photo/'.$blog['Blog']['id'].'/thumb_'.$blog['Blog']['photo'], array('alt' =>$blog['Blog']['title'])), array('action' => 'view',$blog['Blog']['id']),array('escape'=>false,'class'=>'pull-left')) ?>
 		<?php endif ?>
 		<div class="media-body">
-			<h4 class="media-heading" itemprop="name"><?php echo $this -> Html -> link($blog['Blog']['title'], array('controller' => 'blogs', 'action' => 'view', $blog['Blog']['id'])); ?></h4>
+			<h4 class="media-heading" itemprop="name"><?php echo $this -> Html -> link($blog['Blog']['title'].$this->App->getFormatCommentCount($blog['Blog']['blog_comments_count']), array('controller' => 'blogs', 'action' => 'view', $blog['Blog']['id'])); ?></h4>
 			<p itemprop="description"><?php echo $this -> Html -> link($blog['Blog']['description'], array('controller' => 'blogs', 'action' => 'view', $blog['Blog']['id'])); ?></p>
 		</div>
 	</article>

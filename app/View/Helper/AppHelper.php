@@ -30,6 +30,16 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+	public function getFormatCommentCount($comment_count=0) {
+		$return_string='';
+		
+		if($comment_count) {
+			$return_string=' ['.$comment_count.']';
+		} 
+		
+		return $return_string;
+	}
+	
 	public function getOrderLink($paginator,$field,$label=null) {
 		$icon='';
 

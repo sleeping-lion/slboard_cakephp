@@ -7,7 +7,7 @@
       <h3 itemprop="name"><?php echo h($question['Question']['title']); ?></h3>
     </div>
     <div class="sl_content_main">
-     		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php if($question['Question']['user_id']): ?><?php echo $question['User']['name'] ?><?php else: ?><?php echo $question['Question']['name'] ?><?php endif ?></span>&nbsp;&nbsp;&nbsp; <?php echo __('created_at') ?> : <span itemprop="dateCreated"><?php echo $question['Question']['created_at']; ?></span><span class="none" itemprop="dateModified"><?php echo $question['Question']['updated_at'] ?></span></p>    	
+     		<p class="sl_content_info"><?php echo __('Writer') ?> : <span  itemprop="author"><?php if($question['Question']['user_id']): ?><?php echo $question['User']['name'] ?><?php else: ?><?php echo $question['Question']['name'] ?><?php endif ?></span>&nbsp;&nbsp;&nbsp; <?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $question['Question']['created_at']; ?></span><span class="none" itemprop="dateModified"><?php echo $question['Question']['updated_at'] ?></span></p>    	
       <div class="sl_content_text" itemprop="text"><?php echo nl2br($question['QuestionContent']['content']); ?></div>
     </div>
   </div>

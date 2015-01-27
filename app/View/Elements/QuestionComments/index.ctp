@@ -1,8 +1,8 @@
 <section id="sl_question_comment_index">	
 	<?php if(count($question['QuestionComment'])): ?>
 	<?php foreach ($question['QuestionComment'] as $questionComment): ?>
-	<article class="media" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
-		<?php if(isset($question['QuestionComment']['photo'])): ?>
+	<article class="media">
+		<?php if(isset($questionComment['photo'])): ?>
 		<?php echo $this -> Html -> link($this->Html->image('/files/blog/photo/'.$questionComment['id'].'/thumb_'.$questionComment['photo'], array('alt' =>$questionComment['title'])), array('action' => 'index','?'=>array('id'=>$questionComment['id'])),array('escape'=>false,'class'=>'pull-left')) ?>
 		<?php endif ?>
 		<div class="media-body">

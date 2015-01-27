@@ -39,6 +39,11 @@ class GuestBooksController extends SlAnonController {
 			$this -> GuestBook -> id = $id;
 			$this -> GuestBook -> saveField('count', $guestBook['GuestBook']['count'] + 1);
 		}
+		
+		$this->loadModel('GuestBookComment');
+		$this -> GuestBookComment -> recursive = 0;
+		$this -> Paginator -> settings=array('paramType' => 'querystring', 'limit' => 5, 'order' => array('id' => 'desc'));
+		$this -> set('guestBookComments', $this -> Paginator -> paginate('GuestBookComment',array('guest_book_id'=>$guestBook['GuestBook']['id'])));
 	}
 
 	/**

@@ -7,8 +7,8 @@
       <h3 itemprop="name"><?php echo h($guestBook['GuestBook']['title']); ?></h3>
     </div>
     <div class="sl_content_main">
-     		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></span>&nbsp;&nbsp;&nbsp; 
-     			<?php echo __('created_at') ?> : <span itemprop="dateCreated"><?php echo $guestBook['GuestBook']['created_at']; ?></span>
+     		<p class="sl_content_info"><?php echo __('Writer') ?> : <span  itemprop="author"><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></span>&nbsp;&nbsp;&nbsp; 
+     			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $guestBook['GuestBook']['created_at']; ?></span>
      			<span class="none" itemprop="dateModified"><?php echo $guestBook['GuestBook']['updated_at'] ?></span></p>    	
       <div class="sl_content_text" itemprop="text"><?php echo nl2br($guestBook['GuestBookContent']['content']); ?></div>
     </div>
