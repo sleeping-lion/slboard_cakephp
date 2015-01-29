@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2015-01-29 18:47+0000\n"
-"PO-Revision-Date: 2015-01-30 04:05+0900\n"
+"PO-Revision-Date: 2015-01-30 04:39+0900\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -437,7 +437,7 @@ msgstr "로그인"
 
 #: View/Elements/header.ctp:12 View/Elements/Admin/login_header.ctp:2
 msgid "Home Title"
-msgstr ""
+msgstr "SLBoard"
 
 #: View/Elements/header.ctp:16;20 View/Intro/index.ctp:3
 msgid "Intro"
