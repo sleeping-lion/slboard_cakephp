@@ -4,4 +4,4 @@
 <h1><?=h($guest_book['GuestBook']['title']); ?></h1>
 <div><?php echo nl2br($guest_book['GuestBookContent']['content']); ?></div>
 <p><small>Created: <?=$guest_book['GuestBook']['created']; ?></small></p>
-<p><?php echo $this -> Html -> link(__('Go List'), array('action' => 'index')); ?></p>
+<p><?php echo $this -> Html -> link(__('List'), array('action' => 'index')); ?></p>

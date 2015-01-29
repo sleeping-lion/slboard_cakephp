@@ -8,7 +8,7 @@
     </div>
     <div class="sl_content_main">
      		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php echo $portfolio['User']['name'] ?></span>&nbsp;&nbsp;&nbsp; 
-     			<?php echo __('created_at') ?> : <span itemprop="dateCreated"><?php echo $portfolio['Portfolio']['created_at']; ?></span>
+     			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $portfolio['Portfolio']['created_at']; ?></span>
      			<span class="none" itemprop="dateModified"><?php echo $portfolio['Portfolio']['updated_at'] ?></span></p>    	
       <div class="sl_content_text" itemprop="text"><?php echo nl2br($portfolio['PortfolioContent']['content']); ?></div>
     </div>

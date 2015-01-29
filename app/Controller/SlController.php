@@ -67,7 +67,7 @@ class SlController extends AppController {
 			$this -> Paginator -> settings = array('conditions' => $search_model_condition, 'paramType' => 'querystring', 'limit' => 10, 'order' => array('id' => 'desc'));
 		}
 
-		$this -> set('searchTypeOption', array('title' => __('title'), 'content' => __('content'), 'title+content' => __('title+content'), 'username' => __('writer')));
+		$this -> set('searchTypeOption', array('title' => __('Title'), 'content' => __('Content'), 'title+content' => __('Title+Content'), 'username' => __('Writer')));
 		$this -> set('searchType', $search_type);
 		$this -> set('searchText', $search_text);
 	}

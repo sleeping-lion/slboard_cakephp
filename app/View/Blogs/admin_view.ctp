@@ -4,4 +4,4 @@
 <h1><?php echo h($blog['Blog']['title']); ?></h1>
 <div><?php echo nl2br($blog['BlogContent']['content']); ?></div>
 <p><small>Created: <?php echo $blog['Blog']['created']; ?></small></p>
-<p><?php echo $this->Html->link(__('Go List'), array('action' => 'index')); ?></p>
+<p><?php echo $this->Html->link(__('List'), array('action' => 'index')); ?></p>

@@ -4,4 +4,4 @@
 <h1><?php echo h($question['Question']['title']); ?></h1>
 <div><?php echo nl2br($question['QuestionContent']['content']); ?></div>
 <p><small>Created: <?php echo $question['Question']['created']; ?></small></p>
-<p><?php echo $this -> Html -> link(__('Go List'), array('action' => 'index')); ?></p>
+<p><?php echo $this -> Html -> link(__('List'), array('action' => 'index')); ?></p>

@@ -8,7 +8,7 @@
     </div>
     <div class="sl_content_main">
      		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php echo $history['User']['name'] ?></span>&nbsp;&nbsp;&nbsp; 
-     			<?php echo __('created_at') ?> : <span itemprop="dateCreated"><?php echo $history['History']['created_at']; ?></span>
+     			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $history['History']['created_at']; ?></span>
      			<span class="none" itemprop="dateModified"><?php echo $history['History']['updated_at'] ?></span></p>    	
       <div class="sl_content_text" itemprop="text"><?php echo nl2br($history['History']['content']); ?></div>
     </div>

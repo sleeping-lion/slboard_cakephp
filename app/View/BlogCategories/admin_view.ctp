@@ -4,4 +4,4 @@
 <h1><?=h($notice['Notice']['title']); ?></h1>
 <div><?php echo nl2br($notice['NoticeContent']['content']); ?></div>
 <p><small>Created: <?=$notice['Notice']['created']; ?></small></p>
-<p><?php echo $this -> Html -> link(__('Go List'), array('action' => 'index')); ?></p>
+<p><?php echo $this -> Html -> link(__('List'), array('action' => 'index')); ?></p>
