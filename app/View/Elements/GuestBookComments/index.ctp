@@ -11,7 +11,8 @@
 		</div>
 	</article>
 	<?php endforeach; ?>
-	<?php unset($blogs); ?>	
+	<?php unset($guestBookComments); ?>
+	<?php unset($guestBookComment); ?>	
 	<?php else: ?>
 	<p><?php echo __('No Article') ?></p>				
 	<?php endif ?>

@@ -79,10 +79,12 @@ class SlController extends AppController {
 		$this -> set('asideBlogCategories', $this -> BlogCategory -> find('all', array('conditions' => array('enable' => true), 'recursive' => -1)));
 
 		$this -> loadModel('Tag');
-		$this -> set('asideTags', $this -> Tag -> find('all'));
+		$this -> set('asideTags', $this -> Tag -> find('all',array('conditions'=>array('not'=>array('taggings_count'=>0)),'order'=>array('taggings_count desc'), 'recursive' => -1)));
 
 		$this -> Auth -> allow('index', 'view');
 	}
+
+
 
 	protected function getImpressionCount($id) {
 		$this -> loadModel('Impression');

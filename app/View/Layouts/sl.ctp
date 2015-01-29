@@ -13,11 +13,11 @@
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 <![endif]-->
-</head>
-<body>
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+</head>
+<body>
 <?php echo $this->element ('header')?>
 <section id="mom">
 	<section id="main" class="container">

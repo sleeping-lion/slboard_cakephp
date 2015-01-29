@@ -23,7 +23,6 @@ mark, rp, rt, ruby, summary, time {display:inline;}
 
 /* layout */
 footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
-footer div {margin:0.3em 0 0}
 #mom {float:left;width:100%;padding:0}
 .sub_main {float:left;width:728px;padding:0 0 30px}
 .page-header {float:left;width:100%}

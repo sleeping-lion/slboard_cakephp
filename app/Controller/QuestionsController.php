@@ -38,6 +38,11 @@ class QuestionsController extends SlAnonController {
 			$this -> Question -> id = $id;
 			$this -> Question -> saveField('count', $question['Question']['count'] + 1);
 		}
+
+		$this -> loadModel('QuestionComment');
+		$this -> QuestionComment -> recursive = 0;
+		$this -> Paginator -> settings = array('paramType' => 'querystring', 'limit' => 5, 'order' => array('id' => 'desc'));
+		$this -> set('questionComments', $this -> Paginator -> paginate('QuestionComment', array('question_id' => $question['Question']['id'])));		
 	}
 
 	/**

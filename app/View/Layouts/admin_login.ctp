@@ -4,7 +4,7 @@
 	<title><?php echo __('Homepage Title') ?></title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css(array('bootstrap.min.css','index.css'));
+		echo $this->Html->css(array('bootstrap.min.css','admin/login.css'));
 		echo $this-> fetch('css');
 		echo $this->Html->meta('keywords','slboard,php,게시판,무료게시판,공개게시판,cakephp,rails');
 	?>
@@ -13,8 +13,6 @@
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 <![endif]-->
-</head>
-<body>
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->

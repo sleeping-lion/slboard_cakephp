@@ -6,8 +6,10 @@
 	</div>
 	<div id="tags">
 		<ul>
+			<?php $asideTags=$this->App->tag_cloud($asideTags,array('css1','css2','css3','css4')) ?>
+			<?php debug($asideTags) ?>
 			<?php foreach($asideTags as $index=>$value): ?>
-			<li><a href="" class="css_class"><?php echo $value['Tag']['name'] ?></a></li>
+			<li><?php echo $this->html->link($value['Tag']['name'],'/tags/'.$value['Tag']['name'],array('class'=>$value['Tag']['class'])) ?></li>
 			<?php endforeach ?>
 		</ul>
 	</div>

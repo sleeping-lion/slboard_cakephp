@@ -27,8 +27,8 @@
 
 Router::connect('/', array('controller' => 'home'));
 Router::connect('/admin', array('controller' => 'home', 'action' => 'index', 'admin' => true));
-Router::connect('/admin/login', array('controller' => 'users', 'action' => 'login', 'admin' => true));
-Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'logout', 'admin' => true));
+Router::connect('/admin/login', array('controller' => 'users', 'action' => 'admin_login', 'admin' => true));
+Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'admin_logout', 'admin' => true));
 Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 

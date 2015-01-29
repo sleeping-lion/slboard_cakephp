@@ -1,5 +1,5 @@
 <?php
-App::uses('SlController', 'Controller');
+App::uses('SlAnonController', 'Controller');
 /**
  * QuestionComments Controller
  *
@@ -7,7 +7,7 @@ App::uses('SlController', 'Controller');
  * @property PaginatorComponent $Paginator
  * @property SessionComponent $Session
  */
-class QuestionCommentsController extends SlController {
+class QuestionCommentsController extends SlAnonController {
 
 /**
  * index method

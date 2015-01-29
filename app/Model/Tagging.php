@@ -1,10 +1,10 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlModel', 'Model');
 /**
  * Notices Model
  *
  */
-class Tagging extends AppModel {
+class Tagging extends SlModel {
 
 /**
  * Display field
@@ -61,5 +61,5 @@ class Tagging extends AppModel {
  *
  * @var array
  */	
-	public $belongsTo = array('Tag' => array('counterCache' => true),'Blog'	=>array('foreignKey' => 'taggable_id'));
+	public $belongsTo = array('Tag' => array('counterCache' => 'taggings_count'),'Blog'	=>array('foreignKey' => 'taggable_id'));
 }

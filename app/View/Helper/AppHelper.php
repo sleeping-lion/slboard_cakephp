@@ -30,6 +30,18 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+	public function tag_cloud(Array $tags,Array $classes) {
+		if(!count($tags))
+ 			return array();
+		
+		$max_count = $tags[0]['Tag']['taggings_count'];
+		foreach($tags as $index=>$value) {
+			$c_index = (($value['Tag']['taggings_count'] / $max_count) * (count($classes) - 1));
+			$tags[$index]['Tag']['class']=$classes[round($c_index)];
+		}
+		return $tags;
+	}
+	
 	public function getFormatCommentCount($comment_count=0) {
 		$return_string='';
 		

@@ -55,13 +55,16 @@ class BlogsController extends SlController {
 	 * @return void
 	 */
 	public function index() {
+		$blogCategories = $this -> _getCategory();
 		if (isset($this -> params['tag'])) {
-			//@blogs = Blog.tagged_with(params[:tag]).page(params[:page]).per(20)
-			//@blog_categories=BlogCategory.where(:leaf=>true).where(:enable=>true)
+			$this->loadModel('Tagging');
+			$ids=$this->Tagging->find('list',array('fields'=>array('Tagging.taggable_id'),'joins'=>array(array('table'=>'tags','alias'=>'Tag','conditions'=>array('Tagging.tag_id=Tag.id'))),'conditions'=>array('Tag.name'=>$this -> params['tag']),'recursive'=>-1));
+
+			$this -> setSearch('Blog');
+			$conditions= array('Blog.id' =>$ids);
+			$blog_category_id=null;
 			// @meta_keywords=params[:tag]+','+t(:meta_keywords)
 		} else {
-			$blogCategories = $this -> _getCategory();
-
 			if (isset($this -> request -> query['id'])) {
 				$blog = $this -> view($this -> request -> query['id']);
 				$blog_category_id = $blog['Blog']['blog_category_id'];
@@ -76,19 +79,20 @@ class BlogsController extends SlController {
 					$blog_category_id = key($blogCategories);
 				}
 
-				$blog = $this -> Blog -> find('first', array('conditions' => array('Blog.blog_category_id' => $blog_category_id)));
+			//	$blog = $this -> Blog -> find('first', array('conditions' => array('Blog.blog_category_id' => $blog_category_id)));
 			}
-
-			$this -> Blog -> recursive = 0;
-			$this -> setSearch('Blog');
-			$this -> paginate = array('conditions' => array('Blog.blog_category_id' => $blog_category_id), 'order' => 'Blog.id desc');
+			$conditions=array('Blog.blog_category_id' => $blog_category_id);
 		}
-		if (count($blog))
-			$this -> set('blog', $blog);
 
+		$this -> Blog -> recursive = 0;
+		$this -> setSearch('Blog');
+		$this -> paginate = array('conditions' => $conditions, 'order' => 'Blog.id desc');
+		
 		$this -> set('blogs', $this -> Paginator -> paginate());
 		$this -> set('blogCategoryId', $blog_category_id);
-
+		if (isset($blog)) {
+			$this -> set('blog', $blog);	
+		}
 		//$this->render('index_default');
 	}
 
@@ -112,6 +116,32 @@ class BlogsController extends SlController {
 			$this -> Blog -> id = $id;
 			$this -> Blog -> saveField('count', $blog['Blog']['count'] + 1);
 		}
+
+		$this -> loadModel('BlogComment');
+		$this -> BlogComment -> recursive = 0;
+		$this -> Paginator -> settings = array('paramType' => 'querystring', 'limit' => 5, 'order' => array('id' => 'desc'));
+		$this -> set('blogComments', $this -> Paginator -> paginate('BlogComment', array('blog_id' => $blog['Blog']['id'])));
+	}
+
+	protected function saveTaggins($post_id,$tags) {
+		$this -> loadModel('Tag');
+		$tag_a = explode(',',$tags);
+		$tag_a = array_unique($tag_a);
+
+		$taggings = array();
+
+		foreach ($tag_a as $index => $value) {
+			if ($this -> Tag -> find('count', array('conditions' => array('name' => $value)))) {
+				$tag_e = $this -> Tag -> find('first', array('conditions' => array('name' => $value)));
+				$taggings[] = array('taggable_id'=>$post_id,'tag_id'=>$tag_e['Tag']['id'],'taggable_type'=>'Blog','context'=>'tags');
+			} else {
+				$this -> Tag -> save(array('Tag' => array('name' => $value)));
+				$taggings[] = array('taggable_id'=>$post_id,'tag_id'=>$this -> Tag -> getLastInsertID(),'taggable_type'=>'Blog','context'=>'tags');
+			}
+		}
+		
+		$this -> loadModel('Tagging');
+		return $this->Tagging->saveAll($taggings);
 	}
 
 	/**
@@ -122,33 +152,13 @@ class BlogsController extends SlController {
 	public function add() {
 		if ($this -> request -> is('post')) {
 			$this -> Blog -> create();
-
+			$tags=$this -> request -> data['Tag']['tags'];
+			unset($this -> request -> data['Tag']);
+			
 			if ($this -> Blog -> saveAll($this -> request -> data)) {
-				$blog_id = $this -> Blog -> getLastInsertID();
-				$this -> loadModel('Tag');
-				$tag_a = explode(',', $this -> request -> data['Tag']['tags']);
-				$tag_a = array_unique($tag_a);
-
-				foreach ($tag_a as $index => $value) {
-					if ($this -> Tag -> find('count', array('conditions' => array('name' => $value)))) {
-						$tag_e = $this -> Tag -> find('first', array('conditions' => array('name' => $value)));
-						$tag_ids[] = $tag_e['Tag']['id'];
-					} else {
-						$tag[$index]['Tag']['name'] = $value;
-						$tag[$index]['Blog']['id'] = $blog_id;
-						$tag[$index]['Tagging']['taggable_type'] = $this -> modelClass;
-					}
-				}
-
-				if (isset($tag_ids)) {
-					$tag[] = array('Blog' => array('id' => $blog_id), 'Tag' => array('id' => array_values($tag_ids)));
-				}
-
-				if ($this -> Tag -> saveAll($tag)) {
-					$this -> Session -> setFlash(__('The post has been saved.'), 'success');
-					return $this -> redirect(array('action' => 'index'));
-				}
-				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
+				$this -> saveTaggins($this -> Blog -> getLastInsertID(),$tags);
+				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
+				return $this -> redirect(array('action' => 'index'));
 			} else {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}

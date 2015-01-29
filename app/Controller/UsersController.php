@@ -318,8 +318,12 @@ class UsersController extends SlController {
 	}
 	
 	public function admin_login() {
-		$this -> layout = 'admin_login';
+		if ($this -> Session -> read('Auth.User.group_id')==1) {
+			//	$this -> Session -> setFlash('You are logged in! no Auth');
+			return $this -> redirect(array('controller'=>'home','action'=>'admin_index'));
+		}		
 		
+		$this -> layout = 'admin_login';
 		/* if ($this -> Session -> read('Auth.User')) {
 			$this -> Session -> setFlash('You are logged in! no Auth');
 			return $this -> redirect($this -> Auth -> redirect());
