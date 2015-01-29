@@ -1,4 +1,3 @@
-
 <article id="sl_blog_categories" class="box sl_aside">
   <div class="box_header">
     <h2><?php echo __('Blog') ?></h2>
@@ -15,7 +14,7 @@
     	<?php if(empty($blogCategory['BlogCategory']['blog_category_id'])): ?>
 			<li>
       	<?php if($blogCategory['BlogCategory']['leaf']): ?>
-      	<a href=""><?php echo $blogCategory['BlogCategory']['title'] ?><?php if($blogCategory['BlogCategory']['leaf']): ?>(<?php echo $blogCategory['BlogCategory']['blogs_count'] ?>)<?php endif ?></a>
+       <?php echo $this->html->link($blogCategory['BlogCategory']['title'].'('.$blogCategory['BlogCategory']['blogs_count'].')',array('controller'=>'blogs','action'=>'index','?'=>array('blog_category_id'=>$blogCategory['BlogCategory']['id']))) ?>
       	<?php else: ?>
       	<span class="c_pointer"><span><?php echo $blogCategory['BlogCategory']['title'] ?></span><span class="cursor">&nbsp;&gt;&gt;</span></span>  	
       	<?php endif ?>
