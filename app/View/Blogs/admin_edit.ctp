@@ -4,5 +4,5 @@
 <?php
 echo $this->Form->create('Blog');
 echo $this->Form->input('title');
-echo $this->Form->end(__('Save Blog'));
+echo $this->Form->end(__('Update Article'));
 ?>

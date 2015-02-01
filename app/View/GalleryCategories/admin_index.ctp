@@ -39,7 +39,7 @@
 	</table>
 	</article>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Gallery Category'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
+		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

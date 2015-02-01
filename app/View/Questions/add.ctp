@@ -16,4 +16,4 @@ echo $this -> Form -> input('QuestionContent.content', array('div' => array('cla
 <?php echo $this->Recaptcha->display() ?>
 <?php endif ?>
 <br />
-<?php echo $this -> Form -> end(array('label' => __('Save Question'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')) ?>
+<?php echo $this -> Form -> end(array('label' => __('Save Article'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')) ?>

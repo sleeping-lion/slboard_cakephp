@@ -37,7 +37,7 @@
 		</tbody>
 	</table>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add')); ?>
+		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add')); ?>
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

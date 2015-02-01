@@ -9,5 +9,5 @@ echo $this->Form->input('password',array('type'=>'password','div'=>array('class'
 <?php
 echo $this->Form->input('blog_id',array('type'=>'hidden','value'=>$blog['Blog']['id']));
 echo $this->Form->input('content',array('div'=>array('class'=>'form-group'),'class'=>'form-control','id'=>'sl_content'));
-echo $this->Form->end(array('label'=>__('Save BlogComment'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
+echo $this->Form->end(array('label'=>__('Save Comment'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
 ?>

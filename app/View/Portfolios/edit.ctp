@@ -5,5 +5,5 @@
 echo $this -> Form -> create('GuestBook');
 echo $this -> Form -> input('title');
 echo $this -> Form -> input('GuestBookContent.content');
-echo $this -> Form -> end(__('Save GuestBook'));
+echo $this -> Form -> end(__('Save Article'));
 ?>

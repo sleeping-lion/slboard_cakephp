@@ -12,5 +12,5 @@
 			echo $this -> Form -> input('encrypted_password', array('type'=>'password','div' => array('class' => 'form-group'), 'class' => 'form-control'));
 		?>
 	</fieldset>
-	<?php echo $this -> Form -> end(array('label' => _('Login'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>
+	<?php echo $this -> Form -> end(array('label' => __('Login'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>
 </div>

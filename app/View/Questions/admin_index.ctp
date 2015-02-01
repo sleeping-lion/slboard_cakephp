@@ -10,10 +10,11 @@
     </colgroup>
     <thead>
     	<tr>
-      	<th><?php echo $this -> Paginator -> sort('id', _('Id')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('title', _('title')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('count', _('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', _('created')); ?></th>
+				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id',__('Id')) ?></th>
+       <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
+       <th class="sl_t_name"><?php echo $this -> App -> getOrderLink($this -> Paginator,'name',__('Writer')) ?></th>
+       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'count',__('Count')) ?></th>
+       <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -37,7 +38,7 @@
 		</tbody>
 	</table>
 	<div id="sl_bottom_menu">
-		<?php echo $this -> Html -> link(__('New Question'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
+		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
 	</div>
 </section>

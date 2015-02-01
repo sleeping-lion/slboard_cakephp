@@ -11,5 +11,5 @@ echo $this->Form->input('description',array('div'=>array('class'=>'form-group'),
 echo $this->Form->input('BlogContent.content',array('div'=>array('class'=>'form-group'),'class'=>'form-control','id'=>'sl_content'));
 echo $this->Form->input('photo', array('type' => 'file','div'=>array('class'=>'form-group')));
 echo $this->Form->input('photo_dir', array('type' => 'hidden','div'=>array('class'=>'form-group'),'class'=>'form-control'));
-echo $this->Form->end(array('label'=>__('Save Blog'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
+echo $this->Form->end(array('label'=>__('Save Article'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
 ?>

@@ -1,6 +1,6 @@
-<?php $this -> Html -> addCrumb(__('GuestBooks'), array('controller' => 'guest_books', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('GuestBook'), array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
-<?php $this -> assign('title', __('GuestBook')); ?>
+<?php $this -> Html -> addCrumb(__('Guest Books'), array('controller' => 'guest_books', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
+<?php $this -> assign('title', __('Guest Book')); ?>
 <section id="slboard_question_show">
   <div class="slboard_content">
     <div class="sl_content_header">

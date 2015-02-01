@@ -66,7 +66,7 @@ class AppHelper extends Helper {
 		}
 		
 		if(empty($label)) {
-			$label=ucfirst($field);
+			$label=__(ucfirst($field));
 		}
 		
 		return $paginator -> sort($field,$label.$icon,array('escape'=>false));

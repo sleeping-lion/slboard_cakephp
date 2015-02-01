@@ -35,7 +35,7 @@
 	</article>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
-		<?php echo $this -> Html -> link(__('New History'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
+		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add'),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>
 		<?php echo $this-> element ('search') ?>		
 	</div>
 </section>

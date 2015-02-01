@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2015-01-29 18:47+0000\n"
-"PO-Revision-Date: 2015-01-30 04:39+0900\n"
+"PO-Revision-Date: 2015-01-31 17:38+0900\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -428,7 +428,7 @@ msgstr "로그아웃"
 
 #: View/Elements/header.ctp:7
 msgid "New User"
-msgstr ""
+msgstr "회원가입"
 
 #: View/Elements/header.ctp:8 View/Users/admin_login.ctp:7;17
 #: View/Users/login.ctp:3
@@ -599,10 +599,6 @@ msgstr ""
 msgid "New Faq"
 msgstr ""
 
-#: View/Faqs/admin_view.ctp:7
-msgid "Go List"
-msgstr ""
-
 #: View/Galleries/add.ctp:2;3 View/Galleries/admin_add.ctp:2;3
 msgid "Add Gallery"
 msgstr ""
@@ -711,7 +707,7 @@ msgstr ""
 #: View/Layouts/admin.ctp:22 View/Layouts/admin_login.ctp:4
 #: View/Layouts/sl.ctp:4
 msgid "Homepage Title"
-msgstr ""
+msgstr "SLBoard에 오신것을 환영합니다"
 
 #: View/Layouts/admin.ctp:41 View/Layouts/sl.ctp:27
 msgid "Home"

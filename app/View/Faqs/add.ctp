@@ -7,4 +7,4 @@ echo $this -> Form -> input('faq_category_id', array('type' => 'select', 'div' =
 echo $this -> Form -> input('title', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 echo $this -> Form -> input('FaqContent.content', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 ?>
-<?php echo $this -> Form -> end(array('label' => __('Save Faq'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>
+<?php echo $this -> Form -> end(array('label' => __('Save Article'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary')); ?>

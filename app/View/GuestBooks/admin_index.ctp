@@ -36,7 +36,7 @@
 	</table>
 	<div id="sl_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>		
-		<?php echo $this -> Html -> link(__('New GuestBook'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
+		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add'),array('class'=>'btn btn-default')); ?>
 	</div>
 </section>
 
