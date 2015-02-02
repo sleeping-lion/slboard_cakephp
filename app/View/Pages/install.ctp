@@ -37,7 +37,7 @@
 	<article>
 		<h3>사용된 프로그램들</h3>
 		<ol>
-			<li>Css, Javascript(<a href="http://getbootstrap.com" target="_blank">Boostrap</a>)</li>
+			<li>Css, Javascript(<a href="http://getbootstrap.com" target="_blank">Boostrap</a>,Jquery(plugins))</li>
 			<li>Editor(<a href="http://www.ckeditor.com" target="_blank">Ckeditor</a>)</li>
 			<li>Upload Plugin(<a href="https://github.com/josegonzalez/cakephp-upload" target="_blank">josegonzalez/cakephp-upload</a>)</li>
 			<li>Recaptcha Pulgin(<a href="https://github.com/CakeDC/recaptcha" target="_blank">CakeDC/recaptcha</a>)</li>

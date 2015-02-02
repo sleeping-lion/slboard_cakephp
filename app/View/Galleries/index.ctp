@@ -64,7 +64,7 @@
 		</div>
 	</article>
 	<?php else: ?>
-	<p><?php echo __('No Aticle') ?></p>
+	<p><?php echo __('No Article') ?></p>
 	<?php endif ?>	
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>

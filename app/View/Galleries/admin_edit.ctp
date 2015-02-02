@@ -7,5 +7,5 @@ echo $this->Form->input('gallery_category_id',array('type'=>'select'));
 echo $this->Form->input('title');
 echo $this->Form->input('Gallery.photo', array('type' => 'file'));
 echo $this->Form->input('Gallery.photo_dir', array('type' => 'hidden'));
-echo $this->Form->end(__('Save Gallery'));
+echo $this->Form->end(__('Save Article'));
 ?>

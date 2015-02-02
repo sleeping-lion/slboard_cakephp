@@ -8,5 +8,5 @@ echo $this -> Form -> input('email', array('type'=>'email','div' => array('class
 echo $this -> Form -> input('phone', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 echo $this -> Form -> input('title', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 echo $this -> Form -> input('ContactContent.content', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
-echo $this -> Form -> end(array('label' => __('Save Contact'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary'));
+echo $this -> Form -> end(array('label' => __('Save Article'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-primary'));
 ?>
