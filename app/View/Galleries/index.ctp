@@ -62,10 +62,10 @@
 			</div>
 			<a class="next browse right"></a>			
 		</div>
-	</article>
 	<?php else: ?>
 	<p><?php echo __('No Article') ?></p>
-	<?php endif ?>	
+	<?php endif ?>
+	</article>	
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
 		<?php echo $this -> Html -> link(__('New Article'), array('action' => 'add','?'=>array('gallery_category_id'=>$galleryCategoryId)),array('class'=>"btn btn-default btn btn-default col-xs-12 col-md-2")) ?>

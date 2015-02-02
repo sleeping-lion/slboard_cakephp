@@ -57,7 +57,7 @@
   	</div>
   	<?php endforeach ?>
 		<?php else: ?>
-		<dt><?php echo _('No Article') ?></dt>
+		<p><?php echo __('No Article') ?></p>
 		<?php endif ?>
 		<?php unset($value) ?>		 	
   </article>	
