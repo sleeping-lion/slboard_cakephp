@@ -31,13 +31,18 @@ Router::connect('/admin/login', array('controller' => 'users', 'action' => 'admi
 Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'admin_logout', 'admin' => true));
 Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
-
 Router::connect('/tags/:tag',array('controller'=>'blogs','action'=>'index'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+
+Router::connect('/guest_books/check_password/:id', array('controller' => 'guest_books', 'action' => 'check_password'),array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/questions/check_password/:id', array('controller' => 'questions', 'action' => 'check_password'),array('pass' => array('id'), 'id' => '[0-9]+'));
+
+Router::connect('/guest_books/confirm_delete/:id', array('controller' => 'guest_books', 'action' => 'confirm_delete'),array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/questions/confirm_delete/:id', array('controller' => 'questions', 'action' => 'confirm_delete'),array('pass' => array('id'), 'id' => '[0-9]+'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
