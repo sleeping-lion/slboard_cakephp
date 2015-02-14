@@ -46,7 +46,7 @@
 		<section class="sub_main">		
 			<?php echo $this->Session->flash('auth'); ?>			
 			<?php echo $this->Session->flash(); ?>
-			<?php echo $this->element('ad') ?>
+			<?php //echo $this->element('ad') ?>
 			<?php echo $this->element ('Admin/aside');?>			
 			<?php echo $this->fetch('content'); ?>
 		</section>

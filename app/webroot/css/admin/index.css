@@ -52,7 +52,7 @@ footer div {margin:0.3em 0 0}
 .c_pointer {cursor:pointer}
 
 /* header */
-header {position:fixed;top:0;width:100%;}
+header {position:fixed;top:0;width:100%;z-index:999}
 header h1 {float:left;margin:5px 10px;padding:0}
 header h1 a:active {color:red}
 header nav { position: relative; z-index: 999; margin:0; padding:0}

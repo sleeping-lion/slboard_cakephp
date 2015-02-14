@@ -9,7 +9,7 @@ echo $this -> Form -> input('password', array('type' => 'password','div' => arra
 echo $this -> Form -> input('description', array('div' => array('class' => 'form-group'), 'class' => 'form-control'));
 ?>
 <?php if($this->request->data['User']['photo']): ?>
-<?php echo $this -> Html -> link($this->Html->image('/files/user/photo/'.$this->request->data['User']['id'].'/thumb_'.$this->request->data['photo'], array('alt' =>$this->request->data['User']['title'])), array('action' => 'index','?'=>array('id'=>$this->request->data['User']['id'])),array('escape'=>false)) ?>
+<?php echo $this -> Html -> link($this->Html->image('/files/user/photo/'.$this->request->data['User']['id'].'/thumb_'.$this->request->data['User']['photo'], array('alt' =>$this->request->data['User']['name'])), array('action' => 'index','?'=>array('id'=>$this->request->data['User']['id'])),array('escape'=>false)) ?>
 <?php endif ?>
 <?php
 echo $this -> Form -> input('photo', array('type' => 'file', 'div' => array('class' => 'form-group')));
