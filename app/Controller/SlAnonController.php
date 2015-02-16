@@ -31,6 +31,10 @@ class SlAnonController extends SlController {
 		}
 	}
 	
+	protected function grantAnonAuth($id) {
+		$this->Session->write('AnonAuth',array($this -> modelClass=>array($id=>true)));
+	} 
+	
 	public function check_password($id = null) {
 		if (!$this->{$this -> modelClass} -> exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
@@ -42,7 +46,7 @@ class SlAnonController extends SlController {
 			if (strcmp($mm[$this -> modelClass]['encrypted_password'],Security::hash($this ->request->data[$this -> modelClass]['password'], 'sha1', true))) {
 				$this -> Session -> setFlash(__('Invalid password, try again'), 'error');
 			} else {
-				$this->Session->write('AnonAuth',array($this -> modelClass=>array($id=>true)));
+				$this->grantAnonAuth($id);
 				
 				if(isset($this->request->data[$this -> modelClass]['delete'])) {
 					return $this -> redirect(array('action' => 'confirm_delete',$this ->request->params['id']));

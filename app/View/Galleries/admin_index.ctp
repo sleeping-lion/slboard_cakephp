@@ -11,10 +11,10 @@
     </colgroup>
     <thead>
     	<tr>
-      	<th><?php echo $this -> Paginator -> sort('id', _('Id')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('title', _('title')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('count', _('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', _('created')); ?></th>
+      	<th><?php echo $this -> Paginator -> sort('id', __('Id')); ?></th>
+				<th><?php echo $this -> Paginator -> sort('title', __('title')); ?></th>
+				<th><?php echo $this -> Paginator -> sort('count', __('count')); ?></th>				
+				<th><?php echo $this -> Paginator -> sort('created', __('created_at')); ?></th>
 			</tr>
 		</thead>
 		<tbody>

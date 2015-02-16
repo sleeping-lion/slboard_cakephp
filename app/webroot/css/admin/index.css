@@ -22,8 +22,7 @@ article, aside, audio, canvas, command, datalist, details, embed, figcaption, fi
 mark, rp, rt, ruby, summary, time {display:inline;}
 
 /* layout */
-footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
-footer div {margin:0.3em 0 0}
+footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center;height:2.5em}
 .sub_main {float:left;width:728px;padding:0 0 30px}
 .page-header {float:left;width:100%}
 .page-header h1 {float:left;margin:0.3em 0 0;padding:0;font-weight:bold;color:#666}
@@ -73,7 +72,7 @@ aside {position:absolute;top:0;left:0;float:left;width:200px;margin:0}
 
 
 /* footer */
-footer address {margin-top:10px }
+footer address {margin:0px }
 
 
 
@@ -121,10 +120,9 @@ footer address {margin-top:10px }
 @media all and (min-width: 1025px) {
 	header {height:2.5em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
 	header nav {width:80%}
-	footer {height:2em;border-top:1px solid #e7e7e7}
 	aside {margin-top:2.5em}
-	#mom {margin:-2.5em 0 -2em;min-height:100%;background:#fff;margin-left:200px}
-	#main {padding-top:2.5em;padding-bottom:2em}
+	#mom {margin:-2.5em 0;min-height:100%;background:#fff;margin-left:200px}
+	#main {margin:2.5em;padding-top:2.5em}
 	.ad_test {height:90px}
 	
 }

@@ -81,7 +81,9 @@ class UsersController extends SlController {
 		$aco -> create();
 		$aco -> save(array('parent_id' => 1, 'alias' => 'Home')); //20	
 		$aco -> create();
-		$aco -> save(array('parent_id' => 1, 'alias' => 'Intro')); //21			
+		$aco -> save(array('parent_id' => 1, 'alias' => 'Intro')); //21		
+		$aco -> create();
+		$aco -> save(array('parent_id' => 1, 'alias' => 'Resources')); //22		
 	}
 
 	private function initAcl() {

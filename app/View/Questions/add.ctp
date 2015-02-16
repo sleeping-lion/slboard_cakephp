@@ -1,6 +1,6 @@
-<?php $this -> Html -> addCrumb(__('Questions'), array('controller' => 'questions', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('Add Question'), array('controller' => 'questions', 'action' => 'add')); ?>
-<?php $this -> assign('title', __('Add Question')); ?>
+<?php $this -> Html -> addCrumb(__('Questions'), array('controller' => 'questions', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('Add Question'), array('controller' => 'questions', 'action' => 'add')) ?>
+<?php $this -> assign('title', __('Add Question')) ?>
 <?php echo $this -> Form -> create('Question'); ?>
 <?php if(!$this->Session->check('Auth.User')): ?>
 <?php 

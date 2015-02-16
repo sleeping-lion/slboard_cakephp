@@ -1,6 +1,6 @@
-<?php $this -> Html -> addCrumb('Users', array('controller' => 'users', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb('Edit User', array('controller' => 'users', 'action' => 'add')); ?>
-<?php $this -> assign('title', __('Edit User')); ?>
+<?php $this -> Html -> addCrumb('Users', array('controller' => 'users', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb('Edit User', array('controller' => 'users', 'action' => 'add')) ?>
+<?php $this -> assign('title', __('Edit User')) ?>
 <?php
 echo $this -> Form -> create('User');
 echo $this -> Form -> input('email', array('type' => 'email','div' => array('class' => 'form-group'), 'class' => 'form-control'));

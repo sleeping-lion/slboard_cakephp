@@ -56,6 +56,8 @@ class GuestBooksController extends SlAnonController {
 			if ($this -> Session -> read('Auth.User') OR $this -> Recaptcha -> verify()) {
 				$this -> GuestBook -> create();
 				if ($this -> GuestBook -> saveAll($this -> request -> data)) {
+					if(!$this -> Session -> check('Auth.User'))
+						$this->grantAnonAuth($this -> GuestBook->id);
 					$this -> Session -> setFlash(__('The post has been saved.'), 'success');
 					return $this -> redirect(array('action' => 'index'));
 				} else {
