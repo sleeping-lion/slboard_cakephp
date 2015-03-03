@@ -42,7 +42,11 @@ class SlController extends AppController {
 		if ($hasCategory) {
 			$search_model_condition = array($modleCategoryAlias . '.enable' => true, $modelAilas . '.enable' => true);
 		} else {
-			$search_model_condition = array($modelAilas . '.enable' => true);
+			if($this->params['admin']) {
+				$search_model_condition = array();
+			} else {
+				$search_model_condition = array($modelAilas . '.enable' => true);
+			}
 		}
 
 		if (isset($this -> request -> query['search_type']) AND isset($this -> request -> query['search_text'])) {
@@ -127,5 +131,27 @@ class SlController extends AppController {
 		$this -> delete($id);
 		$this -> layout = 'admin';
 	}
-
+	
+	public function admin_change_status($id) {
+		$this -> change_status($id);
+		$this -> layout = 'admin';
+	}	
+	
+	public function change_status($id) {
+		$this -> request -> allowMethod('post');
+		
+		if (!$this -> {$this -> modelClass} -> exists($id)) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		
+		$mm=$this -> {$this -> modelClass}->findById($id);
+		
+		$this->{$this -> modelClass}->id    = $id;		
+		if($mm[$this -> modelClass]['enable']) {
+			$this->{$this -> modelClass}->saveField('enable', false);
+		} else {
+			$this->{$this -> modelClass}->saveField('enable',true);
+		}
+		return $this -> redirect(array('action' => 'index',$id));
+	}
 }

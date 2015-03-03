@@ -27,10 +27,15 @@
         		<td><?php echo $this -> Html -> link($guestBook['GuestBook']['title'], array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?></td>
         		<td><p class="sl_registered_date"><?=$this -> App -> getFormatDate($guestBook['GuestBook']['created_at'], 3); ?></p></td>
         		<td></td>
-        		<td>
+        		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'
 					,array('action'=>'edit',$guestBook['GuestBook']['id']),array('class'=>'btn sl_edit_link','escape'=>false)) ?>
-				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-trash"></span>',array('action' => 'delete',$guestBook['GuestBook']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false,'confirm' => __('Are you sure you wish to delete this article?'))) ?>					
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-trash"></span>',array('action' => 'delete',$guestBook['GuestBook']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false,'confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				<?php if($guestBook['GuestBook']['enable']): ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ok-circle"></span>',array('action' => 'change_status',$guestBook['GuestBook']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+				<?php else: ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ban-circle"></span>',array('action' => 'change_status',$guestBook['GuestBook']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+				<?php endif ?>											
         		</td>
     		</tr>
     		<?php endforeach; ?>

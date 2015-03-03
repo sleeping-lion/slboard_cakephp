@@ -8,13 +8,15 @@
       <col />
       <col width="70px" />
       <col width="130px" />
+      <col />      
     </colgroup>
     <thead>
     	<tr>
-      	<th><?php echo $this -> Paginator -> sort('id', _('Id')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('title', _('title')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('count', _('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', _('created')); ?></th>
+      	<th><?php echo $this -> Paginator -> sort('id', __('Id')); ?></th>
+				<th><?php echo $this -> Paginator -> sort('title', __('title')); ?></th>
+				<th><?php echo $this -> Paginator -> sort('count', __('count')); ?></th>				
+				<th><?php echo $this -> Paginator -> sort('created', __('created_at')); ?></th>
+       <th class="sl_t_manage"><?php echo __('Manage') ?></th>				
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +29,16 @@
         		</td>
         		<td></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
+        		<td class="sl_t_manage">
+					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'
+					,array('action'=>'edit',$blogCategory['BlogCategory']['id']),array('class'=>'btn sl_edit_link','escape'=>false)) ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-trash"></span>',array('action' => 'delete',$blogCategory['BlogCategory']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false,'confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				<?php if($blogCategory['BlogCategory']['enable']): ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ok-circle"></span>',array('action' => 'change_status',$blogCategory['BlogCategory']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+				<?php else: ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ban-circle"></span>',array('action' => 'change_status',$blogCategory['BlogCategory']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+				<?php endif ?>											
+        		</td>           		
     		</tr>
     		<?php endforeach; ?>
     		<?php unset($blogCategories); ?>

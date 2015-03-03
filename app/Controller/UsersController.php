@@ -238,6 +238,7 @@ class UsersController extends SlController {
  * @return void
  */
 	public function admin_index() {
+		$this->layout='admin';		
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
@@ -253,6 +254,7 @@ class UsersController extends SlController {
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
+		$this->layout='admin';		
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
 	}
@@ -263,6 +265,7 @@ class UsersController extends SlController {
  * @return void
  */
 	public function admin_add() {
+		$this->layout='admin';		
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -285,6 +288,7 @@ class UsersController extends SlController {
 		if (!$this->User->exists($id)) {
 			throw new NotFoundException(__('Invalid post'));
 		}
+		$this->layout='admin';		
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The post has been saved.'),'success');
@@ -310,6 +314,7 @@ class UsersController extends SlController {
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
+		$this->layout='admin';		
 		$this->request->allowMethod('post', 'delete');
 		if ($this->User->delete()) {
 			$this->Session->setFlash(__('The post has been deleted.'),'success');

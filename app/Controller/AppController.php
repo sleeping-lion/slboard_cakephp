@@ -94,6 +94,9 @@ class AppController extends Controller {
 				case 'admin_edit' :
 					$allow = $this -> Acl -> check(array('model' => 'Group', 'foreign_key' => $group_id), $controller, 'update');
 					break;
+				case 'admin_change_status' :
+					$allow = $this -> Acl -> check(array('model' => 'Group', 'foreign_key' => $group_id), $controller, 'update');
+					break;
 				case 'delete' :
 					$allow = $this -> Acl -> check(array('model' => 'Group', 'foreign_key' => $group_id), $controller, 'delete');
 					break;
