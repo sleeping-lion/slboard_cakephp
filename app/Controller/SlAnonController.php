@@ -1,12 +1,6 @@
 <?php
 App::uses('SlController', 'Controller');
-/**
- * Blogs Controller
- *
- * @property Blog $Blog
- * @property PaginatorComponent $Paginator
- * @property SessionComponent $Session
- */
+
 class SlAnonController extends SlController {
 
 	public $components = array('Recaptcha.Recaptcha');

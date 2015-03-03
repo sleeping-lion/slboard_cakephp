@@ -20,7 +20,7 @@
 			<?php echo $this -> Html -> link(__('List'), array('action' => 'index'),array('class'=>"btn btn-default")) ?>
 		</div>
 		<div class="pull-right">
-			<?php if($this->Session->check('Auth.User') AND ($guestBook['GuestBook']['user_id']==$this->Session->read('Auth.User.id'))): ?>
+			<?php if($this->App->checkAnonAuth($guestBook['GuestBook'],'GuestBook',$this->Session)): ?>
 			<?php echo $this -> Html -> link(__('Edit'), array('action' => 'edit',$guestBook['GuestBook']['id']),array('class'=>"btn btn-default")) ?>
 			<?php echo $this -> Form-> postLink(__('Delete'),array('action' => 'delete',$guestBook['GuestBook']['id']),array('class'=>'btn btn-default','confirm' => __('Are you sure you wish to delete this article?'))) ?>
 			<?php else: ?>

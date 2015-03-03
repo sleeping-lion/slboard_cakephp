@@ -95,8 +95,8 @@ Cache::config('default', array('engine' => 'File'));
 //Configure::write('Recaptcha.publicKey', 'your-public-api-key');
 //Configure::write('Recaptcha.privateKey', 'your-private-api-key');
 
-Configure::write('Recaptcha.publicKey', '6Ldrj-kSAAAAAAe_ftLzsQL7Qf2mGmSCA8Wuf0ic');
-Configure::write('Recaptcha.privateKey', '6Ldrj-kSAAAAAIKqAbAAxmSdy4uWLNVdETIb_ej_');
+Configure::write('Recaptcha.publicKey', '6Lf-nwITAAAAAJRZPOcMMQboPfa-jWV7UjC28o1F');
+Configure::write('Recaptcha.privateKey', '6Lf-nwITAAAAAIz6bf0HnKxk3k8aceXLSXAiHsxl');
 
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
