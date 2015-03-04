@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Guest Books'), array('controller' => 'guest_books', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('Add Guest Books'), array('controller' => 'guest_books', 'action' => 'add')); ?>
+<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Add Guest Book'), array('controller' => 'guest_books', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Add Guest Book')); ?>
 <?php echo $this -> Form -> create('GuestBook'); ?>
 <?php if(!$this->Session->check('Auth.User')): ?>

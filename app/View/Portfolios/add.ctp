@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Portfolios'), array('controller' => 'portfolios', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Portfolio'), array('controller' => 'portfolios', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Add Portfolio'), array('controller' => 'Portfolios', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Add Portfolio')); ?>
 <?php

@@ -1,4 +1,4 @@
-<?php $this->Html->addCrumb(__('Galleries'), array('controller' => 'galleries', 'action' => 'index')) ?>
+<?php $this->Html->addCrumb(__('Gallery'), array('controller' => 'galleries', 'action' => 'index')) ?>
 <?php $this->Html->addCrumb(__('Add Gallery'), array('controller' => 'galleries', 'action' => 'add')) ?>
 <?php $this -> assign('title', __('Add Gallery')) ?>
 <?php echo $this->Form->create('Gallery',array('type'=>'file')) ?>

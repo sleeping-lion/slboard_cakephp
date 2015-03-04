@@ -1,5 +1,5 @@
 <?php $this -> Html -> script(array('/ckeditor/ckeditor.js','boards/new.js'), false); ?>
-<?php $this->Html->addCrumb(__('Blogs'), array('controller' => 'blogs', 'action' => 'index')); ?>
+<?php $this->Html->addCrumb(__('Blog'), array('controller' => 'blogs', 'action' => 'index')); ?>
 <?php $this->Html->addCrumb(__('Edit Blog'), array('controller' => 'blogs', 'action' => 'edit')); ?>
 <?php $this -> assign('title', __('Edit Blog')); ?>
 <?php

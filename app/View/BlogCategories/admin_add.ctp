@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Blog Categories'), array('controller' => 'blog_categories', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('Blog Category'), array('controller' => 'blog_categories', 'action' => 'index')) ?>
 <?php $this -> Html -> addCrumb(__('Add Blog Category'), array('controller' => 'blog_categories', 'action' => 'add')) ?>
 <?php $this -> assign('title', __('Add Blog Category')) ?>
 <?php

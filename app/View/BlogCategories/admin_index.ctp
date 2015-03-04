@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Blog Categories'), array('controller' => 'blog_categories', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Blog Categories')); ?>
+<?php $this -> Html -> addCrumb(__('Blog Category'), array('controller' => 'blog_categories', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Blog Category')); ?>
 <section id="sl_blog_category_index">
 	<article class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">

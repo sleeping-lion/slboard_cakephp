@@ -1,5 +1,5 @@
-<?php $this->Html->addCrumb(__('Blogs'), array('controller' => 'blogs', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Blogs')); ?>
+<?php $this->Html->addCrumb(__('Blog'), array('controller' => 'blogs', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Blog')); ?>
 <section id="sl_blog_index" itemscope itemprop="blogPosts" itemtype="http://schema.org/Blog">
 	<ol class="nav nav-tabs sl_categories">
 		<?php if(isset($blogCategories)): ?>

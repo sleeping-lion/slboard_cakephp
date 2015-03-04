@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Faqs'), array('controller' => 'faqs', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Faq'), array('controller' => 'faqs', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Add Faq'), array('controller' => 'faqs', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Add Faq')); ?>
 <?php echo $this -> Form -> create('Faq'); ?>

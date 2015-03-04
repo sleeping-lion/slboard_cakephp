@@ -1,6 +1,6 @@
-<?php $this -> Html -> addCrumb(__('Faqs'), array('controller' => 'faqs', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('Add Faq'), array('controller' => 'faqs', 'action' => 'add')); ?>
-<?php $this -> assign('title', __('Add Faq')); ?>
+<?php $this -> Html -> addCrumb(__('Faq'), array('controller' => 'faqs', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Edit Faq'), array('controller' => 'faqs', 'action' => 'add')); ?>
+<?php $this -> assign('title', __('Edit Faq')); ?>
 <?php echo $this -> Form -> create('Faq'); ?>
 <?php
 echo $this -> Form -> input('faq_category_id', array('type' => 'select', 'div' => array('class' => 'form-group'), 'class' => 'form-control','selected'=>$faqCategoryId));

@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb('Users', array('controller' => 'users', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb('User', array('controller' => 'users', 'action' => 'index')) ?>
 <?php $this -> Html -> addCrumb('Edit User', array('controller' => 'users', 'action' => 'add')) ?>
 <?php $this -> assign('title', __('Edit User')) ?>
 <?php

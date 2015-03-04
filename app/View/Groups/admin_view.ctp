@@ -1,16 +1,16 @@
-<?php $this -> Html -> addCrumb(__('Notices'), array('controller' => 'notices', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('Notice'), array('controller' => 'notices', 'action' => 'view', $notice['Notice']['id'])); ?>
-<?php $this -> assign('title', __('Notice')); ?>
+<?php $this -> Html -> addCrumb(__('Group'), array('controller' => 'notices', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb($group['Group']['title'], array('controller' => 'notices', 'action' => 'view', $group['Group']['id'])); ?>
+<?php $this -> assign('title', __('Group')); ?>
 <section id="slboard_question_show">
   <div class="slboard_content">
     <div class="sl_content_header">
-      <h3 itemprop="name"><?php echo h($notice['Notice']['title']); ?></h3>
+      <h3 itemprop="name"><?php echo h($group['Group']['title']); ?></h3>
     </div>
     <div class="sl_content_main">
      		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php echo $notice['User']['name'] ?></span>&nbsp;&nbsp;&nbsp; 
-     			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $notice['Notice']['created_at']; ?></span>
-     			<span class="none" itemprop="dateModified"><?php echo $notice['Notice']['updated_at'] ?></span></p>    	
-      <div class="sl_content_text" itemprop="text"><?php echo nl2br($notice['NoticeContent']['content']); ?></div>
+     			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $group['Group']['created_at']; ?></span>
+     			<span class="none" itemprop="dateModified"><?php echo $group['Group']['updated_at'] ?></span></p>    	
+      <div class="sl_content_text" itemprop="text"></div>
     </div>
   </div>
 	<div id="sl_content_bottom_buttons">

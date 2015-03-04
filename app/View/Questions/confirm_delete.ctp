@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Questions'), array('controller' => 'guest_books', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Question'), array('controller' => 'guest_books', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Check Password'), array('controller' => 'guest_books', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Check Password')); ?>
 <?php echo $this -> Form -> create('Question'); ?>

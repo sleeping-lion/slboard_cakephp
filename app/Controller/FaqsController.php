@@ -161,4 +161,15 @@ class FaqsController extends SlController {
 		}
 		return $this -> redirect(array('action' => 'index'));
 	}
+
+/**
+ * admin_index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->layout='admin';		
+		$this->Faq->recursive = 0;
+		$this->set('faqs', $this->Paginator->paginate());
+	}
 }

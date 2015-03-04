@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Groups'), array('controller' => 'groups', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Groups')); ?>
+<?php $this -> Html -> addCrumb(__('Group'), array('controller' => 'groups', 'action' => 'index')); ?>
+<?php $this -> assign('title', __('Group')); ?>
 <section id="sl_group_index" class="table-responsive">
 	<table width="100%" cellpadding="0" cellspacing="0" class="table table-striped">
 		<colgroup>

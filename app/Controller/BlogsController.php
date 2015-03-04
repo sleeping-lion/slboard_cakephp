@@ -213,4 +213,14 @@ class BlogsController extends SlController {
 		return $this -> redirect(array('action' => 'index'));
 	}
 
+	/**
+ * index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->layout='admin';
+		$this->Blog->recursive = 0;
+		$this->set('blogs', $this->Paginator->paginate());
+	}
 }

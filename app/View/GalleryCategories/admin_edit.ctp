@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Gallery Categories'), array('controller' => 'gallery_categories', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Gallery Category'), array('controller' => 'gallery_categories', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Edit Gallery Category'), array('controller' => 'gallery_categories', 'action' => 'edit', $this -> request -> data['GalleryCategory']['id'])); ?>
 <?php $this -> assign('title', __('Edit Gallery Category')); ?>
 <?php

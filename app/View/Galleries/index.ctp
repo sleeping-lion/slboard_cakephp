@@ -1,7 +1,7 @@
 <?php $this -> Html -> script(array('plugin/jquery.easing.1.3.pack.js','plugin/jquery.fancybox.pack.js','plugin/jquery.uri.js','galleries/index.js'), array('inline' => false)) ?>
 <?php $this -> Html -> css(array('plugin/jquery.fancybox.css'),array('inline' => false)) ?>
-<?php $this -> Html -> addCrumb(__('Galleries'), array('controller' => 'galleries', 'action' => 'index')) ?>
-<?php $this -> assign('title', __('Galleries')) ?>
+<?php $this -> Html -> addCrumb(__('Gallery'), array('controller' => 'galleries', 'action' => 'index')) ?>
+<?php $this -> assign('title', __('Gallery')) ?>
 
 <section id="sl_gallery_index">
 	<article class="table-responsive">	
