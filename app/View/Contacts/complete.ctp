@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Contact'), array('controller' => 'contacts', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Contact'), array('controller' => 'contacts', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Contact')); ?>
 <section id="sl_contact_complete">
 	<article>

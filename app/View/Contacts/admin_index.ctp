@@ -31,17 +31,18 @@
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($contact['Contact']['created_at'], 3); ?></p></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'
-					,array('action'=>'edit',$notice['Notice']['id']),array('class'=>'btn sl_edit_link','escape'=>false)) ?>
-				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-trash"></span>',array('action' => 'delete',$notice['Notice']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false,'confirm' => __('Are you sure you wish to delete this article?'))) ?>
-				<?php if($notice['Notice']['enable']): ?>
-				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ok-circle"></span>',array('action' => 'change_status',$notice['Notice']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+					,array('action'=>'edit',$contact['Contact']['id']),array('class'=>'btn sl_edit_link','escape'=>false)) ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-trash"></span>',array('action' => 'delete',$contact['Contact']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false,'confirm' => __('Are you sure you wish to delete this article?'))) ?>
+				<?php if($contact['Contact']['enable']): ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ok-circle"></span>',array('action' => 'change_status',$contact['Contact']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
 				<?php else: ?>
-				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ban-circle"></span>',array('action' => 'change_status',$notice['Notice']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
+				<?php echo $this -> Form-> postLink('<span class="glyphicon glyphicon-ban-circle"></span>',array('action' => 'change_status',$contact['Contact']['id']),array('class'=>'btn sl_delete_form_link','escape'=>false)) ?>
 				<?php endif ?>											
         		</td>            		
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($contacts); ?>
+    		<?php unset($contacts) ?>
+    		<?php unset($contact) ?>    		
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>

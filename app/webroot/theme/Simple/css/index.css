@@ -22,7 +22,7 @@ article, aside, audio, canvas, command, datalist, details, embed, figcaption, fi
 mark, rp, rt, ruby, summary, time {display:inline;}
 
 /* layout */
-footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center;border-top:1px solid #e7e7e7}
+footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
 #mom {float:left;width:100%;padding:0}
 .sub_main {float:left;width:728px;padding:0 0 30px}
 .page-header {float:left;width:100%}
@@ -308,7 +308,7 @@ h3.no_m {margin:0}
 	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
 	header nav ul li:first-child {margin-left:0}	
 	#sl_intro_index #sl_intro_right dd {width:200px}
-	footer {height:5em}
+	footer {height:5em;border-top:1px solid #e7e7e7}
 	#mom {margin:-8em 0 -5em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:5em}
 }
@@ -317,7 +317,7 @@ h3.no_m {margin:0}
 	header {height:6em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
 	header nav {width:80%}
 	#sl_intro_index #sl_intro_right dd {width:200px}
-	footer {height:5em}
+	footer {height:5em;border-top:1px solid #e7e7e7}
 	#mom {margin:-6em 0 -5em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:5em}
 	.ad_test {height:90px}

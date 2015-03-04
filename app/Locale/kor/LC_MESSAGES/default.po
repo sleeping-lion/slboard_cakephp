@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-03 12:36+0000\n"
+"POT-Creation-Date: 2015-03-04 04:53+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -16,13 +16,14 @@ msgstr ""
 
 #: Controller/BlogCategoriesController.php:31;63;88
 #: Controller/BlogCommentsController.php:31;63;88
-#: Controller/BlogsController.php:21;41;76;108;179;207
+#: Controller/BlogsController.php:21;39;74;106;177;205
 #: Controller/CkeditorAssetsController.php:56;76
 #: Controller/ContactsController.php:36;72;97
 #: Controller/FaqCategoriesController.php:31;63;88
 #: Controller/FaqsController.php:19;48;79;123;154
 #: Controller/GalleriesController.php:24;52;81;130;159
 #: Controller/GalleryCategoriesController.php:31;63;88
+#: Controller/GroupsController.php:31;69;95
 #: Controller/GuestBookCommentsController.php:31;63;88
 #: Controller/GuestBookContentsController.php:31;63;88;118;150;175
 #: Controller/GuestBooksController.php:31;82;107
@@ -34,19 +35,21 @@ msgstr ""
 #: Controller/QuestionsController.php:31;80;107
 #: Controller/ResourcesController.php:31;69;95
 #: Controller/SettingsController.php:38;70;95;125;157;182
-#: Controller/SlAnonController.php:30;40
-#: Controller/UsersController.php:165;197;224;254;286;311
+#: Controller/SlAnonController.php:24;34
+#: Controller/SlController.php:144
+#: Controller/UsersController.php:165;197;224;255;289;315
 msgid "Invalid post"
 msgstr ""
 
 #: Controller/BlogCategoriesController.php:46;67
 #: Controller/BlogCommentsController.php:46;67
-#: Controller/BlogsController.php:160;184
+#: Controller/BlogsController.php:158;182
 #: Controller/ContactsController.php:51;76
 #: Controller/FaqCategoriesController.php:46;67
 #: Controller/FaqsController.php:102;130
 #: Controller/GalleriesController.php:111;137
 #: Controller/GalleryCategoriesController.php:46;67
+#: Controller/GroupsController.php:52;74
 #: Controller/GuestBookCommentsController.php:46;67
 #: Controller/GuestBookContentsController.php:46;67;133;154
 #: Controller/GuestBooksController.php:61;86
@@ -57,19 +60,20 @@ msgstr ""
 #: Controller/QuestionsController.php:58;84
 #: Controller/ResourcesController.php:52;74
 #: Controller/SettingsController.php:53;74;140;161
-#: Controller/UsersController.php:180;201;269;290
+#: Controller/UsersController.php:180;201;272;294
 msgid "The post has been saved."
 msgstr ""
 
 #: Controller/BlogCategoriesController.php:49;70
 #: Controller/BlogCommentsController.php:49;70
-#: Controller/BlogsController.php:163;187
+#: Controller/BlogsController.php:161;185
 #: Controller/CkeditorAssetsController.php:42
 #: Controller/ContactsController.php:54;79
 #: Controller/FaqCategoriesController.php:49;70
 #: Controller/FaqsController.php:105;133
 #: Controller/GalleriesController.php:114;140
 #: Controller/GalleryCategoriesController.php:49;70
+#: Controller/GroupsController.php:55;77
 #: Controller/GuestBookCommentsController.php:49;70
 #: Controller/GuestBookContentsController.php:49;70;136;157
 #: Controller/GuestBooksController.php:64;89
@@ -80,20 +84,21 @@ msgstr ""
 #: Controller/QuestionsController.php:61;87
 #: Controller/ResourcesController.php:55;77
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/SlController.php:100
-#: Controller/UsersController.php:183;204;293
+#: Controller/SlController.php:104
+#: Controller/UsersController.php:183;204;297
 msgid "The post could not be saved. Please, try again."
 msgstr ""
 
 #: Controller/BlogCategoriesController.php:92
 #: Controller/BlogCommentsController.php:92
-#: Controller/BlogsController.php:211
+#: Controller/BlogsController.php:209
 #: Controller/CkeditorAssetsController.php:80
 #: Controller/ContactsController.php:101
 #: Controller/FaqCategoriesController.php:92
 #: Controller/FaqsController.php:158
 #: Controller/GalleriesController.php:163
 #: Controller/GalleryCategoriesController.php:92
+#: Controller/GroupsController.php:99
 #: Controller/GuestBookCommentsController.php:92
 #: Controller/GuestBookContentsController.php:92;179
 #: Controller/GuestBooksController.php:111
@@ -104,19 +109,20 @@ msgstr ""
 #: Controller/QuestionsController.php:111
 #: Controller/ResourcesController.php:99
 #: Controller/SettingsController.php:99;186
-#: Controller/UsersController.php:228;315
+#: Controller/UsersController.php:228;320
 msgid "The post has been deleted."
 msgstr ""
 
 #: Controller/BlogCategoriesController.php:94
 #: Controller/BlogCommentsController.php:94
-#: Controller/BlogsController.php:213
+#: Controller/BlogsController.php:211
 #: Controller/CkeditorAssetsController.php:82
 #: Controller/ContactsController.php:103
 #: Controller/FaqCategoriesController.php:94
 #: Controller/FaqsController.php:160
 #: Controller/GalleriesController.php:165
 #: Controller/GalleryCategoriesController.php:94
+#: Controller/GroupsController.php:101
 #: Controller/GuestBookCommentsController.php:94
 #: Controller/GuestBookContentsController.php:94;181
 #: Controller/GuestBooksController.php:113
@@ -127,11 +133,11 @@ msgstr ""
 #: Controller/QuestionsController.php:113
 #: Controller/ResourcesController.php:101
 #: Controller/SettingsController.php:101;188
-#: Controller/UsersController.php:230;317
+#: Controller/UsersController.php:230;322
 msgid "The post could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/BlogsController.php:17;37
+#: Controller/BlogsController.php:17;35
 msgid "Insert Blog Category First"
 msgstr ""
 
@@ -147,23 +153,23 @@ msgstr ""
 msgid "Insert Gallery Category First"
 msgstr ""
 
-#: Controller/SlAnonController.php:47
+#: Controller/SlAnonController.php:41
 msgid "Invalid password, try again"
 msgstr ""
 
-#: Controller/SlController.php:70
+#: Controller/SlController.php:74
 msgid "Title"
 msgstr ""
 
-#: Controller/SlController.php:70
+#: Controller/SlController.php:74
 msgid "Content"
 msgstr ""
 
-#: Controller/SlController.php:70
+#: Controller/SlController.php:74
 msgid "Title+Content"
 msgstr ""
 
-#: Controller/SlController.php:70
+#: Controller/SlController.php:74
 #: View/Blogs/index_default.ctp:17
 #: View/Faqs/index_default.ctp:17
 #: View/Galleries/index_default.ctp:17
@@ -173,17 +179,17 @@ msgstr ""
 #: View/GuestBooks/view.ctp:10
 #: View/Notices/index.ctp:17
 #: View/Notices/view.ctp:10
-#: View/Questions/admin_index.ctp:15
+#: View/Questions/admin_index.ctp:17
 #: View/Questions/index.ctp:17
 #: View/Questions/view.ctp:10
 msgid "Writer"
 msgstr ""
 
-#: Controller/UsersController.php:272
+#: Controller/UsersController.php:275
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:338
+#: Controller/UsersController.php:343
 msgid "Invalid username or password, try again"
 msgstr ""
 
@@ -210,8 +216,9 @@ msgstr ""
 #: View/BlogCategories/admin_add.ctp:1
 #: View/BlogCategories/admin_edit.ctp:1
 #: View/BlogCategories/admin_index.ctp:1;2
-#: View/BlogCategories/admin_view.ctp:1
-msgid "Blog Categories"
+#: View/BlogCategories/admin_view.ctp:1;2;3
+#: View/Elements/Admin/aside.ctp:21
+msgid "Blog Category"
 msgstr ""
 
 #: View/BlogCategories/admin_add.ctp:2;3
@@ -224,17 +231,17 @@ msgstr ""
 #: View/BlogComments/admin_edit.ctp:7
 #: View/Blogs/add.ctp:14
 #: View/Blogs/admin_add.ctp:8
-#: View/Blogs/admin_edit.ctp:7
+#: View/Blogs/admin_edit.ctp:14
 #: View/Blogs/edit.ctp:14
 #: View/Contacts/add.ctp:11
-#: View/Contacts/admin_add.ctp:8
-#: View/Contacts/admin_edit.ctp:8
+#: View/Contacts/admin_add.ctp:11
+#: View/Contacts/admin_edit.ctp:11
 #: View/Contacts/edit.ctp:11
 #: View/FaqCategories/admin_add.ctp:7
 #: View/FaqCategories/admin_edit.ctp:7
 #: View/Faqs/add.ctp:10
 #: View/Faqs/admin_add.ctp:10
-#: View/Faqs/admin_edit.ctp:8
+#: View/Faqs/admin_edit.ctp:10
 #: View/Faqs/edit.ctp:10
 #: View/Galleries/add.ctp:11
 #: View/Galleries/admin_add.ctp:10
@@ -242,6 +249,8 @@ msgstr ""
 #: View/Galleries/edit.ctp:11
 #: View/GalleryCategories/admin_add.ctp:7
 #: View/GalleryCategories/admin_edit.ctp:7
+#: View/Groups/admin_add.ctp:7
+#: View/Groups/admin_edit.ctp:7
 #: View/GuestBookComments/admin_add.ctp:8
 #: View/GuestBookComments/admin_edit.ctp:7
 #: View/GuestBooks/add.ctp:19
@@ -250,8 +259,8 @@ msgstr ""
 #: View/GuestBooks/check_password.ctp:11
 #: View/GuestBooks/edit.ctp:15
 #: View/Histories/add.ctp:11
-#: View/Histories/admin_add.ctp:9
-#: View/Histories/admin_edit.ctp:9
+#: View/Histories/admin_add.ctp:11
+#: View/Histories/admin_edit.ctp:11
 #: View/Histories/edit.ctp:11
 #: View/NoticeComments/admin_add.ctp:8
 #: View/NoticeComments/admin_edit.ctp:7
@@ -263,14 +272,18 @@ msgstr ""
 #: View/Portfolios/admin_add.ctp:9
 #: View/Portfolios/admin_edit.ctp:9
 #: View/Portfolios/edit.ctp:8
+#: View/QuestionComments/admin_add.ctp:8
+#: View/QuestionComments/admin_edit.ctp:7
 #: View/Questions/add.ctp:20
-#: View/Questions/admin_add.ctp:8
+#: View/Questions/admin_add.ctp:20
 #: View/Questions/admin_edit.ctp:8
 #: View/Questions/check_password.ctp:8
 #: View/Questions/edit.ctp:8
 #: View/Resources/admin_add.ctp:9
 #: View/Resources/admin_edit.ctp:9
 #: View/Users/add.ctp:12
+#: View/Users/admin_add.ctp:12
+#: View/Users/admin_edit.ctp:18
 #: View/Users/edit.ctp:18
 msgid "Save Article"
 msgstr ""
@@ -279,72 +292,138 @@ msgstr ""
 msgid "Edit Blog Category"
 msgstr ""
 
+#: View/BlogCategories/admin_index.ctp:15
+#: View/Blogs/admin_index.ctp:15
+#: View/Contacts/admin_index.ctp:15
+#: View/Faqs/admin_index.ctp:15
+#: View/Galleries/admin_index.ctp:15
+#: View/Questions/admin_index.ctp:15
+msgid "Id"
+msgstr ""
+
+#: View/BlogCategories/admin_index.ctp:17
+#: View/Blogs/admin_index.ctp:17
+#: View/Contacts/admin_index.ctp:17
+#: View/Faqs/admin_index.ctp:17
+#: View/Galleries/admin_index.ctp:17
+#: View/Questions/admin_index.ctp:18
+msgid "Count"
+msgstr ""
+
+#: View/BlogCategories/admin_index.ctp:19
+#: View/Blogs/admin_index.ctp:19
+#: View/Contacts/admin_index.ctp:19
+#: View/FaqCategories/admin_index.ctp:19
+#: View/Faqs/admin_index.ctp:19
+#: View/Galleries/admin_index.ctp:19
+#: View/GalleryCategories/admin_index.ctp:19
+#: View/Groups/admin_index.ctp:16
+#: View/GuestBooks/admin_index.ctp:19
+#: View/Notices/admin_index.ctp:16
+#: View/Questions/admin_index.ctp:20
+#: View/Resources/admin_index.ctp:16
+#: View/Users/admin_index.ctp:18
+msgid "Manage"
+msgstr ""
+
 #: View/BlogCategories/admin_index.ctp:35
+#: View/Blogs/admin_index.ctp:35
+#: View/Blogs/view.ctp:23
+#: View/CkeditorAssets/index.ctp:31
+#: View/Contacts/admin_index.ctp:35
+#: View/FaqCategories/admin_index.ctp:35
+#: View/Faqs/admin_index.ctp:32
+#: View/Faqs/index.ctp:32;42;53
+#: View/Galleries/admin_index.ctp:35
+#: View/Galleries/index.ctp:32
+#: View/GalleryCategories/admin_index.ctp:35
+#: View/Groups/admin_index.ctp:29
+#: View/GuestBooks/admin_index.ctp:33
+#: View/GuestBooks/admin_view.ctp:25
+#: View/GuestBooks/confirm_delete.ctp:5
+#: View/GuestBooks/view.ctp:25
+#: View/Histories/admin_view.ctp:22
+#: View/Histories/view.ctp:22
+#: View/Notices/admin_index.ctp:29
+#: View/Notices/view.ctp:24
+#: View/Portfolios/view.ctp:22
+#: View/Questions/admin_index.ctp:36
+#: View/Questions/confirm_delete.ctp:5
+#: View/Questions/view.ctp:23
+#: View/Resources/admin_index.ctp:29
+#: View/Users/admin_index.ctp:32
+msgid "Are you sure you wish to delete this article?"
+msgstr ""
+
+#: View/BlogCategories/admin_index.ctp:47
+#: View/Blogs/admin_index.ctp:47
 #: View/Blogs/index.ctp:29
 #: View/Blogs/index_default.ctp:36
 #: View/CkeditorAssets/index.ctp:55;66
-#: View/Contacts/admin_index.ctp:35
-#: View/Contacts/index.ctp:34
+#: View/Contacts/admin_index.ctp:47
+#: View/Contacts/index.ctp:35
 #: View/Elements/BlogCategories/index.ctp:34
-#: View/Elements/Blogs/index.ctp:14
-#: View/Elements/GuestBooks/index.ctp:13
-#: View/Elements/Notices/index.ctp:13
-#: View/Elements/Questions/index.ctp:13
-#: View/FaqCategories/admin_index.ctp:35
-#: View/Faqs/admin_index.ctp:30
+#: View/Elements/Blogs/index.ctp:15
+#: View/Elements/Faqs/index.ctp:15
+#: View/Elements/GuestBooks/index.ctp:15
+#: View/Elements/Notices/index.ctp:15
+#: View/Elements/Questions/index.ctp:15
+#: View/FaqCategories/admin_index.ctp:47
+#: View/Faqs/admin_index.ctp:44
 #: View/Faqs/index.ctp:60
 #: View/Faqs/index_default.ctp:37
-#: View/Galleries/admin_index.ctp:35
+#: View/Galleries/admin_index.ctp:47
 #: View/Galleries/index.ctp:56;66
 #: View/Galleries/index_default.ctp:36
-#: View/GalleryCategories/admin_index.ctp:35
-#: View/GuestBooks/admin_index.ctp:40
+#: View/GalleryCategories/admin_index.ctp:47
+#: View/Groups/admin_index.ctp:42
+#: View/GuestBooks/admin_index.ctp:45
 #: View/GuestBooks/index.ctp:38
 #: View/Histories/admin_index.ctp:29
 #: View/Histories/index.ctp:30
 #: View/Intro/index.ctp:63
-#: View/Notices/admin_index.ctp:36
+#: View/Notices/admin_index.ctp:42
 #: View/Notices/index.ctp:36
 #: View/Portfolios/admin_index.ctp:29
 #: View/Portfolios/index.ctp:17
-#: View/Questions/admin_index.ctp:35
+#: View/Questions/admin_index.ctp:48
 #: View/Questions/index.ctp:38
 #: View/Resources/admin_index.ctp:36
+#: View/Users/admin_index.ctp:45
 msgid "No Article"
 msgstr ""
 
-#: View/BlogCategories/admin_index.ctp:42
+#: View/BlogCategories/admin_index.ctp:54
 #: View/BlogComments/admin_index.ctp:34
-#: View/Blogs/admin_index.ctp:36
+#: View/Blogs/admin_index.ctp:54
 #: View/Blogs/index.ctp:33
 #: View/CkeditorAssets/index.ctp:70
-#: View/Contacts/admin_index.ctp:42
-#: View/Contacts/index.ctp:40
-#: View/FaqCategories/admin_index.ctp:42
+#: View/Contacts/admin_index.ctp:54
+#: View/Contacts/index.ctp:41
+#: View/FaqCategories/admin_index.ctp:54
+#: View/Faqs/admin_index.ctp:51
 #: View/Faqs/index.ctp:66
-#: View/Galleries/admin_index.ctp:42
+#: View/Galleries/admin_index.ctp:54
 #: View/Galleries/index.ctp:71
 #: View/Galleries/index_default.ctp:44
-#: View/GalleryCategories/admin_index.ctp:42
+#: View/GalleryCategories/admin_index.ctp:54
+#: View/Groups/admin_index.ctp:48
 #: View/GuestBookComments/admin_index.ctp:34
-#: View/GuestBooks/admin_index.ctp:47
+#: View/GuestBooks/admin_index.ctp:52
 #: View/GuestBooks/index.ctp:46
 #: View/Histories/admin_index.ctp:36
 #: View/Histories/index.ctp:38
 #: View/NoticeComments/admin_index.ctp:34
-#: View/Notices/admin_index.ctp:42
+#: View/Notices/admin_index.ctp:48
 #: View/Notices/index.ctp:44
 #: View/Portfolios/admin_index.ctp:36
 #: View/Portfolios/index.ctp:21
-#: View/Questions/admin_index.ctp:41
+#: View/QuestionComments/admin_index.ctp:34
+#: View/Questions/admin_index.ctp:54
 #: View/Questions/index.ctp:46
 #: View/Resources/admin_index.ctp:42
+#: View/Users/admin_index.ctp:51
 msgid "New Article"
-msgstr ""
-
-#: View/BlogCategories/admin_view.ctp:2;3
-#: View/Elements/Admin/aside.ctp:21
-msgid "Blog Category"
 msgstr ""
 
 #: View/BlogCategories/admin_view.ctp:7
@@ -361,6 +440,7 @@ msgstr ""
 #: View/Faqs/admin_view.ctp:7
 #: View/Faqs/view.ctp:7
 #: View/GalleryCategories/admin_view.ctp:7
+#: View/Groups/admin_view.ctp:18
 #: View/GuestBookComments/admin_view.ctp:7
 #: View/GuestBooks/admin_view.ctp:20
 #: View/GuestBooks/view.ctp:20
@@ -381,45 +461,27 @@ msgstr ""
 #: View/BlogComments/admin_add.ctp:1
 #: View/BlogComments/admin_edit.ctp:1
 #: View/BlogComments/admin_index.ctp:1;2
-#: View/BlogComments/admin_view.ctp:1
-#: View/Blogs/add.ctp:2
-#: View/Blogs/admin_add.ctp:1
-#: View/Blogs/admin_edit.ctp:1
-#: View/Blogs/admin_index.ctp:1;2
-#: View/Blogs/admin_view.ctp:1
-#: View/Blogs/edit.ctp:2
-#: View/Blogs/index.ctp:1;2
-#: View/Blogs/index_default.ctp:1;2
-#: View/Blogs/view.ctp:1
-#: View/Elements/BlogComments/view.ctp:1
-#: View/Elements/GuestBookComments/view.ctp:1
-#: View/Elements/NoticeComments/view.ctp:1
-#: View/Elements/QuestionComments/view.ctp:1
-#: View/GuestBookComments/admin_add.ctp:1
-#: View/GuestBookComments/admin_edit.ctp:1
-#: View/GuestBookComments/admin_index.ctp:1;2
-#: View/GuestBookComments/admin_view.ctp:1
-#: View/QuestionComments/admin_view.ctp:1
-msgid "Blogs"
+#: View/BlogComments/admin_view.ctp:1;2;3
+msgid "Blog Comment"
 msgstr ""
 
 #: View/BlogComments/admin_add.ctp:2;3
-#: View/Blogs/add.ctp:3;4
-#: View/Blogs/admin_add.ctp:2;3
-#: View/GuestBookComments/admin_add.ctp:2;3
-msgid "Add Blog"
+msgid "Add Blog Comment"
 msgstr ""
 
 #: View/BlogComments/admin_edit.ctp:2;3
-#: View/Blogs/admin_edit.ctp:2;3
-#: View/Blogs/edit.ctp:3;4
-#: View/GuestBookComments/admin_edit.ctp:2;3
-msgid "Edit Blog"
+msgid "Edit Blog Comment"
 msgstr ""
 
-#: View/BlogComments/admin_view.ctp:2;3
-#: View/Blogs/admin_view.ctp:2;3
-#: View/Blogs/view.ctp:2;3
+#: View/Blogs/add.ctp:2
+#: View/Blogs/admin_add.ctp:1
+#: View/Blogs/admin_edit.ctp:2
+#: View/Blogs/admin_index.ctp:1;2
+#: View/Blogs/admin_view.ctp:1;2;3
+#: View/Blogs/edit.ctp:2
+#: View/Blogs/index.ctp:1;2
+#: View/Blogs/index_default.ctp:1;2
+#: View/Blogs/view.ctp:1;2;3
 #: View/Elements/header.ctp:26
 #: View/Elements/Admin/aside.ctp:9
 #: View/Elements/BlogCategories/index.ctp:3
@@ -429,8 +491,18 @@ msgstr ""
 #: View/Elements/NoticeComments/view.ctp:2;3
 #: View/Elements/QuestionComments/view.ctp:2;3
 #: View/GuestBookComments/admin_view.ctp:2;3
-#: View/QuestionComments/admin_view.ctp:2;3
 msgid "Blog"
+msgstr ""
+
+#: View/Blogs/add.ctp:3;4
+#: View/Blogs/admin_add.ctp:2;3
+msgid "Add Blog"
+msgstr ""
+
+#: View/Blogs/admin_edit.ctp:3;4
+#: View/Blogs/edit.ctp:3;4
+#: View/GuestBookComments/admin_edit.ctp:2;3
+msgid "Edit Blog"
 msgstr ""
 
 #: View/Blogs/index_default.ctp:44
@@ -442,6 +514,7 @@ msgstr ""
 #: View/Elements/GuestBookComments/view.ctp:9
 #: View/Elements/NoticeComments/view.ctp:9
 #: View/Elements/QuestionComments/view.ctp:9
+#: View/Groups/admin_view.ctp:11
 #: View/GuestBooks/admin_view.ctp:11
 #: View/GuestBooks/view.ctp:11
 #: View/Histories/admin_view.ctp:11
@@ -459,6 +532,7 @@ msgstr ""
 #: View/CkeditorAssets/index.ctp:30
 #: View/Faqs/index.ctp:31;41;52
 #: View/Galleries/index.ctp:31
+#: View/Groups/admin_view.ctp:21
 #: View/GuestBooks/admin_view.ctp:24;27
 #: View/GuestBooks/view.ctp:24;27
 #: View/Histories/admin_view.ctp:21
@@ -476,6 +550,7 @@ msgstr ""
 #: View/CkeditorAssets/index.ctp:31
 #: View/Faqs/index.ctp:32;42;53
 #: View/Galleries/index.ctp:32
+#: View/Groups/admin_view.ctp:22
 #: View/GuestBooks/admin_view.ctp:25;28
 #: View/GuestBooks/view.ctp:25;28
 #: View/Histories/admin_view.ctp:22
@@ -489,26 +564,8 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: View/Blogs/view.ctp:23
-#: View/CkeditorAssets/index.ctp:31
-#: View/Faqs/index.ctp:32;42;53
-#: View/Galleries/index.ctp:32
-#: View/GuestBooks/admin_index.ctp:33
-#: View/GuestBooks/admin_view.ctp:25
-#: View/GuestBooks/confirm_delete.ctp:5
-#: View/GuestBooks/view.ctp:25
-#: View/Histories/view.ctp:22
-#: View/Notices/admin_index.ctp:29
-#: View/Notices/view.ctp:24
-#: View/Portfolios/view.ctp:22
-#: View/Questions/confirm_delete.ctp:5
-#: View/Questions/view.ctp:23
-#: View/Resources/admin_index.ctp:29
-msgid "Are you sure you wish to delete this article?"
-msgstr ""
-
 #: View/CkeditorAssets/add.ctp:1
-msgid "Ckeditor Assets"
+msgid "Ckeditor Asset"
 msgstr ""
 
 #: View/CkeditorAssets/add.ctp:2;3
@@ -520,15 +577,18 @@ msgid "Save Ckeditor Asset"
 msgstr ""
 
 #: View/CkeditorAssets/index.ctp:3;4
+#: View/Elements/header.ctp:27
+#: View/Elements/Admin/aside.ctp:8
+#: View/Elements/Galleries/index.ctp:2
 #: View/Galleries/add.ctp:1
 #: View/Galleries/admin_add.ctp:1
 #: View/Galleries/admin_edit.ctp:1
 #: View/Galleries/admin_index.ctp:1;2
-#: View/Galleries/admin_view.ctp:1
+#: View/Galleries/admin_view.ctp:1;2;3
 #: View/Galleries/edit.ctp:1
 #: View/Galleries/index.ctp:3;4
 #: View/Galleries/index_default.ctp:1;2
-msgid "Galleries"
+msgid "Gallery"
 msgstr ""
 
 #: View/CkeditorAssets/index.ctp:14
@@ -538,52 +598,25 @@ msgid "No Category"
 msgstr ""
 
 #: View/Contacts/add.ctp:1
+#: View/Contacts/admin_add.ctp:1
+#: View/Contacts/admin_edit.ctp:1
 #: View/Contacts/admin_index.ctp:1;2
 #: View/Contacts/admin_view.ctp:1
+#: View/Contacts/complete.ctp:1;2
 #: View/Contacts/edit.ctp:1
 #: View/Contacts/index.ctp:1;2
 #: View/Contacts/view.ctp:1;3
-msgid "Contacts"
-msgstr ""
-
-#: View/Contacts/add.ctp:2;3
-msgid "Add Contact"
-msgstr ""
-
-#: View/Contacts/admin_add.ctp:1
-#: View/Contacts/admin_edit.ctp:1
-#: View/Questions/add.ctp:1
-#: View/Questions/admin_add.ctp:1
-#: View/Questions/admin_edit.ctp:1
-#: View/Questions/admin_index.ctp:1;2
-#: View/Questions/admin_view.ctp:1
-#: View/Questions/check_password.ctp:1
-#: View/Questions/confirm_delete.ctp:1
-#: View/Questions/edit.ctp:1
-#: View/Questions/index.ctp:1;2
-#: View/Questions/view.ctp:1
-msgid "Questions"
-msgstr ""
-
-#: View/Contacts/admin_add.ctp:2;3
-#: View/Questions/add.ctp:2;3
-#: View/Questions/admin_add.ctp:2;3
-msgid "Add Question"
-msgstr ""
-
-#: View/Contacts/admin_edit.ctp:2;3
-#: View/Questions/admin_edit.ctp:2;3
-#: View/Questions/edit.ctp:2;3
-msgid "Edit Question"
-msgstr ""
-
-#: View/Contacts/admin_view.ctp:2;3
-#: View/Contacts/view.ctp:2
 #: View/Elements/header.ctp:25
 #: View/Elements/Admin/aside.ctp:6
 msgid "Contact"
 msgstr ""
 
+#: View/Contacts/add.ctp:2;3
+#: View/Contacts/admin_add.ctp:2;3
+msgid "Add Contact"
+msgstr ""
+
+#: View/Contacts/admin_edit.ctp:2;3
 #: View/Contacts/edit.ctp:2;3
 msgid "Edit Contact"
 msgstr ""
@@ -625,26 +658,37 @@ msgid "Install"
 msgstr ""
 
 #: View/Elements/header.ctp:21
-#: View/Histories/view.ctp:2;3
+#: View/Histories/add.ctp:2
+#: View/Histories/admin_add.ctp:2
 msgid "History"
-msgstr ""
-
-#: View/Elements/header.ctp:27
-#: View/Elements/Admin/aside.ctp:8
-#: View/Elements/Galleries/index.ctp:2
-#: View/Galleries/admin_view.ctp:2;3
-msgid "Gallery"
 msgstr ""
 
 #: View/Elements/header.ctp:28
 #: View/Elements/Admin/aside.ctp:7
 #: View/Elements/Questions/index.ctp:2
-#: View/Questions/admin_view.ctp:2;3
-#: View/Questions/view.ctp:2;3
+#: View/Questions/add.ctp:1
+#: View/Questions/admin_add.ctp:1
+#: View/Questions/admin_edit.ctp:1
+#: View/Questions/admin_index.ctp:1;2
+#: View/Questions/admin_view.ctp:1;3
+#: View/Questions/check_password.ctp:1
+#: View/Questions/confirm_delete.ctp:1
+#: View/Questions/edit.ctp:1
+#: View/Questions/index.ctp:1;2
+#: View/Questions/view.ctp:1
 msgid "Question"
 msgstr ""
 
 #: View/Elements/header.ctp:29
+#: View/Elements/Faqs/index.ctp:2
+#: View/Faqs/add.ctp:1
+#: View/Faqs/admin_add.ctp:1
+#: View/Faqs/admin_edit.ctp:1
+#: View/Faqs/admin_view.ctp:1;2;3
+#: View/Faqs/edit.ctp:1
+#: View/Faqs/index.ctp:2;3
+#: View/Faqs/index_default.ctp:1;2
+#: View/Faqs/view.ctp:1;2;3
 msgid "Faq"
 msgstr ""
 
@@ -652,10 +696,14 @@ msgstr ""
 #: View/Elements/info.ctp:4
 #: View/Elements/Admin/aside.ctp:10
 #: View/Elements/Notices/index.ctp:2
-#: View/Histories/admin_view.ctp:2;3
-#: View/Notices/admin_view.ctp:2;3
-#: View/Notices/view.ctp:2;3
-#: View/Portfolios/admin_view.ctp:2;3
+#: View/Notices/add.ctp:2
+#: View/Notices/admin_add.ctp:2
+#: View/Notices/admin_edit.ctp:2
+#: View/Notices/admin_index.ctp:1
+#: View/Notices/admin_view.ctp:1
+#: View/Notices/edit.ctp:2
+#: View/Notices/index.ctp:1
+#: View/Notices/view.ctp:1
 #: View/Resources/admin_view.ctp:2;3
 msgid "Notice"
 msgstr ""
@@ -663,14 +711,25 @@ msgstr ""
 #: View/Elements/header.ctp:31
 #: View/Elements/Admin/aside.ctp:11
 #: View/Elements/GuestBooks/index.ctp:2
-#: View/Faqs/admin_view.ctp:2;3
-#: View/Faqs/view.ctp:2;3
-#: View/GuestBooks/admin_view.ctp:2;3
-#: View/GuestBooks/view.ctp:2;3
+#: View/GuestBooks/add.ctp:1
+#: View/GuestBooks/admin_add.ctp:1
+#: View/GuestBooks/admin_edit.ctp:1
+#: View/GuestBooks/admin_index.ctp:1;2
+#: View/GuestBooks/admin_view.ctp:1
+#: View/GuestBooks/check_password.ctp:1
+#: View/GuestBooks/edit.ctp:1
+#: View/GuestBooks/index.ctp:1;2
+#: View/GuestBooks/view.ctp:1
 msgid "Guest Book"
 msgstr ""
 
 #: View/Elements/header.ctp:32
+#: View/Portfolios/add.ctp:1
+#: View/Portfolios/admin_add.ctp:2
+#: View/Portfolios/admin_edit.ctp:2
+#: View/Portfolios/admin_index.ctp:1;2
+#: View/Portfolios/admin_view.ctp:1
+#: View/Portfolios/index.ctp:1;2
 #: View/Portfolios/view.ctp:2;3
 msgid "Portfolio"
 msgstr ""
@@ -691,18 +750,37 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
+#: View/Elements/Admin/aside.ctp:13
+#: View/Users/admin_index.ctp:1;2
+msgid "User"
+msgstr ""
+
 #: View/Elements/Admin/aside.ctp:16
 msgid "Categories"
 msgstr ""
 
 #: View/Elements/Admin/aside.ctp:19
+#: View/FaqCategories/admin_add.ctp:1
+#: View/FaqCategories/admin_edit.ctp:1
+#: View/FaqCategories/admin_index.ctp:1;2
+#: View/FaqCategories/admin_view.ctp:2;3
 msgid "Faq Category"
 msgstr ""
 
 #: View/Elements/Admin/aside.ctp:20
-#: View/FaqCategories/admin_view.ctp:2
-#: View/GalleryCategories/admin_view.ctp:2
+#: View/GalleryCategories/admin_add.ctp:1
+#: View/GalleryCategories/admin_edit.ctp:1
+#: View/GalleryCategories/admin_index.ctp:1;2
+#: View/GalleryCategories/admin_view.ctp:1;2;3
 msgid "Gallery Category"
+msgstr ""
+
+#: View/Elements/Admin/aside.ctp:22
+#: View/Groups/admin_add.ctp:1
+#: View/Groups/admin_edit.ctp:1
+#: View/Groups/admin_index.ctp:1;2
+#: View/Groups/admin_view.ctp:1;3
+msgid "Group"
 msgstr ""
 
 #: View/Elements/BlogCategories/index.ctp:11
@@ -710,11 +788,12 @@ msgid "All"
 msgstr ""
 
 #: View/Elements/BlogCategories/index.ctp:37
-#: View/Elements/Blogs/index.ctp:16
-#: View/Elements/Galleries/index.ctp:18
-#: View/Elements/GuestBooks/index.ctp:15
-#: View/Elements/Notices/index.ctp:15
-#: View/Elements/Questions/index.ctp:15
+#: View/Elements/Blogs/index.ctp:17
+#: View/Elements/Faqs/index.ctp:17
+#: View/Elements/Galleries/index.ctp:21
+#: View/Elements/GuestBooks/index.ctp:17
+#: View/Elements/Notices/index.ctp:17
+#: View/Elements/Questions/index.ctp:17
 msgid "more"
 msgstr ""
 
@@ -725,67 +804,42 @@ msgstr ""
 msgid "Save Comment"
 msgstr ""
 
-#: View/FaqCategories/admin_add.ctp:1
-#: View/FaqCategories/admin_edit.ctp:1
-#: View/FaqCategories/admin_view.ctp:1;3
-#: View/GalleryCategories/admin_add.ctp:1
-#: View/GalleryCategories/admin_edit.ctp:1
-#: View/GalleryCategories/admin_index.ctp:1;2
-#: View/GalleryCategories/admin_view.ctp:1;3
-msgid "Gallery Categories"
+#: View/Elements/BlogComments/view.ctp:1
+#: View/Elements/GuestBookComments/view.ctp:1
+#: View/Elements/NoticeComments/view.ctp:1
+#: View/Elements/QuestionComments/view.ctp:1
+#: View/GuestBookComments/admin_edit.ctp:1
+#: View/GuestBookComments/admin_index.ctp:1;2
+#: View/GuestBookComments/admin_view.ctp:1
+msgid "Blogs"
 msgstr ""
 
 #: View/FaqCategories/admin_add.ctp:2;3
-#: View/GalleryCategories/admin_add.ctp:2;3
-msgid "Add Gallery Category"
+msgid "Add Faq Category"
 msgstr ""
 
 #: View/FaqCategories/admin_edit.ctp:2;3
-#: View/GalleryCategories/admin_edit.ctp:2;3
-msgid "Edit Gallery Category"
+msgid "Edit Faq Category"
 msgstr ""
 
-#: View/FaqCategories/admin_index.ctp:1;2
+#: View/FaqCategories/admin_view.ctp:1
 msgid "Faq Categories"
-msgstr ""
-
-#: View/Faqs/add.ctp:1
-#: View/Faqs/admin_add.ctp:1
-#: View/Faqs/admin_index.ctp:1;2
-#: View/Faqs/edit.ctp:1
-#: View/Faqs/index.ctp:2;3
-#: View/Faqs/index_default.ctp:1;2
-msgid "Faqs"
 msgstr ""
 
 #: View/Faqs/add.ctp:2;3
 #: View/Faqs/admin_add.ctp:2;3
-#: View/Faqs/edit.ctp:2;3
 msgid "Add Faq"
 msgstr ""
 
-#: View/Faqs/admin_edit.ctp:1
-#: View/Faqs/admin_view.ctp:1
-#: View/Faqs/view.ctp:1
-#: View/GuestBooks/add.ctp:1
-#: View/GuestBooks/admin_add.ctp:1
-#: View/GuestBooks/admin_edit.ctp:1
-#: View/GuestBooks/admin_index.ctp:1;2
-#: View/GuestBooks/admin_view.ctp:1
-#: View/GuestBooks/check_password.ctp:1
-#: View/GuestBooks/edit.ctp:1
-#: View/GuestBooks/index.ctp:1;2
-#: View/GuestBooks/view.ctp:1
-msgid "Guest Books"
-msgstr ""
-
 #: View/Faqs/admin_edit.ctp:2;3
-#: View/GuestBooks/admin_edit.ctp:3
-#: View/GuestBooks/edit.ctp:3
-msgid "Edit Guest Book"
+#: View/Faqs/edit.ctp:2;3
+msgid "Edit Faq"
 msgstr ""
 
-#: View/Faqs/admin_index.ctp:37
+#: View/Faqs/admin_index.ctp:1;2
+msgid "Faqs"
+msgstr ""
+
 #: View/Faqs/index_default.ctp:45
 msgid "New Faq"
 msgstr ""
@@ -800,42 +854,38 @@ msgstr ""
 msgid "Edit Gallery"
 msgstr ""
 
-#: View/Galleries/admin_index.ctp:14
-#: View/Questions/admin_index.ctp:13
-msgid "Id"
+#: View/GalleryCategories/admin_add.ctp:2;3
+msgid "Add Gallery Category"
 msgstr ""
 
-#: View/Galleries/admin_index.ctp:15
-msgid "title"
+#: View/GalleryCategories/admin_edit.ctp:2;3
+msgid "Edit Gallery Category"
 msgstr ""
 
-#: View/Galleries/admin_index.ctp:16
-msgid "count"
+#: View/Groups/admin_add.ctp:2;3
+msgid "Add Group"
 msgstr ""
 
-#: View/Galleries/admin_index.ctp:17
-msgid "created_at"
+#: View/Groups/admin_edit.ctp:2;3
+msgid "Edit Group"
 msgstr ""
 
-#: View/GuestBooks/add.ctp:2
-#: View/GuestBooks/admin_add.ctp:2
-msgid "Add Guest Books"
+#: View/GuestBookComments/admin_add.ctp:1
+msgid "Guest Book Comment"
 msgstr ""
 
-#: View/GuestBooks/add.ctp:3
-#: View/GuestBooks/admin_add.ctp:3
+#: View/GuestBookComments/admin_add.ctp:2;3
+msgid "Add Guest Book Comment"
+msgstr ""
+
+#: View/GuestBooks/add.ctp:2;3
+#: View/GuestBooks/admin_add.ctp:2;3
 msgid "Add Guest Book"
 msgstr ""
 
-#: View/GuestBooks/admin_edit.ctp:2
-#: View/GuestBooks/edit.ctp:2
-msgid "Edit Guest Books"
-msgstr ""
-
-#: View/GuestBooks/admin_index.ctp:19
-#: View/Notices/admin_index.ctp:16
-#: View/Resources/admin_index.ctp:16
-msgid "Manage"
+#: View/GuestBooks/admin_edit.ctp:2;3
+#: View/GuestBooks/edit.ctp:2;3
+msgid "Edit Guest Book"
 msgstr ""
 
 #: View/GuestBooks/check_password.ctp:2;3
@@ -845,7 +895,7 @@ msgid "Check Password"
 msgstr ""
 
 #: View/GuestBooks/confirm_delete.ctp:1
-msgid "GuestBooks"
+msgid "GuestBook"
 msgstr ""
 
 #: View/GuestBooks/confirm_delete.ctp:2;3
@@ -862,64 +912,21 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: View/Histories/add.ctp:2
-#: View/Histories/edit.ctp:2
-#: View/Histories/index.ctp:1;2
-#: View/Histories/view.ctp:1
-msgid "Histories"
-msgstr ""
-
 #: View/Histories/add.ctp:3;4
+#: View/Histories/admin_add.ctp:3;4
 msgid "Add History"
 msgstr ""
 
-#: View/Histories/admin_add.ctp:2
 #: View/Histories/admin_edit.ctp:2
-#: View/Histories/admin_index.ctp:1
+#: View/Histories/admin_index.ctp:1;2
 #: View/Histories/admin_view.ctp:1
-#: View/Notices/add.ctp:2
-#: View/Notices/admin_add.ctp:2
-#: View/Notices/admin_edit.ctp:2
-#: View/Notices/admin_index.ctp:1
-#: View/Notices/admin_view.ctp:1
-#: View/Notices/edit.ctp:2
-#: View/Notices/index.ctp:1
-#: View/Notices/view.ctp:1
-#: View/Portfolios/admin_add.ctp:2
-#: View/Portfolios/admin_edit.ctp:2
-#: View/Portfolios/admin_index.ctp:1
-#: View/Portfolios/admin_view.ctp:1
-#: View/Resources/admin_add.ctp:2
-#: View/Resources/admin_edit.ctp:2
-#: View/Resources/admin_index.ctp:1
-#: View/Resources/admin_view.ctp:1
-msgid "Notices"
-msgstr ""
-
-#: View/Histories/admin_add.ctp:3;4
-#: View/Notices/add.ctp:3;4
-#: View/Notices/admin_add.ctp:3;4
-#: View/Portfolios/admin_add.ctp:3;4
-#: View/Resources/admin_add.ctp:3;4
-msgid "Add Notice"
+#: View/Histories/edit.ctp:2
+#: View/Histories/index.ctp:1;2
+#: View/Histories/view.ctp:1
+msgid "Histroy"
 msgstr ""
 
 #: View/Histories/admin_edit.ctp:3;4
-#: View/Notices/admin_edit.ctp:3;4
-#: View/Notices/edit.ctp:3;4
-#: View/Portfolios/admin_edit.ctp:3;4
-#: View/Resources/admin_edit.ctp:3;4
-msgid "Edit Notice"
-msgstr ""
-
-#: View/Histories/admin_index.ctp:2
-#: View/Notices/admin_index.ctp:2
-#: View/Notices/index.ctp:2
-#: View/Portfolios/admin_index.ctp:2
-#: View/Resources/admin_index.ctp:2
-msgid "Noitces"
-msgstr ""
-
 #: View/Histories/edit.ctp:3;4
 msgid "Edit History"
 msgstr ""
@@ -954,29 +961,84 @@ msgstr ""
 msgid "Notice Comment"
 msgstr ""
 
-#: View/Portfolios/add.ctp:1
-#: View/Portfolios/edit.ctp:1
-#: View/Portfolios/index.ctp:1;2
-#: View/Portfolios/view.ctp:1
-msgid "Portfolios"
+#: View/Notices/add.ctp:3;4
+#: View/Notices/admin_add.ctp:3;4
+#: View/Resources/admin_add.ctp:3;4
+msgid "Add Notice"
+msgstr ""
+
+#: View/Notices/admin_edit.ctp:3;4
+#: View/Notices/edit.ctp:3;4
+#: View/Resources/admin_edit.ctp:3;4
+msgid "Edit Notice"
+msgstr ""
+
+#: View/Notices/admin_index.ctp:2
+#: View/Notices/index.ctp:2
+msgid "Noitce"
 msgstr ""
 
 #: View/Portfolios/add.ctp:2;3
+#: View/Portfolios/admin_add.ctp:3;4
 msgid "Add Portfolio"
 msgstr ""
 
+#: View/Portfolios/admin_edit.ctp:3;4
 #: View/Portfolios/edit.ctp:2;3
 msgid "Edit Portfolio"
 msgstr ""
 
-#: View/Questions/admin_index.ctp:16
-msgid "Count"
+#: View/Portfolios/edit.ctp:1
+#: View/Portfolios/view.ctp:1
+msgid "Portfolios"
+msgstr ""
+
+#: View/QuestionComments/admin_add.ctp:1
+#: View/QuestionComments/admin_edit.ctp:1
+#: View/QuestionComments/admin_index.ctp:1;2
+#: View/QuestionComments/admin_view.ctp:1
+msgid "Question Comments"
+msgstr ""
+
+#: View/QuestionComments/admin_add.ctp:2;3
+msgid "Add Question Comment"
+msgstr ""
+
+#: View/QuestionComments/admin_edit.ctp:2;3
+msgid "Edit Question Comment"
+msgstr ""
+
+#: View/QuestionComments/admin_view.ctp:2;3
+msgid "Question Comment"
+msgstr ""
+
+#: View/Questions/add.ctp:2;3
+#: View/Questions/admin_add.ctp:2;3
+msgid "Add Question"
+msgstr ""
+
+#: View/Questions/admin_edit.ctp:2;3
+#: View/Questions/edit.ctp:2;3
+msgid "Edit Question"
+msgstr ""
+
+#: View/Resources/admin_add.ctp:2
+#: View/Resources/admin_edit.ctp:2
+#: View/Resources/admin_index.ctp:1
+#: View/Resources/admin_view.ctp:1
+msgid "Notices"
+msgstr ""
+
+#: View/Resources/admin_index.ctp:2
+msgid "Noitces"
 msgstr ""
 
 #: View/Users/add.ctp:3
+#: View/Users/admin_add.ctp:3
 msgid "Add User"
 msgstr ""
 
+#: View/Users/admin_edit.ctp:3
 #: View/Users/edit.ctp:3
 msgid "Edit User"
 msgstr ""

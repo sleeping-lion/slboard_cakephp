@@ -12,11 +12,11 @@
     </colgroup>
     <thead>
     	<tr>
-      	<th><?php echo $this -> Paginator -> sort('id', __('Id')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('title', __('title')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('count', __('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', __('created_at')); ?></th>
-       <th class="sl_t_manage"><?php echo __('Manage') ?></th>				
+				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id',__('Id')) ?></th>
+       <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
+       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'count',__('Count')) ?></th>
+       <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
+       <th class="sl_t_manage"><?php echo __('Manage') ?></th>	
 			</tr>
 		</thead>
 		<tbody>

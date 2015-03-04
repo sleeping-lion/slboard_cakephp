@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Contacts'), array('controller' => 'contacts', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Contact'), array('controller' => 'contacts', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Edit Contact'), array('controller' => 'contacts', 'action' => 'edit', $this -> request -> data['Contact']['id'])); ?>
 <?php $this -> assign('title', __('Edit Contact')); ?>
 <?php

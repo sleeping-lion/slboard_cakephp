@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('GuestBook'), array('controller' => 'guest_books', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')); ?>
 <?php $this -> Html -> addCrumb(__('Confirm Delete'), array('controller' => 'guest_books', 'action' => 'add')); ?>
 <?php $this -> assign('title', __('Confirm Delete')); ?>
 <?php echo $this -> Form -> create('GuestBook',array('url'=>array('action'=>'delete',$this->request->params['id']))); ?>

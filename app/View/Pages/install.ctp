@@ -1,4 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Install'), array('controller' => 'pages', 'action' => 'install')); ?>
+<?php $this -> Html -> addCrumb(__('Install'), array('controller' => 'pages', 'action' => 'install')) ?>
+<?php $this -> assign('title', __('Install')) ?>
 <section id="sl_install_index">
 	<article>
 		<h3>SLBoard 란?</h3>
