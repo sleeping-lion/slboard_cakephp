@@ -14,7 +14,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Plugin/Upload/Model/Behavior/UploadBehavior.php:270
-msgid "File was not downloaded."
+#: View/Elements/ThemeSelect/default.ctp:3
+#: View/Elements/ThemeSelect/link.ctp:2
+msgid "Default Theme"
+msgstr ""
+
+#: View/Elements/ThemeSelect/default.ctp:4
+#: View/Elements/ThemeSelect/link.ctp:3
+msgid "Simple Theme"
+msgstr ""
+
+#: View/Elements/ThemeSelect/default.ctp:5
+#: View/Elements/ThemeSelect/link.ctp:4
+msgid "BlacknWhite Theme"
 msgstr ""
 

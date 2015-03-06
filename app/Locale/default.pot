@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-04 04:53+0000\n"
+"POT-Creation-Date: 2015-03-06 09:38+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: Controller/ResourcesController.php:31;69;95
 #: Controller/SettingsController.php:38;70;95;125;157;182
 #: Controller/SlAnonController.php:24;34
-#: Controller/SlController.php:144
+#: Controller/SlController.php:150
 #: Controller/UsersController.php:165;197;224;255;289;315
 msgid "Invalid post"
 msgstr ""
@@ -84,7 +84,7 @@ msgstr ""
 #: Controller/QuestionsController.php:61;87
 #: Controller/ResourcesController.php:55;77
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/SlController.php:104
+#: Controller/SlController.php:110
 #: Controller/UsersController.php:183;204;297
 msgid "The post could not be saved. Please, try again."
 msgstr ""
@@ -233,7 +233,7 @@ msgstr ""
 #: View/Blogs/admin_add.ctp:8
 #: View/Blogs/admin_edit.ctp:14
 #: View/Blogs/edit.ctp:14
-#: View/Contacts/add.ctp:11
+#: View/Contacts/add.ctp:10
 #: View/Contacts/admin_add.ctp:11
 #: View/Contacts/admin_edit.ctp:11
 #: View/Contacts/edit.ctp:11
@@ -347,7 +347,7 @@ msgstr ""
 #: View/Notices/admin_index.ctp:29
 #: View/Notices/view.ctp:24
 #: View/Portfolios/view.ctp:22
-#: View/Questions/admin_index.ctp:36
+#: View/Questions/admin_index.ctp:37
 #: View/Questions/confirm_delete.ctp:5
 #: View/Questions/view.ctp:23
 #: View/Resources/admin_index.ctp:29
@@ -360,7 +360,7 @@ msgstr ""
 #: View/Blogs/index.ctp:29
 #: View/Blogs/index_default.ctp:36
 #: View/CkeditorAssets/index.ctp:55;66
-#: View/Contacts/admin_index.ctp:47
+#: View/Contacts/admin_index.ctp:48
 #: View/Contacts/index.ctp:35
 #: View/Elements/BlogCategories/index.ctp:34
 #: View/Elements/Blogs/index.ctp:15
@@ -381,12 +381,12 @@ msgstr ""
 #: View/GuestBooks/index.ctp:38
 #: View/Histories/admin_index.ctp:29
 #: View/Histories/index.ctp:30
-#: View/Intro/index.ctp:63
+#: View/Intro/index.ctp:64
 #: View/Notices/admin_index.ctp:42
 #: View/Notices/index.ctp:36
 #: View/Portfolios/admin_index.ctp:29
 #: View/Portfolios/index.ctp:17
-#: View/Questions/admin_index.ctp:48
+#: View/Questions/admin_index.ctp:49
 #: View/Questions/index.ctp:38
 #: View/Resources/admin_index.ctp:36
 #: View/Users/admin_index.ctp:45
@@ -398,7 +398,7 @@ msgstr ""
 #: View/Blogs/admin_index.ctp:54
 #: View/Blogs/index.ctp:33
 #: View/CkeditorAssets/index.ctp:70
-#: View/Contacts/admin_index.ctp:54
+#: View/Contacts/admin_index.ctp:55
 #: View/Contacts/index.ctp:41
 #: View/FaqCategories/admin_index.ctp:54
 #: View/Faqs/admin_index.ctp:51
@@ -419,10 +419,9 @@ msgstr ""
 #: View/Portfolios/admin_index.ctp:36
 #: View/Portfolios/index.ctp:21
 #: View/QuestionComments/admin_index.ctp:34
-#: View/Questions/admin_index.ctp:54
+#: View/Questions/admin_index.ctp:55
 #: View/Questions/index.ctp:46
 #: View/Resources/admin_index.ctp:42
-#: View/Users/admin_index.ctp:51
 msgid "New Article"
 msgstr ""
 
@@ -597,7 +596,7 @@ msgstr ""
 msgid "No Category"
 msgstr ""
 
-#: View/Contacts/add.ctp:1
+#: View/Contacts/add.ctp:1;2
 #: View/Contacts/admin_add.ctp:1
 #: View/Contacts/admin_edit.ctp:1
 #: View/Contacts/admin_index.ctp:1;2
@@ -611,7 +610,6 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: View/Contacts/add.ctp:2;3
 #: View/Contacts/admin_add.ctp:2;3
 msgid "Add Contact"
 msgstr ""
@@ -632,6 +630,7 @@ msgid "Logout"
 msgstr ""
 
 #: View/Elements/header.ctp:7
+#: View/Users/admin_index.ctp:51
 msgid "New User"
 msgstr ""
 
@@ -648,12 +647,13 @@ msgstr ""
 
 #: View/Elements/header.ctp:16;20
 #: View/Elements/Admin/aside.ctp:4
-#: View/Intro/index.ctp:3
+#: View/Intro/admin_index.ctp:3;4
+#: View/Intro/index.ctp:3;4
 msgid "Intro"
 msgstr ""
 
 #: View/Elements/header.ctp:19
-#: View/Pages/install.ctp:1
+#: View/Pages/install.ctp:1;2
 msgid "Install"
 msgstr ""
 
@@ -684,6 +684,7 @@ msgstr ""
 #: View/Faqs/add.ctp:1
 #: View/Faqs/admin_add.ctp:1
 #: View/Faqs/admin_edit.ctp:1
+#: View/Faqs/admin_index.ctp:1;2
 #: View/Faqs/admin_view.ctp:1;2;3
 #: View/Faqs/edit.ctp:1
 #: View/Faqs/index.ctp:2;3
@@ -699,12 +700,14 @@ msgstr ""
 #: View/Notices/add.ctp:2
 #: View/Notices/admin_add.ctp:2
 #: View/Notices/admin_edit.ctp:2
-#: View/Notices/admin_index.ctp:1
+#: View/Notices/admin_index.ctp:1;2
 #: View/Notices/admin_view.ctp:1
 #: View/Notices/edit.ctp:2
-#: View/Notices/index.ctp:1
+#: View/Notices/index.ctp:1;2
 #: View/Notices/view.ctp:1
-#: View/Resources/admin_view.ctp:2;3
+#: View/Resources/admin_add.ctp:2
+#: View/Resources/admin_edit.ctp:2
+#: View/Resources/admin_view.ctp:1;2;3
 msgid "Notice"
 msgstr ""
 
@@ -717,6 +720,7 @@ msgstr ""
 #: View/GuestBooks/admin_index.ctp:1;2
 #: View/GuestBooks/admin_view.ctp:1
 #: View/GuestBooks/check_password.ctp:1
+#: View/GuestBooks/confirm_delete.ctp:1
 #: View/GuestBooks/edit.ctp:1
 #: View/GuestBooks/index.ctp:1;2
 #: View/GuestBooks/view.ctp:1
@@ -814,6 +818,10 @@ msgstr ""
 msgid "Blogs"
 msgstr ""
 
+#: View/Elements/ThemeSelect/default.ctp:7
+msgid "Theme Change"
+msgstr ""
+
 #: View/FaqCategories/admin_add.ctp:2;3
 msgid "Add Faq Category"
 msgstr ""
@@ -834,10 +842,6 @@ msgstr ""
 #: View/Faqs/admin_edit.ctp:2;3
 #: View/Faqs/edit.ctp:2;3
 msgid "Edit Faq"
-msgstr ""
-
-#: View/Faqs/admin_index.ctp:1;2
-msgid "Faqs"
 msgstr ""
 
 #: View/Faqs/index_default.ctp:45
@@ -894,10 +898,6 @@ msgstr ""
 msgid "Check Password"
 msgstr ""
 
-#: View/GuestBooks/confirm_delete.ctp:1
-msgid "GuestBook"
-msgstr ""
-
 #: View/GuestBooks/confirm_delete.ctp:2;3
 msgid "Confirm Delete"
 msgstr ""
@@ -934,11 +934,15 @@ msgstr ""
 #: View/Layouts/admin.ctp:22
 #: View/Layouts/admin_login.ctp:4
 #: View/Layouts/sl.ctp:4
+#: View/Themed/BlacknWhite/Layouts/_sl.ctp:4
+#: View/Themed/Simple/Layouts/_sl.ctp:4
 msgid "Homepage Title"
 msgstr ""
 
 #: View/Layouts/admin.ctp:41
 #: View/Layouts/sl.ctp:27
+#: View/Themed/BlacknWhite/Layouts/_sl.ctp:26
+#: View/Themed/Simple/Layouts/_sl.ctp:27
 msgid "Home"
 msgstr ""
 
@@ -971,11 +975,6 @@ msgstr ""
 #: View/Notices/edit.ctp:3;4
 #: View/Resources/admin_edit.ctp:3;4
 msgid "Edit Notice"
-msgstr ""
-
-#: View/Notices/admin_index.ctp:2
-#: View/Notices/index.ctp:2
-msgid "Noitce"
 msgstr ""
 
 #: View/Portfolios/add.ctp:2;3
@@ -1022,15 +1021,12 @@ msgstr ""
 msgid "Edit Question"
 msgstr ""
 
-#: View/Resources/admin_add.ctp:2
-#: View/Resources/admin_edit.ctp:2
 #: View/Resources/admin_index.ctp:1
-#: View/Resources/admin_view.ctp:1
-msgid "Notices"
+msgid "Notics"
 msgstr ""
 
 #: View/Resources/admin_index.ctp:2
-msgid "Noitces"
+msgid "Noitce"
 msgstr ""
 
 #: View/Users/add.ctp:3
