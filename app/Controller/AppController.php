@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
  
 class AppController extends Controller {
 	#public $theme='Simple';
-	public $theme='BlacknWhite';	
+	#public $theme='BlacknWhite';	
 	public $helpers = array('Html', 'Form', 'App', 'Session');
 	public $components = array('Paginator','Acl','RequestHandler', 'Auth' => array('authorize' => 'Controller','authenticate' => array('Form' => array(
 	      'passwordHasher' => 'Blowfish',

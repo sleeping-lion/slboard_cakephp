@@ -86,6 +86,12 @@ class SlController extends AppController {
 		$this -> set('asideTags', $this -> Tag -> find('all',array('conditions'=>array('not'=>array('taggings_count'=>0)),'order'=>array('taggings_count desc'), 'recursive' => -1)));
 
 		$this -> Auth -> allow('index', 'view');
+		
+		if($this->Session->check('theme')) {
+			$this->theme=$this->Session->read('theme');
+		} else {
+			$this->theme=null;
+		}
 	}
 
 

@@ -3,5 +3,6 @@
 	<address>
 		CopyLeft. 2012, SL. All wrongs reserved.&nbsp;&nbsp; 주소 : 아프리카 사자굴 &nbsp;&nbsp;
 	</address>
- 	</div>	
+	<?php echo $this->element('ThemeSelect/default')?>	
+ 	</div>
 </footer>

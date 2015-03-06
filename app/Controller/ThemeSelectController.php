@@ -14,6 +14,12 @@ class ThemeSelectController extends SlController {
 	 * @return void
 	 */
 	public function index() {
+		if(empty($this->params->query['theme']) OR $this->params->query['theme']=='default') {
+			$this->Session->write('theme',null); 	
+		} else {
+			$this->Session->write('theme',$this->params->query['theme']);
+		}
+		$this->redirect('/');
 	}
 
 	/**
@@ -29,6 +35,7 @@ class ThemeSelectController extends SlController {
 		} else {
 			$this->Session->write('theme',$theme);
 		}
+		$this->redirect('/');		
 	}
 
 	/**
