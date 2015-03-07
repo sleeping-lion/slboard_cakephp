@@ -4,19 +4,19 @@
 	<article class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
-      <col width="100px" />
       <col />
-      <col width="70px" />
-      <col width="130px" />
+      <col />
+      <col />
+      <col />
       <col />      
     </colgroup>
     <thead>
     	<tr>
 				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id',__('Id')) ?></th>
        <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
-       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'count',__('Count')) ?></th>
+       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'blogs_count',__('Child Count')) ?></th>
        <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
-       <th class="sl_t_manage"><?php echo __('Manage') ?></th>	
+       <th class="sl_t_manage"><?php echo __('Manage') ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,7 +27,7 @@
         		<td>
         			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'notices', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
         		</td>
-        		<td></td>
+        		<td><?php echo $blogCategory['BlogCategory']['blogs_count'] ?></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'

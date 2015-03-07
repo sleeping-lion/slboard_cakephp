@@ -4,18 +4,18 @@
 	<article class="table-responsive">	
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
-      <col width="100px" />
       <col />
-      <col width="70px" />
-      <col width="130px" />
+      <col />
+      <col />
+      <col />
       <col />      
     </colgroup>
     <thead>
     	<tr>
-      	<th><?php echo $this -> Paginator -> sort('id', _('Id')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('title', _('title')); ?></th>
-				<th><?php echo $this -> Paginator -> sort('count', _('count')); ?></th>				
-				<th><?php echo $this -> Paginator -> sort('created', _('created')); ?></th>
+				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id',__('Id')) ?></th>
+       <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
+       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'galleries_count',__('Child Count')) ?></th>
+       <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
        <th class="sl_t_manage"><?php echo __('Manage') ?></th>
 			</tr>
 		</thead>
@@ -27,7 +27,7 @@
         		<td>
         			<?php echo $this -> Html -> link($galleryCategory['GalleryCategory']['title'], array('controller' => 'notices', 'action' => 'view', $galleryCategory['GalleryCategory']['id'])); ?>
         		</td>
-        		<td></td>
+        		<td><?php echo $galleryCategory['GalleryCategory']['galleries_count'] ?></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($galleryCategory['GalleryCategory']['created_at'], 3); ?></p></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'

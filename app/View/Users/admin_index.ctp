@@ -24,7 +24,7 @@
     		<tr>
         		<td class="sl_t_id"><?php echo $user['User']['id']; ?></td>
         		<td class=""><?php echo $user['Group']['title'] ?></td>
-        		<td class="sl_t_title"><?php echo $this -> Html -> link($user['User']['email'], array('controller' => 'notices', 'action' => 'view', $user['User']['id'])); ?></td>
+        		<td class="sl_t_title"><?php echo $this -> Html -> link($user['User']['email'], array('controller' => 'users', 'action' => 'view', $user['User']['id'])); ?></td>
         		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($user['User']['created_at'], 3); ?></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'

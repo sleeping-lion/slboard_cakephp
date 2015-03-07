@@ -7,11 +7,13 @@
 			<col />
 			<col />
 			<col />
+			<col />			
 		</colgroup>
 		<thead>
 			<tr>
 				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id') ?></th>
        <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
+       <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'blogs_count',__('Child Count')) ?></th>       
        <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
        <th class="sl_t_manage"><?php echo __('Manage') ?></th>       
 			</tr>
@@ -22,6 +24,7 @@
     		<tr>
         		<td class="sl_t_id"><?php echo $group['Group']['id']; ?></td>
         		<td class="sl_t_title"><?php echo $this -> Html -> link($group['Group']['title'], array('controller' => 'groups', 'action' => 'view', $group['Group']['id'])); ?></td>
+        		<td><?php echo $group['Group']['users_count'] ?></td>        		
         		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($group['Group']['created_at'], 3); ?></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'

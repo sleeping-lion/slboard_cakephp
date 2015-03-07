@@ -25,7 +25,7 @@
     		<tr>
         		<td><?php echo $contact['Contact']['id']; ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($contact['Contact']['title'], array('controller' => 'questions', 'action' => 'view', $contact['Contact']['id'])); ?>
+        			<?php echo $this -> Html -> link($contact['Contact']['title'], array('controller' => 'contacts', 'action' => 'view', $contact['Contact']['id'])); ?>
         		</td>
         		<td></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($contact['Contact']['created_at'], 3); ?></p></td>
