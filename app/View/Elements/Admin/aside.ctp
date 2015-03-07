@@ -2,7 +2,7 @@
 	<nav>
 		<ul class="nav nav-pills nav-stacked">				
 			<li <?php if($this->params['controller']=='intro'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('Intro'), array('controller' => 'intro', 'action' => 'index')) ?></li>
-			<li <?php if($this->params['controller']=='faqs'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('FAQ'), array('controller' => 'faqs', 'action' => 'index')) ?></li>
+			<li <?php if($this->params['controller']=='faqs'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('Faq'), array('controller' => 'faqs', 'action' => 'index')) ?></li>
 			<li <?php if($this->params['controller']=='contacts'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('Contact'), array('controller' => 'contacts', 'action' => 'index')) ?></li>
 			<li <?php if($this->params['controller']=='questions'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('Question'), array('controller' => 'questions', 'action' => 'index')) ?></li>	
 			<li <?php if($this->params['controller']=='galleries'): ?>class="active"<?php endif ?>><?=$this -> Html -> link(__('Gallery'), array('controller' => 'galleries', 'action' => 'index')) ?></li>

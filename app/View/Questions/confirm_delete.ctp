@@ -1,6 +1,6 @@
 <?php $this -> Html -> addCrumb(__('Question'), array('controller' => 'guest_books', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb(__('Check Password'), array('controller' => 'guest_books', 'action' => 'add')); ?>
-<?php $this -> assign('title', __('Check Password')); ?>
+<?php $this -> Html -> addCrumb(__('Confirm Delete'), array('controller' => 'guest_books', 'action' => 'add')); ?>
+<?php $this -> assign('title', __('Confirm Delete')); ?>
 <?php echo $this -> Form -> create('Question'); ?>
 <?php echo __('Are you sure you wish to delete this article?') ?>
 <?php echo $this -> Form -> end(array('label' => __('Delete Article'), 'div' => array('class' => 'form-group'), 'class' => 'btn btn-danger')); ?>

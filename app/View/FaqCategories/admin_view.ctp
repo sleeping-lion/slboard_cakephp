@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Faq Categories'), array('controller' => 'faq_categories', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('Faq Category'), array('controller' => 'faq_categories', 'action' => 'index')) ?>
 <?php $this -> Html -> addCrumb(__('Faq Category'), array('controller' => 'faq_categories', 'action' => 'view', $this -> params['id'])) ?>
 <?php $this -> assign('title', __('Faq Category')) ?>
 <h1><?=h($faqCategory['FaqCategory']['title']); ?></h1>

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-07 08:45+0000\n"
+"POT-Creation-Date: 2015-03-07 15:36+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -252,8 +252,6 @@ msgstr ""
 #: View/GalleryCategories/admin_edit.ctp:7
 #: View/Groups/admin_add.ctp:7
 #: View/Groups/admin_edit.ctp:7
-#: View/GuestBookComments/admin_add.ctp:8
-#: View/GuestBookComments/admin_edit.ctp:7
 #: View/GuestBooks/add.ctp:19
 #: View/GuestBooks/admin_add.ctp:19
 #: View/GuestBooks/admin_edit.ctp:15
@@ -409,7 +407,6 @@ msgstr ""
 #: View/Galleries/index_default.ctp:44
 #: View/GalleryCategories/admin_index.ctp:54
 #: View/Groups/admin_index.ctp:51
-#: View/GuestBookComments/admin_index.ctp:34
 #: View/GuestBooks/admin_index.ctp:52
 #: View/GuestBooks/index.ctp:46
 #: View/Histories/admin_index.ctp:36
@@ -486,12 +483,11 @@ msgstr ""
 #: View/Elements/header.ctp:26
 #: View/Elements/Admin/aside.ctp:9
 #: View/Elements/BlogCategories/index.ctp:3
-#: View/Elements/BlogComments/view.ctp:2;3
+#: View/Elements/BlogComments/view.ctp:1;2;3
 #: View/Elements/Blogs/index.ctp:2
-#: View/Elements/GuestBookComments/view.ctp:2;3
-#: View/Elements/NoticeComments/view.ctp:2;3
-#: View/Elements/QuestionComments/view.ctp:2;3
-#: View/GuestBookComments/admin_view.ctp:2;3
+#: View/Elements/GuestBookComments/view.ctp:1;2;3
+#: View/Elements/NoticeComments/view.ctp:1;2;3
+#: View/Elements/QuestionComments/view.ctp:1;2;3
 msgid "Blog"
 msgstr ""
 
@@ -502,7 +498,6 @@ msgstr ""
 
 #: View/Blogs/admin_edit.ctp:3;4
 #: View/Blogs/edit.ctp:3;4
-#: View/GuestBookComments/admin_edit.ctp:2;3
 msgid "Edit Blog"
 msgstr ""
 
@@ -705,6 +700,7 @@ msgid "Question"
 msgstr ""
 
 #: View/Elements/header.ctp:29
+#: View/Elements/Admin/aside.ctp:5
 #: View/Elements/Faqs/index.ctp:2
 #: View/Faqs/add.ctp:1
 #: View/Faqs/admin_add.ctp:1
@@ -732,6 +728,7 @@ msgstr ""
 #: View/Notices/view.ctp:1
 #: View/Resources/admin_add.ctp:2
 #: View/Resources/admin_edit.ctp:2
+#: View/Resources/admin_index.ctp:1;2
 #: View/Resources/admin_view.ctp:1;2;3
 msgid "Notice"
 msgstr ""
@@ -758,8 +755,9 @@ msgstr ""
 #: View/Portfolios/admin_edit.ctp:2
 #: View/Portfolios/admin_index.ctp:1;2
 #: View/Portfolios/admin_view.ctp:1
+#: View/Portfolios/edit.ctp:1
 #: View/Portfolios/index.ctp:1;2
-#: View/Portfolios/view.ctp:2;3
+#: View/Portfolios/view.ctp:1
 msgid "Portfolio"
 msgstr ""
 
@@ -773,10 +771,6 @@ msgstr ""
 
 #: View/Elements/search.ctp:5
 msgid "Search"
-msgstr ""
-
-#: View/Elements/Admin/aside.ctp:5
-msgid "FAQ"
 msgstr ""
 
 #: View/Elements/Admin/aside.ctp:13
@@ -793,7 +787,7 @@ msgstr ""
 #: View/FaqCategories/admin_add.ctp:1
 #: View/FaqCategories/admin_edit.ctp:1
 #: View/FaqCategories/admin_index.ctp:1;2
-#: View/FaqCategories/admin_view.ctp:2;3
+#: View/FaqCategories/admin_view.ctp:1;2;3
 msgid "Faq Category"
 msgstr ""
 
@@ -831,17 +825,9 @@ msgstr ""
 #: View/Elements/GuestBookComments/add.ctp:12
 #: View/Elements/NoticeComments/add.ctp:10
 #: View/Elements/QuestionComments/add.ctp:12
+#: View/GuestBookComments/admin_add.ctp:8
+#: View/GuestBookComments/admin_edit.ctp:7
 msgid "Save Comment"
-msgstr ""
-
-#: View/Elements/BlogComments/view.ctp:1
-#: View/Elements/GuestBookComments/view.ctp:1
-#: View/Elements/NoticeComments/view.ctp:1
-#: View/Elements/QuestionComments/view.ctp:1
-#: View/GuestBookComments/admin_edit.ctp:1
-#: View/GuestBookComments/admin_index.ctp:1;2
-#: View/GuestBookComments/admin_view.ctp:1
-msgid "Blogs"
 msgstr ""
 
 #: View/Elements/ThemeSelect/default.ctp:7
@@ -854,10 +840,6 @@ msgstr ""
 
 #: View/FaqCategories/admin_edit.ctp:2;3
 msgid "Edit Faq Category"
-msgstr ""
-
-#: View/FaqCategories/admin_view.ctp:1
-msgid "Faq Categories"
 msgstr ""
 
 #: View/Faqs/add.ctp:2;3
@@ -901,11 +883,22 @@ msgid "Edit Group"
 msgstr ""
 
 #: View/GuestBookComments/admin_add.ctp:1
+#: View/GuestBookComments/admin_edit.ctp:1
+#: View/GuestBookComments/admin_index.ctp:1;2
+#: View/GuestBookComments/admin_view.ctp:1;2;3
 msgid "Guest Book Comment"
 msgstr ""
 
 #: View/GuestBookComments/admin_add.ctp:2;3
 msgid "Add Guest Book Comment"
+msgstr ""
+
+#: View/GuestBookComments/admin_edit.ctp:2;3
+msgid "Edit Guest Book Comment"
+msgstr ""
+
+#: View/GuestBookComments/admin_index.ctp:34
+msgid "New Comment"
 msgstr ""
 
 #: View/GuestBooks/add.ctp:2;3
@@ -920,11 +913,11 @@ msgstr ""
 
 #: View/GuestBooks/check_password.ctp:2;3
 #: View/Questions/check_password.ctp:2;3
-#: View/Questions/confirm_delete.ctp:2;3
 msgid "Check Password"
 msgstr ""
 
 #: View/GuestBooks/confirm_delete.ctp:2;3
+#: View/Questions/confirm_delete.ctp:2;3
 msgid "Confirm Delete"
 msgstr ""
 
@@ -975,8 +968,8 @@ msgstr ""
 #: View/NoticeComments/admin_add.ctp:1
 #: View/NoticeComments/admin_edit.ctp:1
 #: View/NoticeComments/admin_index.ctp:1;2
-#: View/NoticeComments/admin_view.ctp:1
-msgid "Notice Comments"
+#: View/NoticeComments/admin_view.ctp:1;2;3
+msgid "Notice Comment"
 msgstr ""
 
 #: View/NoticeComments/admin_add.ctp:2;3
@@ -985,10 +978,6 @@ msgstr ""
 
 #: View/NoticeComments/admin_edit.ctp:2;3
 msgid "Edit Notice Comment"
-msgstr ""
-
-#: View/NoticeComments/admin_view.ctp:2;3
-msgid "Notice Comment"
 msgstr ""
 
 #: View/Notices/add.ctp:3;4
@@ -1013,16 +1002,11 @@ msgstr ""
 msgid "Edit Portfolio"
 msgstr ""
 
-#: View/Portfolios/edit.ctp:1
-#: View/Portfolios/view.ctp:1
-msgid "Portfolios"
-msgstr ""
-
 #: View/QuestionComments/admin_add.ctp:1
 #: View/QuestionComments/admin_edit.ctp:1
 #: View/QuestionComments/admin_index.ctp:1;2
-#: View/QuestionComments/admin_view.ctp:1
-msgid "Question Comments"
+#: View/QuestionComments/admin_view.ctp:1;2;3
+msgid "Question Comment"
 msgstr ""
 
 #: View/QuestionComments/admin_add.ctp:2;3
@@ -1033,10 +1017,6 @@ msgstr ""
 msgid "Edit Question Comment"
 msgstr ""
 
-#: View/QuestionComments/admin_view.ctp:2;3
-msgid "Question Comment"
-msgstr ""
-
 #: View/Questions/add.ctp:2;3
 #: View/Questions/admin_add.ctp:2;3
 msgid "Add Question"
@@ -1045,14 +1025,6 @@ msgstr ""
 #: View/Questions/admin_edit.ctp:2;3
 #: View/Questions/edit.ctp:2;3
 msgid "Edit Question"
-msgstr ""
-
-#: View/Resources/admin_index.ctp:1
-msgid "Notics"
-msgstr ""
-
-#: View/Resources/admin_index.ctp:2
-msgid "Noitce"
 msgstr ""
 
 #: View/Users/add.ctp:3
