@@ -5,5 +5,5 @@
 echo $this->Form->create('GuestBookComment');
 echo $this->Form->input('title',array('div'=>array('class'=>'form-group'),'class'=>'form-control'));
 echo $this->Form->input('content',array('div'=>array('class'=>'form-group'),'class'=>'form-control'));
-echo $this->Form->end(array('label'=>__('Save Article'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
+echo $this->Form->end(array('label'=>__('Save Comment'),'div'=>array('class'=>'form-group'),'class'=>'btn btn-primary'));
 ?>

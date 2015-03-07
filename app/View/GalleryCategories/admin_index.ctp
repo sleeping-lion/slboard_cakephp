@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb(__('Gallery Category'), array('controller' => 'gallery_categories', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Gallery Category')); ?>
+<?php $this -> Html -> addCrumb(__('Gallery Category'), array('controller' => 'gallery_categories', 'action' => 'index')) ?>
+<?php $this -> assign('title', __('Gallery Category')) ?>
 <section id="sl_gallery_category_index">
 	<article class="table-responsive">	
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">

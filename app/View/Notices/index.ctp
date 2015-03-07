@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Notice'), array('controller' => 'notices', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Notice'), array('controller' => 'notices', 'action' => 'index')) ?>
 <?php $this -> assign('title', __('Notice')); ?>
 <section id="sl_notice_index">
 	<article class="table-responsive">

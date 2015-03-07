@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-06 09:38+0000\n"
+"POT-Creation-Date: 2015-03-07 08:45+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -162,6 +162,7 @@ msgid "Title"
 msgstr ""
 
 #: Controller/SlController.php:74
+#: View/Contacts/admin_view.ctp:19
 msgid "Content"
 msgstr ""
 
@@ -295,19 +296,19 @@ msgstr ""
 #: View/BlogCategories/admin_index.ctp:15
 #: View/Blogs/admin_index.ctp:15
 #: View/Contacts/admin_index.ctp:15
+#: View/FaqCategories/admin_index.ctp:15
 #: View/Faqs/admin_index.ctp:15
 #: View/Galleries/admin_index.ctp:15
+#: View/GalleryCategories/admin_index.ctp:15
 #: View/Questions/admin_index.ctp:15
 msgid "Id"
 msgstr ""
 
 #: View/BlogCategories/admin_index.ctp:17
-#: View/Blogs/admin_index.ctp:17
-#: View/Contacts/admin_index.ctp:17
-#: View/Faqs/admin_index.ctp:17
-#: View/Galleries/admin_index.ctp:17
-#: View/Questions/admin_index.ctp:18
-msgid "Count"
+#: View/FaqCategories/admin_index.ctp:17
+#: View/GalleryCategories/admin_index.ctp:17
+#: View/Groups/admin_index.ctp:16
+msgid "Child Count"
 msgstr ""
 
 #: View/BlogCategories/admin_index.ctp:19
@@ -317,7 +318,7 @@ msgstr ""
 #: View/Faqs/admin_index.ctp:19
 #: View/Galleries/admin_index.ctp:19
 #: View/GalleryCategories/admin_index.ctp:19
-#: View/Groups/admin_index.ctp:16
+#: View/Groups/admin_index.ctp:18
 #: View/GuestBooks/admin_index.ctp:19
 #: View/Notices/admin_index.ctp:16
 #: View/Questions/admin_index.ctp:20
@@ -337,7 +338,7 @@ msgstr ""
 #: View/Galleries/admin_index.ctp:35
 #: View/Galleries/index.ctp:32
 #: View/GalleryCategories/admin_index.ctp:35
-#: View/Groups/admin_index.ctp:29
+#: View/Groups/admin_index.ctp:32
 #: View/GuestBooks/admin_index.ctp:33
 #: View/GuestBooks/admin_view.ctp:25
 #: View/GuestBooks/confirm_delete.ctp:5
@@ -376,7 +377,7 @@ msgstr ""
 #: View/Galleries/index.ctp:56;66
 #: View/Galleries/index_default.ctp:36
 #: View/GalleryCategories/admin_index.ctp:47
-#: View/Groups/admin_index.ctp:42
+#: View/Groups/admin_index.ctp:45
 #: View/GuestBooks/admin_index.ctp:45
 #: View/GuestBooks/index.ctp:38
 #: View/Histories/admin_index.ctp:29
@@ -407,7 +408,7 @@ msgstr ""
 #: View/Galleries/index.ctp:71
 #: View/Galleries/index_default.ctp:44
 #: View/GalleryCategories/admin_index.ctp:54
-#: View/Groups/admin_index.ctp:48
+#: View/Groups/admin_index.ctp:51
 #: View/GuestBookComments/admin_index.ctp:34
 #: View/GuestBooks/admin_index.ctp:52
 #: View/GuestBooks/index.ctp:46
@@ -429,7 +430,7 @@ msgstr ""
 #: View/BlogComments/admin_view.ctp:7
 #: View/Blogs/admin_view.ctp:7
 #: View/Blogs/view.ctp:19
-#: View/Contacts/admin_view.ctp:7
+#: View/Contacts/admin_view.ctp:24
 #: View/Contacts/view.ctp:7
 #: View/Elements/BlogComments/view.ctp:45
 #: View/Elements/GuestBookComments/view.ctp:45
@@ -454,6 +455,7 @@ msgstr ""
 #: View/Questions/admin_view.ctp:7
 #: View/Questions/view.ctp:18
 #: View/Resources/admin_view.ctp:18
+#: View/Users/admin_view.ctp:19
 msgid "List"
 msgstr ""
 
@@ -504,6 +506,14 @@ msgstr ""
 msgid "Edit Blog"
 msgstr ""
 
+#: View/Blogs/admin_index.ctp:17
+#: View/Contacts/admin_index.ctp:17
+#: View/Faqs/admin_index.ctp:17
+#: View/Galleries/admin_index.ctp:17
+#: View/Questions/admin_index.ctp:18
+msgid "Count"
+msgstr ""
+
 #: View/Blogs/index_default.ctp:44
 msgid "New Blog"
 msgstr ""
@@ -524,6 +534,7 @@ msgstr ""
 #: View/Portfolios/view.ctp:11
 #: View/Questions/view.ctp:10
 #: View/Resources/admin_view.ctp:11
+#: View/Users/admin_view.ctp:18
 msgid "Created_at"
 msgstr ""
 
@@ -617,6 +628,20 @@ msgstr ""
 #: View/Contacts/admin_edit.ctp:2;3
 #: View/Contacts/edit.ctp:2;3
 msgid "Edit Contact"
+msgstr ""
+
+#: View/Contacts/admin_view.ctp:7
+#: View/Users/admin_view.ctp:6
+msgid "Name"
+msgstr ""
+
+#: View/Contacts/admin_view.ctp:11
+#: View/Users/admin_view.ctp:10
+msgid "Email"
+msgstr ""
+
+#: View/Contacts/admin_view.ctp:15
+msgid "Phone"
 msgstr ""
 
 #: View/Elements/header.ctp:4
@@ -756,6 +781,7 @@ msgstr ""
 
 #: View/Elements/Admin/aside.ctp:13
 #: View/Users/admin_index.ctp:1;2
+#: View/Users/admin_view.ctp:1
 msgid "User"
 msgstr ""
 
@@ -1037,6 +1063,10 @@ msgstr ""
 #: View/Users/admin_edit.ctp:3
 #: View/Users/edit.ctp:3
 msgid "Edit User"
+msgstr ""
+
+#: View/Users/admin_view.ctp:14
+msgid "Description"
 msgstr ""
 
 #: View/Users/login.ctp:8
