@@ -14,18 +14,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: View/Elements/ThemeSelector/default.ctp:3
-#: View/Elements/ThemeSelector/link.ctp:2
-msgid "Default Theme"
+#: View/Elements/footer.ctp:4
+msgid "Address"
 msgstr ""
 
-#: View/Elements/ThemeSelector/default.ctp:4
-#: View/Elements/ThemeSelector/link.ctp:3
-msgid "Simple Theme"
+#: View/Elements/jumbotron.ctp:2
+msgid "Main Title"
 msgstr ""
 
-#: View/Elements/ThemeSelector/default.ctp:5
-#: View/Elements/ThemeSelector/link.ctp:4
-msgid "BlacknWhite Theme"
+#: View/Elements/jumbotron.ctp:3
+msgid "Main Description"
+msgstr ""
+
+#: View/Elements/jumbotron.ctp:4
+msgid "Now Download"
+msgstr ""
+
+#: View/Elements/jumbotron.ctp:5
+msgid "SLBoard Dream"
 msgstr ""
 

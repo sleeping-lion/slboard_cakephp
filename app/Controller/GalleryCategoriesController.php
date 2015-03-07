@@ -43,10 +43,10 @@ class GalleryCategoriesController extends SlController {
 		if ($this->request->is('post')) {
 			$this->GalleryCategory->create();
 			if ($this->GalleryCategory->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved.'));
+				$this->Session->setFlash(__('The post has been saved.'),'success');
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The post could not be saved. Please, try again.'),'error');
 			}
 		}
 	}
@@ -64,10 +64,10 @@ class GalleryCategoriesController extends SlController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->GalleryCategory->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved.'));
+				$this->Session->setFlash(__('The post has been saved.'),'success');
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The post could not be saved. Please, try again.'),'error');
 			}
 		} else {
 			$options = array('conditions' => array('GalleryCategory.' . $this->GalleryCategory->primaryKey => $id));
@@ -89,9 +89,9 @@ class GalleryCategoriesController extends SlController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->GalleryCategory->delete()) {
-			$this->Session->setFlash(__('The post has been deleted.'));
+			$this->Session->setFlash(__('The post has been deleted.'),'success');
 		} else {
-			$this->Session->setFlash(__('The post could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The post could not be deleted. Please, try again.'),'error');
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

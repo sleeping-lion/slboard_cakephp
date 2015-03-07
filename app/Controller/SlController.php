@@ -78,6 +78,9 @@ class SlController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
+		
+		$this -> loadModel('SettingController');
+		$this -> set('settingController', $this -> SettingController -> find('all', array('conditions' => array('enable' => true), 'recursive' => -1)));
 
 		$this -> loadModel('BlogCategory');
 		$this -> set('asideBlogCategories', $this -> BlogCategory -> find('all', array('conditions' => array('enable' => true), 'recursive' => -1)));
@@ -92,6 +95,10 @@ class SlController extends AppController {
 		} else {
 			$this->theme=null;
 		}
+		
+   if ($this->Session->check('Config.language')) {
+   		Configure::write('Config.language', $this->Session->read('Config.language'));
+		 }		
 	}
 
 

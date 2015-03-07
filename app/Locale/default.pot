@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-07 15:36+0000\n"
+"POT-Creation-Date: 2015-03-07 19:29+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: Controller/ResourcesController.php:31;69;95
 #: Controller/SettingsController.php:38;70;95;125;157;182
 #: Controller/SlAnonController.php:24;34
-#: Controller/SlController.php:150
+#: Controller/SlController.php:154
 #: Controller/UsersController.php:165;197;224;255;289;315
 msgid "Invalid post"
 msgstr ""
@@ -84,7 +84,7 @@ msgstr ""
 #: Controller/QuestionsController.php:61;87
 #: Controller/ResourcesController.php:55;77
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/SlController.php:110
+#: Controller/SlController.php:114
 #: Controller/UsersController.php:183;204;297
 msgid "The post could not be saved. Please, try again."
 msgstr ""
@@ -276,7 +276,7 @@ msgstr ""
 #: View/Questions/add.ctp:20
 #: View/Questions/admin_add.ctp:20
 #: View/Questions/admin_edit.ctp:8
-#: View/Questions/check_password.ctp:8
+#: View/Questions/check_password.ctp:6
 #: View/Questions/edit.ctp:8
 #: View/Resources/admin_add.ctp:9
 #: View/Resources/admin_edit.ctp:9
@@ -396,12 +396,14 @@ msgstr ""
 #: View/BlogComments/admin_index.ctp:34
 #: View/Blogs/admin_index.ctp:54
 #: View/Blogs/index.ctp:33
+#: View/Blogs/index_default.ctp:44
 #: View/CkeditorAssets/index.ctp:70
 #: View/Contacts/admin_index.ctp:55
 #: View/Contacts/index.ctp:41
 #: View/FaqCategories/admin_index.ctp:54
 #: View/Faqs/admin_index.ctp:51
 #: View/Faqs/index.ctp:66
+#: View/Faqs/index_default.ctp:45
 #: View/Galleries/admin_index.ctp:54
 #: View/Galleries/index.ctp:71
 #: View/Galleries/index_default.ctp:44
@@ -507,10 +509,6 @@ msgstr ""
 #: View/Galleries/admin_index.ctp:17
 #: View/Questions/admin_index.ctp:18
 msgid "Count"
-msgstr ""
-
-#: View/Blogs/index_default.ctp:44
-msgid "New Blog"
 msgstr ""
 
 #: View/Blogs/view.ctp:9
@@ -637,6 +635,10 @@ msgstr ""
 
 #: View/Contacts/admin_view.ctp:15
 msgid "Phone"
+msgstr ""
+
+#: View/Elements/footer.ctp:4
+msgid "Address"
 msgstr ""
 
 #: View/Elements/header.ctp:4
@@ -830,8 +832,12 @@ msgstr ""
 msgid "Save Comment"
 msgstr ""
 
-#: View/Elements/ThemeSelect/default.ctp:7
-msgid "Theme Change"
+#: View/Elements/LanguageSelector/default.ctp:7
+msgid "Change Language"
+msgstr ""
+
+#: View/Elements/ThemeSelector/default.ctp:7
+msgid "Change Theme"
 msgstr ""
 
 #: View/FaqCategories/admin_add.ctp:2;3
@@ -850,10 +856,6 @@ msgstr ""
 #: View/Faqs/admin_edit.ctp:2;3
 #: View/Faqs/edit.ctp:2;3
 msgid "Edit Faq"
-msgstr ""
-
-#: View/Faqs/index_default.ctp:45
-msgid "New Faq"
 msgstr ""
 
 #: View/Galleries/add.ctp:2;3
@@ -992,6 +994,10 @@ msgstr ""
 msgid "Edit Notice"
 msgstr ""
 
+#: View/Pages/popup.ctp:12
+msgid "confirm"
+msgstr ""
+
 #: View/Portfolios/add.ctp:2;3
 #: View/Portfolios/admin_add.ctp:3;4
 msgid "Add Portfolio"
@@ -1043,6 +1049,10 @@ msgstr ""
 
 #: View/Users/login.ctp:8
 msgid "Please enter your email and password"
+msgstr ""
+
+#: View/Users/login.ctp:12
+msgid "Password"
 msgstr ""
 
 #: Model/Blog.php:validation for field user_id;validation for field blog_category_id
@@ -1113,10 +1123,8 @@ msgstr ""
 
 #: Model/Blog.php:validation for field enable
 #: Model/BlogCategory.php:validation for field enable
-#: Model/BlogContent.php:validation for field html
 #: Model/Contact.php:validation for field enable
 #: Model/FaqCategory.php:validation for field enable
-#: Model/FaqContent.php:validation for field html
 #: Model/GalleryCategory.php:validation for field enable
 #: Model/GuestBook.php:validation for field enable
 #: Model/History.php:validation for field enable

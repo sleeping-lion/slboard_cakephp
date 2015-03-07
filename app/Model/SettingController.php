@@ -4,7 +4,7 @@ App::uses('SlModel', 'Model');
  * Notices Model
  *
  */
-class Resource extends SlModel {
+class SettingController extends SlModel {
 
 /**
  * Display field

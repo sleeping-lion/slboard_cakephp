@@ -8,7 +8,9 @@ App::uses('AppModel', 'Model');
  * @property Blog $Blog
  */
 class BlogCategory extends AppModel {
-
+	public $actsAs = array(
+  	'Translate' => array('title')
+	);
 /**
  * Display field
  *
@@ -42,7 +44,7 @@ class BlogCategory extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 			'maxLength' => array(
-				'rule' => array('maxLength'),
+				'rule' => array('maxLength',60),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

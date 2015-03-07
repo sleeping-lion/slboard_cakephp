@@ -14,18 +14,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: View/Elements/ThemeSelector/default.ctp:3
-#: View/Elements/ThemeSelector/link.ctp:2
-msgid "Default Theme"
+#: View/Elements/LanguageSelector/default.ctp:3
+#: View/Elements/LanguageSelector/link.ctp:2
+msgid "Korean"
 msgstr ""
 
-#: View/Elements/ThemeSelector/default.ctp:4
-#: View/Elements/ThemeSelector/link.ctp:3
-msgid "Simple Theme"
+#: View/Elements/LanguageSelector/default.ctp:4
+#: View/Elements/LanguageSelector/link.ctp:3
+msgid "English"
 msgstr ""
 
-#: View/Elements/ThemeSelector/default.ctp:5
-#: View/Elements/ThemeSelector/link.ctp:4
-msgid "BlacknWhite Theme"
+#: View/Elements/LanguageSelector/default.ctp:5
+#: View/Elements/LanguageSelector/link.ctp:4
+msgid "Chinese"
 msgstr ""
 

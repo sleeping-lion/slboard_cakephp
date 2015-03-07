@@ -7,17 +7,17 @@ App::uses('SlController', 'Controller');
  * @property PaginatorComponent $Paginator
  * @property SessionComponent $Session
  */
-class ThemeSelectController extends SlController {
+class LanguageSelectController extends SlController {
 	/**
 	 * index method
 	 *
 	 * @return void
 	 */
 	public function index() {
-		if(empty($this->params->query['theme']) OR $this->params->query['theme']=='Default') {
-			$this->Session->delete('theme'); 	
+		if(empty($this->params->query['language']) OR $this->params->query['language']=='default') {
+			$this->Session->delete('Config.language');
 		} else {
-			$this->Session->write('theme',$this->params->query['theme']);
+			$this->Session->write('Config.language',$this->params->query['language']);
 		}
 		$this->redirect('/');
 	}
@@ -29,11 +29,11 @@ class ThemeSelectController extends SlController {
 	 * @param string $id
 	 * @return void
 	 */
-	public function view($theme=null) {
-		if(empty($theme)) {
-			$this->Session->delete('theme');
+	public function view($language=null) {
+		if(empty($language)) {
+			$this->Session->delete('Config.language'); 	
 		} else {
-			$this->Session->write('theme',$theme);
+			$this->Session->write('Config.language',$language);
 		}
 		$this->redirect('/');
 	}
