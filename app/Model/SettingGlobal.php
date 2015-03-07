@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * Setting Model
  *
  */
-class Setting extends AppModel {
+class SettingGlobal extends AppModel {
 
 /**
  * Display field
