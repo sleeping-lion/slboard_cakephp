@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')); ?>
+<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')) ?>
 <?php $this -> assign('title', __('Guest Book')) ?>
 <section id="sl_guest_book_index">
 	<article class="table-responsive">

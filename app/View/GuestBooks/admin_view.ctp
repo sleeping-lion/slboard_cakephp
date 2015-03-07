@@ -1,10 +1,10 @@
-<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')); ?>
-<?php $this -> Html -> addCrumb($guestBook['GuestBook']['title'], array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
+<?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb($guestBook['GuestBook']['title'], array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])) ?>
 <?php $this -> assign('title', $guestBook['GuestBook']['title']) ?>
 <section id="slboard_question_show">
   <div class="slboard_content">
     <div class="sl_content_header">
-      <h3 itemprop="name"><?php echo h($guestBook['GuestBook']['title']); ?></h3>
+      <h3 itemprop="name"><?php echo h($guestBook['GuestBook']['title']) ?></h3>
     </div>
     <div class="sl_content_main">
      		<p class="sl_content_info"><?php echo __('Writer') ?> : <span  itemprop="author"><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></span>&nbsp;&nbsp;&nbsp; 

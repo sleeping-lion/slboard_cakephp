@@ -1,5 +1,5 @@
-<?php $this->Html->addCrumb(__('Guest Book Comment'), array('controller' => 'guest_book_comments', 'action' => 'index')); ?>
-<?php $this -> assign('title', __('Guest Book Comment')); ?>
+<?php $this->Html->addCrumb(__('Guest Book Comment'), array('controller' => 'guest_book_comments', 'action' => 'index')) ?>
+<?php $this -> assign('title', __('Guest Book Comment')) ?>
 <section id="sl_blog_index" class="table-responsive">
   <table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
     <colgroup>
