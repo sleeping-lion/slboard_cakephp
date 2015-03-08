@@ -215,6 +215,7 @@
  * the cake shell command: cake schema create Sessions
  *
  */
+	Configure::write('language','kor'); 
 	Configure::write('Session', array(
 		'defaults' => 'database'
 	));

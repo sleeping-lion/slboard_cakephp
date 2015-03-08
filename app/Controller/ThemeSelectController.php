@@ -14,12 +14,12 @@ class ThemeSelectController extends SlController {
 	 * @return void
 	 */
 	public function index() {
-		if(empty($this->params->query['theme']) OR $this->params->query['theme']=='Default') {
-			$this->Session->delete('theme'); 	
+		if (empty($this -> params -> query['theme']) OR $this -> params -> query['theme'] == 'Default') {
+			$this -> Session -> delete('theme');
 		} else {
-			$this->Session->write('theme',$this->params->query['theme']);
+			$this -> Session -> write('theme', $this -> params -> query['theme']);
 		}
-		$this->redirect('/');
+		$this -> redirect('/');
 	}
 
 	/**
@@ -29,13 +29,13 @@ class ThemeSelectController extends SlController {
 	 * @param string $id
 	 * @return void
 	 */
-	public function view($theme=null) {
-		if(empty($theme)) {
-			$this->Session->delete('theme');
+	public function view($theme = null) {
+		if (empty($theme)) {
+			$this -> Session -> delete('theme');
 		} else {
-			$this->Session->write('theme',$theme);
+			$this -> Session -> write('theme', $theme);
 		}
-		$this->redirect('/');
+		$this -> redirect('/');
 	}
 
 	/**
@@ -68,4 +68,5 @@ class ThemeSelectController extends SlController {
 	public function delete($id = null) {
 
 	}
+
 }

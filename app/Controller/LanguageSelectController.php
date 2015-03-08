@@ -14,12 +14,12 @@ class LanguageSelectController extends SlController {
 	 * @return void
 	 */
 	public function index() {
-		if(empty($this->params->query['language']) OR $this->params->query['language']=='default') {
-			$this->Session->delete('Config.language');
+		if (empty($this -> params -> query['language']) OR $this -> params -> query['language'] == 'kor') {
+			$this -> Session -> delete('Config.language');
 		} else {
-			$this->Session->write('Config.language',$this->params->query['language']);
+			$this -> Session -> write('Config.language', $this -> params -> query['language']);
 		}
-		$this->redirect('/');
+		$this -> redirect('/');
 	}
 
 	/**
@@ -29,13 +29,13 @@ class LanguageSelectController extends SlController {
 	 * @param string $id
 	 * @return void
 	 */
-	public function view($language=null) {
-		if(empty($language)) {
-			$this->Session->delete('Config.language'); 	
+	public function view($language = null) {
+		if (empty($language)) {
+			$this -> Session -> delete('Config.language');
 		} else {
-			$this->Session->write('Config.language',$language);
+			$this -> Session -> write('Config.language', $language);
 		}
-		$this->redirect('/');
+		$this -> redirect('/');
 	}
 
 	/**
@@ -68,4 +68,5 @@ class LanguageSelectController extends SlController {
 	public function delete($id = null) {
 
 	}
+
 }

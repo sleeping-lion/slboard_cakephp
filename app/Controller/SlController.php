@@ -98,7 +98,7 @@ class SlController extends AppController {
 		
    if ($this->Session->check('Config.language')) {
    		Configure::write('Config.language', $this->Session->read('Config.language'));
-		 }		
+		 }
 	}
 
 
