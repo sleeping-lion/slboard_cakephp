@@ -1,5 +1,5 @@
 <?php $this -> Html -> script(array('/ckeditor/ckeditor.js','boards/new.js'), false) ?>
-<?php $this -> Html -> addCrumb(__('Histroy'), array('controller' => 'histories', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('History'), array('controller' => 'histories', 'action' => 'index')) ?>
 <?php $this -> Html -> addCrumb(__('Edit History'), array('controller' => 'histories', 'action' => 'add')) ?>
 <?php $this -> assign('title', __('Edit History')) ?>
 <?php

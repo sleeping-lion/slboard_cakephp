@@ -129,10 +129,11 @@ footer address {margin-top:10px }
 #sl_portfolio_index .media {border-bottom:1px dotted #ccc;padding-bottom:10px;margin-bottom:20px}
 
 /* blog */
-#sl_board_blog_index {float:left;width:100%;margin:10px 0}
-#sl_board_blog_index ol.nav-tabs {margin:0 0 10px}
+#sl_blog_index {float:left;width:100%;margin:0}
+#sl_blog_index ol.nav-tabs {margin:0 0 10px}
 #sl_blog {float:left;width:100%;margin:20px 0}
-#sl_blog_index .media {border-bottom:1px dotted #ccc;padding-bottom:10px;margin-bottom:20px}
+#sl_blog_index article {float:left;width:100%;margin:20px 0}
+#sl_blog_index article.media {border-bottom:1px dotted #ccc;padding-bottom:10px;margin-bottom:20px}
 
 /* Main Common*/
 #main_main section {margin:0 0 3em;padding:0}

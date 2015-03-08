@@ -1,4 +1,4 @@
-<?php $this -> Html -> addCrumb(__('Histroy'), array('controller' => 'histories', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('History'), array('controller' => 'histories', 'action' => 'index')) ?>
 <?php $this -> Html -> addCrumb($history['History']['title'], array('controller' => 'histories', 'action' => 'view',$this -> params['id'])) ?>
 <?php $this -> assign('title', $history['History']['title']) ?>
 <section id="slboard_history_show">

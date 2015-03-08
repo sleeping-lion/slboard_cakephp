@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-03-07 19:29+0000\n"
+"POT-Creation-Date: 2015-03-08 14:23+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: Controller/ResourcesController.php:31;69;95
 #: Controller/SettingsController.php:38;70;95;125;157;182
 #: Controller/SlAnonController.php:24;34
-#: Controller/SlController.php:154
+#: Controller/SlController.php:157
 #: Controller/UsersController.php:165;197;224;255;289;315
 msgid "Invalid post"
 msgstr ""
@@ -84,7 +84,7 @@ msgstr ""
 #: Controller/QuestionsController.php:61;87
 #: Controller/ResourcesController.php:55;77
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/SlController.php:114
+#: Controller/SlController.php:117
 #: Controller/UsersController.php:183;204;297
 msgid "The post could not be saved. Please, try again."
 msgstr ""
@@ -334,7 +334,7 @@ msgstr ""
 #: View/Faqs/admin_index.ctp:32
 #: View/Faqs/index.ctp:32;42;53
 #: View/Galleries/admin_index.ctp:35
-#: View/Galleries/index.ctp:32
+#: View/Galleries/index.ctp:30
 #: View/GalleryCategories/admin_index.ctp:35
 #: View/Groups/admin_index.ctp:32
 #: View/GuestBooks/admin_index.ctp:33
@@ -356,7 +356,7 @@ msgstr ""
 
 #: View/BlogCategories/admin_index.ctp:47
 #: View/Blogs/admin_index.ctp:47
-#: View/Blogs/index.ctp:29
+#: View/Blogs/index.ctp:30
 #: View/Blogs/index_default.ctp:36
 #: View/CkeditorAssets/index.ctp:55;66
 #: View/Contacts/admin_index.ctp:48
@@ -372,7 +372,7 @@ msgstr ""
 #: View/Faqs/index.ctp:60
 #: View/Faqs/index_default.ctp:37
 #: View/Galleries/admin_index.ctp:47
-#: View/Galleries/index.ctp:56;66
+#: View/Galleries/index.ctp:54;64
 #: View/Galleries/index_default.ctp:36
 #: View/GalleryCategories/admin_index.ctp:47
 #: View/Groups/admin_index.ctp:45
@@ -395,7 +395,7 @@ msgstr ""
 #: View/BlogCategories/admin_index.ctp:54
 #: View/BlogComments/admin_index.ctp:34
 #: View/Blogs/admin_index.ctp:54
-#: View/Blogs/index.ctp:33
+#: View/Blogs/index.ctp:35
 #: View/Blogs/index_default.ctp:44
 #: View/CkeditorAssets/index.ctp:70
 #: View/Contacts/admin_index.ctp:55
@@ -405,7 +405,7 @@ msgstr ""
 #: View/Faqs/index.ctp:66
 #: View/Faqs/index_default.ctp:45
 #: View/Galleries/admin_index.ctp:54
-#: View/Galleries/index.ctp:71
+#: View/Galleries/index.ctp:69
 #: View/Galleries/index_default.ctp:44
 #: View/GalleryCategories/admin_index.ctp:54
 #: View/Groups/admin_index.ctp:51
@@ -534,7 +534,7 @@ msgstr ""
 #: View/Blogs/view.ctp:22
 #: View/CkeditorAssets/index.ctp:30
 #: View/Faqs/index.ctp:31;41;52
-#: View/Galleries/index.ctp:31
+#: View/Galleries/index.ctp:29
 #: View/Groups/admin_view.ctp:21
 #: View/GuestBooks/admin_view.ctp:24;27
 #: View/GuestBooks/view.ctp:24;27
@@ -552,7 +552,7 @@ msgstr ""
 #: View/Blogs/view.ctp:23
 #: View/CkeditorAssets/index.ctp:31
 #: View/Faqs/index.ctp:32;42;53
-#: View/Galleries/index.ctp:32
+#: View/Galleries/index.ctp:30
 #: View/Groups/admin_view.ctp:22
 #: View/GuestBooks/admin_view.ctp:25;28
 #: View/GuestBooks/view.ctp:25;28
@@ -596,7 +596,7 @@ msgstr ""
 
 #: View/CkeditorAssets/index.ctp:14
 #: View/Faqs/index.ctp:14
-#: View/Galleries/index.ctp:15
+#: View/Galleries/index.ctp:14
 msgid "No Category"
 msgstr ""
 
@@ -1068,8 +1068,8 @@ msgstr ""
 #: Model/Notice.php:validation for field user_id
 #: Model/Portfolio.php:validation for field user_id
 #: Model/QuestionComment.php:validation for field question_id
-#: Model/Resource.php:validation for field user_id
-#: Model/Setting.php:validation for field theme_id
+#: Model/SettingController.php:validation for field user_id
+#: Model/SettingGlobal.php:validation for field theme_id
 #: Model/Tagging.php:validation for field tag_id;validation for field taggable_id
 msgid "numeric"
 msgstr ""
@@ -1098,8 +1098,8 @@ msgstr ""
 #: Model/Question.php:validation for field title
 #: Model/QuestionComment.php:validation for field question_id;validation for field content
 #: Model/QuestionContent.php:validation for field content
-#: Model/Resource.php:validation for field user_id;validation for field title
-#: Model/Setting.php:validation for field theme_id
+#: Model/SettingController.php:validation for field user_id;validation for field title
+#: Model/SettingGlobal.php:validation for field theme_id
 #: Model/SlContentModel.php:validation for field content
 #: Model/Tag.php:validation for field name
 #: Model/Tagging.php:validation for field tag_id;validation for field taggable_id
@@ -1131,8 +1131,8 @@ msgstr ""
 #: Model/Notice.php:validation for field enable
 #: Model/Portfolio.php:validation for field enable
 #: Model/Question.php:validation for field enable
-#: Model/Resource.php:validation for field enable
-#: Model/Setting.php:validation for field use_header
+#: Model/SettingController.php:validation for field enable
+#: Model/SettingGlobal.php:validation for field use_header
 msgid "boolean"
 msgstr ""
 

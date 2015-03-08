@@ -4,14 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLBoard\n"
-"POT-Creation-Date: 2015-03-07 15:36+0000\n"
-"PO-Revision-Date: 2015-03-08 02:34+0900\n"
+"POT-Creation-Date: 2015-03-08 14:23+0000\n"
+"PO-Revision-Date: 2015-03-09 00:01+0900\n"
 "Last-Translator: \n"
-"Language-Team: sl <admin@sleepinglion.pe.kr>\n"
+"Language-Team: SL <admin@sleepinglion>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: korean\n"
+"Language: english\n"
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -35,10 +35,10 @@ msgstr ""
 #: Controller/QuestionsController.php:31;80;107
 #: Controller/ResourcesController.php:31;69;95
 #: Controller/SettingsController.php:38;70;95;125;157;182
-#: Controller/SlAnonController.php:24;34 Controller/SlController.php:150
+#: Controller/SlAnonController.php:24;34 Controller/SlController.php:157
 #: Controller/UsersController.php:165;197;224;255;289;315
 msgid "Invalid post"
-msgstr ""
+msgstr "Invalid post"
 
 #: Controller/BlogCategoriesController.php:46;67
 #: Controller/BlogCommentsController.php:46;67
@@ -61,7 +61,7 @@ msgstr ""
 #: Controller/SettingsController.php:53;74;140;161
 #: Controller/UsersController.php:180;201;272;294
 msgid "The post has been saved."
-msgstr ""
+msgstr "The post has been saved."
 
 #: Controller/BlogCategoriesController.php:49;70
 #: Controller/BlogCommentsController.php:49;70
@@ -83,9 +83,9 @@ msgstr ""
 #: Controller/QuestionsController.php:61;87
 #: Controller/ResourcesController.php:55;77
 #: Controller/SettingsController.php:56;77;143;164
-#: Controller/SlController.php:110 Controller/UsersController.php:183;204;297
+#: Controller/SlController.php:117 Controller/UsersController.php:183;204;297
 msgid "The post could not be saved. Please, try again."
-msgstr ""
+msgstr "The post could not be saved. Please, try again."
 
 #: Controller/BlogCategoriesController.php:92
 #: Controller/BlogCommentsController.php:92 Controller/BlogsController.php:209
@@ -106,7 +106,7 @@ msgstr ""
 #: Controller/SettingsController.php:99;186
 #: Controller/UsersController.php:228;320
 msgid "The post has been deleted."
-msgstr ""
+msgstr "The post has been deleted."
 
 #: Controller/BlogCategoriesController.php:94
 #: Controller/BlogCommentsController.php:94 Controller/BlogsController.php:211
@@ -127,27 +127,27 @@ msgstr ""
 #: Controller/SettingsController.php:101;188
 #: Controller/UsersController.php:230;322
 msgid "The post could not be deleted. Please, try again."
-msgstr ""
+msgstr "The post could not be deleted. Please, try again."
 
 #: Controller/BlogsController.php:17;35
 msgid "Insert Blog Category First"
-msgstr ""
+msgstr "Insert Blog Category First"
 
 #: Controller/CkeditorAssetsController.php:39
 msgid "File Uploaded Successfully"
-msgstr ""
+msgstr "File Uploaded Successfully"
 
 #: Controller/FaqsController.php:27
 msgid "Insert Faq Category First"
-msgstr ""
+msgstr "Insert Faq Category First"
 
 #: Controller/GalleriesController.php:20
 msgid "Insert Gallery Category First"
-msgstr ""
+msgstr "Insert Gallery Category First"
 
 #: Controller/SlAnonController.php:41
 msgid "Invalid password, try again"
-msgstr ""
+msgstr "Invalid password, try again"
 
 #: Controller/SlController.php:74
 msgid "Title"
@@ -173,41 +173,41 @@ msgstr "Writer"
 
 #: Controller/UsersController.php:275
 msgid "The user could not be saved. Please, try again."
-msgstr ""
+msgstr "The user could not be saved. Please, try again."
 
 #: Controller/UsersController.php:343
 msgid "Invalid username or password, try again"
-msgstr ""
+msgstr "Invalid username or password, try again"
 
 #: Plugin/Sitemap/View/Sitemaps/display.ctp:5
 msgid "Location"
-msgstr ""
+msgstr "Location"
 
 #: Plugin/Sitemap/View/Sitemaps/display.ctp:9
 msgid "Last Modified"
-msgstr ""
+msgstr "Last Modified"
 
 #: Plugin/Sitemap/View/Sitemaps/display.ctp:14
 msgid "Priority"
-msgstr ""
+msgstr "Priority"
 
 #: Plugin/Sitemap/View/Sitemaps/display.ctp:19
 msgid "Change Frequency"
-msgstr ""
+msgstr "Change Frequency"
 
 #: Plugin/Upload/Model/Behavior/UploadBehavior.php:1078
 msgid "No filename after parsing. Function %s returned an invalid filename"
-msgstr ""
+msgstr "No filename after parsing. Function %s returned an invalid filename"
 
 #: View/BlogCategories/admin_add.ctp:1 View/BlogCategories/admin_edit.ctp:1
 #: View/BlogCategories/admin_index.ctp:1;2
 #: View/BlogCategories/admin_view.ctp:1;2;3 View/Elements/Admin/aside.ctp:21
 msgid "Blog Category"
-msgstr ""
+msgstr "Blog Category"
 
 #: View/BlogCategories/admin_add.ctp:2;3
 msgid "Add Blog Category"
-msgstr ""
+msgstr "Add Blog Category"
 
 #: View/BlogCategories/admin_add.ctp:7 View/BlogCategories/admin_edit.ctp:7
 #: View/BlogComments/admin_add.ctp:8 View/BlogComments/admin_edit.ctp:7
@@ -234,7 +234,7 @@ msgstr ""
 #: View/QuestionComments/admin_add.ctp:8
 #: View/QuestionComments/admin_edit.ctp:7 View/Questions/add.ctp:20
 #: View/Questions/admin_add.ctp:20 View/Questions/admin_edit.ctp:8
-#: View/Questions/check_password.ctp:8 View/Questions/edit.ctp:8
+#: View/Questions/check_password.ctp:6 View/Questions/edit.ctp:8
 #: View/Resources/admin_add.ctp:9 View/Resources/admin_edit.ctp:9
 #: View/Users/add.ctp:12 View/Users/admin_add.ctp:12
 #: View/Users/admin_edit.ctp:18 View/Users/edit.ctp:18
@@ -243,7 +243,7 @@ msgstr "Save Article"
 
 #: View/BlogCategories/admin_edit.ctp:2;3
 msgid "Edit Blog Category"
-msgstr ""
+msgstr "Edit Blog Category"
 
 #: View/BlogCategories/admin_index.ctp:15 View/Blogs/admin_index.ctp:15
 #: View/Contacts/admin_index.ctp:15 View/FaqCategories/admin_index.ctp:15
@@ -272,7 +272,7 @@ msgstr "Manage"
 #: View/Blogs/view.ctp:23 View/CkeditorAssets/index.ctp:31
 #: View/Contacts/admin_index.ctp:35 View/FaqCategories/admin_index.ctp:35
 #: View/Faqs/admin_index.ctp:32 View/Faqs/index.ctp:32;42;53
-#: View/Galleries/admin_index.ctp:35 View/Galleries/index.ctp:32
+#: View/Galleries/admin_index.ctp:35 View/Galleries/index.ctp:30
 #: View/GalleryCategories/admin_index.ctp:35 View/Groups/admin_index.ctp:32
 #: View/GuestBooks/admin_index.ctp:33 View/GuestBooks/admin_view.ctp:25
 #: View/GuestBooks/confirm_delete.ctp:5 View/GuestBooks/view.ctp:25
@@ -282,10 +282,10 @@ msgstr "Manage"
 #: View/Questions/confirm_delete.ctp:5 View/Questions/view.ctp:23
 #: View/Resources/admin_index.ctp:29 View/Users/admin_index.ctp:32
 msgid "Are you sure you wish to delete this article?"
-msgstr ""
+msgstr "Are you sure you wish to delete this article?"
 
 #: View/BlogCategories/admin_index.ctp:47 View/Blogs/admin_index.ctp:47
-#: View/Blogs/index.ctp:29 View/Blogs/index_default.ctp:36
+#: View/Blogs/index.ctp:30 View/Blogs/index_default.ctp:36
 #: View/CkeditorAssets/index.ctp:55;66 View/Contacts/admin_index.ctp:48
 #: View/Contacts/index.ctp:35 View/Elements/BlogCategories/index.ctp:34
 #: View/Elements/Blogs/index.ctp:15 View/Elements/Faqs/index.ctp:15
@@ -293,7 +293,7 @@ msgstr ""
 #: View/Elements/Questions/index.ctp:15 View/FaqCategories/admin_index.ctp:47
 #: View/Faqs/admin_index.ctp:44 View/Faqs/index.ctp:60
 #: View/Faqs/index_default.ctp:37 View/Galleries/admin_index.ctp:47
-#: View/Galleries/index.ctp:56;66 View/Galleries/index_default.ctp:36
+#: View/Galleries/index.ctp:54;64 View/Galleries/index_default.ctp:36
 #: View/GalleryCategories/admin_index.ctp:47 View/Groups/admin_index.ctp:45
 #: View/GuestBooks/admin_index.ctp:45 View/GuestBooks/index.ctp:38
 #: View/Histories/admin_index.ctp:29 View/Histories/index.ctp:30
@@ -306,11 +306,12 @@ msgid "No Article"
 msgstr "No Article"
 
 #: View/BlogCategories/admin_index.ctp:54 View/BlogComments/admin_index.ctp:34
-#: View/Blogs/admin_index.ctp:54 View/Blogs/index.ctp:33
-#: View/CkeditorAssets/index.ctp:70 View/Contacts/admin_index.ctp:55
-#: View/Contacts/index.ctp:41 View/FaqCategories/admin_index.ctp:54
-#: View/Faqs/admin_index.ctp:51 View/Faqs/index.ctp:66
-#: View/Galleries/admin_index.ctp:54 View/Galleries/index.ctp:71
+#: View/Blogs/admin_index.ctp:54 View/Blogs/index.ctp:35
+#: View/Blogs/index_default.ctp:44 View/CkeditorAssets/index.ctp:70
+#: View/Contacts/admin_index.ctp:55 View/Contacts/index.ctp:41
+#: View/FaqCategories/admin_index.ctp:54 View/Faqs/admin_index.ctp:51
+#: View/Faqs/index.ctp:66 View/Faqs/index_default.ctp:45
+#: View/Galleries/admin_index.ctp:54 View/Galleries/index.ctp:69
 #: View/Galleries/index_default.ctp:44
 #: View/GalleryCategories/admin_index.ctp:54 View/Groups/admin_index.ctp:51
 #: View/GuestBooks/admin_index.ctp:52 View/GuestBooks/index.ctp:46
@@ -347,15 +348,15 @@ msgstr "List"
 #: View/BlogComments/admin_index.ctp:1;2
 #: View/BlogComments/admin_view.ctp:1;2;3
 msgid "Blog Comment"
-msgstr ""
+msgstr "Blog Comment"
 
 #: View/BlogComments/admin_add.ctp:2;3
 msgid "Add Blog Comment"
-msgstr ""
+msgstr "Add Blog Comment"
 
 #: View/BlogComments/admin_edit.ctp:2;3
 msgid "Edit Blog Comment"
-msgstr ""
+msgstr "Edit Blog Comment"
 
 #: View/Blogs/add.ctp:2 View/Blogs/admin_add.ctp:1 View/Blogs/admin_edit.ctp:2
 #: View/Blogs/admin_index.ctp:1;2 View/Blogs/admin_view.ctp:1;2;3
@@ -398,7 +399,7 @@ msgid "Created_at"
 msgstr "Created_at"
 
 #: View/Blogs/view.ctp:22 View/CkeditorAssets/index.ctp:30
-#: View/Faqs/index.ctp:31;41;52 View/Galleries/index.ctp:31
+#: View/Faqs/index.ctp:31;41;52 View/Galleries/index.ctp:29
 #: View/Groups/admin_view.ctp:21 View/GuestBooks/admin_view.ctp:24;27
 #: View/GuestBooks/view.ctp:24;27 View/Histories/admin_view.ctp:21
 #: View/Histories/view.ctp:21 View/Notices/admin_view.ctp:21
@@ -409,7 +410,7 @@ msgid "Edit"
 msgstr "Edit"
 
 #: View/Blogs/view.ctp:23 View/CkeditorAssets/index.ctp:31
-#: View/Faqs/index.ctp:32;42;53 View/Galleries/index.ctp:32
+#: View/Faqs/index.ctp:32;42;53 View/Galleries/index.ctp:30
 #: View/Groups/admin_view.ctp:22 View/GuestBooks/admin_view.ctp:25;28
 #: View/GuestBooks/view.ctp:25;28 View/Histories/admin_view.ctp:22
 #: View/Histories/view.ctp:22 View/Notices/admin_view.ctp:22
@@ -421,15 +422,15 @@ msgstr "Delete"
 
 #: View/CkeditorAssets/add.ctp:1
 msgid "Ckeditor Asset"
-msgstr ""
+msgstr "Ckeditor Asset"
 
 #: View/CkeditorAssets/add.ctp:2;3
 msgid "Add Ckeditor Asset"
-msgstr ""
+msgstr "Add Ckeditor Asset"
 
 #: View/CkeditorAssets/add.ctp:7
 msgid "Save Ckeditor Asset"
-msgstr ""
+msgstr "Save Ckeditor Asset"
 
 #: View/CkeditorAssets/index.ctp:3;4 View/Elements/header.ctp:27
 #: View/Elements/Admin/aside.ctp:8 View/Elements/Galleries/index.ctp:2
@@ -441,9 +442,9 @@ msgid "Gallery"
 msgstr "Gallery"
 
 #: View/CkeditorAssets/index.ctp:14 View/Faqs/index.ctp:14
-#: View/Galleries/index.ctp:15
+#: View/Galleries/index.ctp:14
 msgid "No Category"
-msgstr ""
+msgstr "No Category"
 
 #: View/Contacts/add.ctp:1;2 View/Contacts/admin_add.ctp:1
 #: View/Contacts/admin_edit.ctp:1 View/Contacts/admin_index.ctp:1;2
@@ -473,6 +474,10 @@ msgstr "Email"
 #: View/Contacts/admin_view.ctp:15
 msgid "Phone"
 msgstr "Phone"
+
+#: View/Elements/footer.ctp:4
+msgid "Address"
+msgstr "Address"
 
 #: View/Elements/header.ctp:4 View/Elements/Admin/header.ctp:3
 msgid "Welcome"
@@ -582,14 +587,14 @@ msgstr "Categories"
 #: View/FaqCategories/admin_edit.ctp:1 View/FaqCategories/admin_index.ctp:1;2
 #: View/FaqCategories/admin_view.ctp:1;2;3
 msgid "Faq Category"
-msgstr ""
+msgstr "Faq Category"
 
 #: View/Elements/Admin/aside.ctp:20 View/GalleryCategories/admin_add.ctp:1
 #: View/GalleryCategories/admin_edit.ctp:1
 #: View/GalleryCategories/admin_index.ctp:1;2
 #: View/GalleryCategories/admin_view.ctp:1;2;3
 msgid "Gallery Category"
-msgstr ""
+msgstr "Gallery Category"
 
 #: View/Elements/Admin/aside.ctp:22 View/Groups/admin_add.ctp:1
 #: View/Groups/admin_edit.ctp:1 View/Groups/admin_index.ctp:1;2
@@ -617,25 +622,29 @@ msgstr "more"
 msgid "Save Comment"
 msgstr "Save Comment"
 
-#: View/Elements/ThemeSelect/default.ctp:7
+#: View/Elements/LanguageSelector/default.ctp:7
+msgid "Change Language"
+msgstr "Change Language"
+
+#: View/Elements/ThemeSelector/default.ctp:7
 msgid "Change Theme"
 msgstr "Change Theme"
 
 #: View/FaqCategories/admin_add.ctp:2;3
 msgid "Add Faq Category"
-msgstr ""
+msgstr "Add FAQ Category"
 
 #: View/FaqCategories/admin_edit.ctp:2;3
 msgid "Edit Faq Category"
-msgstr ""
+msgstr "Edit FAQ Category"
 
 #: View/Faqs/add.ctp:2;3 View/Faqs/admin_add.ctp:2;3
 msgid "Add Faq"
-msgstr "Add Faq"
+msgstr "Add FAQ"
 
 #: View/Faqs/admin_edit.ctp:2;3 View/Faqs/edit.ctp:2;3
 msgid "Edit Faq"
-msgstr "Edit Faq"
+msgstr "Edit FAQ"
 
 #: View/Galleries/add.ctp:2;3 View/Galleries/admin_add.ctp:2;3
 msgid "Add Gallery"
@@ -666,15 +675,15 @@ msgstr "Edit Group"
 #: View/GuestBookComments/admin_index.ctp:1;2
 #: View/GuestBookComments/admin_view.ctp:1;2;3
 msgid "Guest Book Comment"
-msgstr ""
+msgstr "Guest Book Comment"
 
 #: View/GuestBookComments/admin_add.ctp:2;3
 msgid "Add Guest Book Comment"
-msgstr ""
+msgstr "Add Guest Book Comment"
 
 #: View/GuestBookComments/admin_edit.ctp:2;3
 msgid "Edit Guest Book Comment"
-msgstr ""
+msgstr "Edit Guest Book Comment"
 
 #: View/GuestBookComments/admin_index.ctp:34
 msgid "New Comment"
@@ -682,11 +691,11 @@ msgstr "New Comment"
 
 #: View/GuestBooks/add.ctp:2;3 View/GuestBooks/admin_add.ctp:2;3
 msgid "Add Guest Book"
-msgstr ""
+msgstr "Add Guest Book"
 
 #: View/GuestBooks/admin_edit.ctp:2;3 View/GuestBooks/edit.ctp:2;3
 msgid "Edit Guest Book"
-msgstr ""
+msgstr "Edit Guest Book"
 
 #: View/GuestBooks/check_password.ctp:2;3
 #: View/Questions/check_password.ctp:2;3
@@ -710,12 +719,6 @@ msgstr "Cancel"
 msgid "Add History"
 msgstr "Add History"
 
-#: View/Histories/admin_edit.ctp:2 View/Histories/admin_index.ctp:1;2
-#: View/Histories/admin_view.ctp:1 View/Histories/edit.ctp:2
-#: View/Histories/index.ctp:1;2 View/Histories/view.ctp:1
-msgid "Histroy"
-msgstr "Histroy"
-
 #: View/Histories/admin_edit.ctp:3;4 View/Histories/edit.ctp:3;4
 msgid "Edit History"
 msgstr "Edit History"
@@ -724,27 +727,27 @@ msgstr "Edit History"
 #: View/Layouts/sl.ctp:4 View/Themed/BlacknWhite/Layouts/_sl.ctp:4
 #: View/Themed/Simple/Layouts/_sl.ctp:4
 msgid "Homepage Title"
-msgstr ""
+msgstr "Welcome to SLBoard intro, sample page"
 
 #: View/Layouts/admin.ctp:41 View/Layouts/sl.ctp:27
 #: View/Themed/BlacknWhite/Layouts/_sl.ctp:26
 #: View/Themed/Simple/Layouts/_sl.ctp:27
 msgid "Home"
-msgstr "Home"
+msgstr "home"
 
 #: View/NoticeComments/admin_add.ctp:1 View/NoticeComments/admin_edit.ctp:1
 #: View/NoticeComments/admin_index.ctp:1;2
 #: View/NoticeComments/admin_view.ctp:1;2;3
 msgid "Notice Comment"
-msgstr ""
+msgstr "Notice Comment"
 
 #: View/NoticeComments/admin_add.ctp:2;3
 msgid "Add Notice Comment"
-msgstr ""
+msgstr "Add Notice Comment"
 
 #: View/NoticeComments/admin_edit.ctp:2;3
 msgid "Edit Notice Comment"
-msgstr ""
+msgstr "Edit Notice Comment"
 
 #: View/Notices/add.ctp:3;4 View/Notices/admin_add.ctp:3;4
 #: View/Resources/admin_add.ctp:3;4
@@ -755,6 +758,10 @@ msgstr "Add Notice"
 #: View/Resources/admin_edit.ctp:3;4
 msgid "Edit Notice"
 msgstr "Edit Notice"
+
+#: View/Pages/popup.ctp:12
+msgid "Confirm"
+msgstr "Confirm"
 
 #: View/Portfolios/add.ctp:2;3 View/Portfolios/admin_add.ctp:3;4
 msgid "Add Portfolio"
@@ -769,15 +776,15 @@ msgstr "Edit Portfolio"
 #: View/QuestionComments/admin_index.ctp:1;2
 #: View/QuestionComments/admin_view.ctp:1;2;3
 msgid "Question Comment"
-msgstr ""
+msgstr "Question Comment"
 
 #: View/QuestionComments/admin_add.ctp:2;3
 msgid "Add Question Comment"
-msgstr ""
+msgstr "Add Question Comment"
 
 #: View/QuestionComments/admin_edit.ctp:2;3
 msgid "Edit Question Comment"
-msgstr ""
+msgstr "Edit Question Comment"
 
 #: View/Questions/add.ctp:2;3 View/Questions/admin_add.ctp:2;3
 msgid "Add Question"
@@ -789,11 +796,11 @@ msgstr "Edit Question"
 
 #: View/Users/add.ctp:3 View/Users/admin_add.ctp:3
 msgid "Add User"
-msgstr ""
+msgstr "Add User"
 
 #: View/Users/admin_edit.ctp:3 View/Users/edit.ctp:3
 msgid "Edit User"
-msgstr ""
+msgstr "Edit User"
 
 #: View/Users/admin_view.ctp:14
 msgid "Description"
@@ -801,7 +808,11 @@ msgstr "Description"
 
 #: View/Users/login.ctp:8
 msgid "Please enter your email and password"
-msgstr ""
+msgstr "Please enter your email and password"
+
+#: View/Users/login.ctp:12
+msgid "Password"
+msgstr "Password"
 
 #: Model/Blog.php:validation for field user_id;validation blog_category_id
 #: Model/BlogCategory.php:validation blog_type_id
@@ -813,10 +824,11 @@ msgstr ""
 #: Model/History.php:validation Model/Impression.php:validation
 #: impressionable_id Model/Notice.php:validation
 #: Model/Portfolio.php:validation Model/QuestionComment.php:validation
-#: question_id Model/Resource.php:validation Model/Setting.php:validation
-#: theme_id Model/Tagging.php:validation tag_id;validation taggable_id
+#: question_id Model/SettingController.php:validation
+#: Model/SettingGlobal.php:validation theme_id Model/Tagging.php:validation
+#: tag_id;validation taggable_id
 msgid "numeric"
-msgstr ""
+msgstr "numeric"
 
 #: Model/Blog.php:validation for field user_id;validation
 #: blog_category_id;validation title;validation description
@@ -835,13 +847,13 @@ msgstr ""
 #: Model/NoticeContent.php:validation Model/Portfolio.php:validation
 #: Model/PortfolioContent.php:validation Model/Question.php:validation
 #: Model/QuestionComment.php:validation question_id;validation
-#: Model/QuestionContent.php:validation Model/Resource.php:validation
-#: Model/Setting.php:validation theme_id Model/SlContentModel.php:validation
-#: Model/Tag.php:validation name Model/Tagging.php:validation
-#: tag_id;validation taggable_id Model/User.php:validation password;validation
-#: role
+#: Model/QuestionContent.php:validation Model/SettingController.php:validation
+#: Model/SettingGlobal.php:validation theme_id
+#: Model/SlContentModel.php:validation Model/Tag.php:validation name
+#: Model/Tagging.php:validation tag_id;validation taggable_id
+#: Model/User.php:validation password;validation role
 msgid "notEmpty"
-msgstr ""
+msgstr "notEmpty"
 
 #: Model/Blog.php:validation for field title Model/BlogCategory.php:validation
 #: Model/Contact.php:validation name;validation email;validation
@@ -851,22 +863,18 @@ msgstr ""
 #: Model/Intro.php:validation Model/Question.php:validation
 #: Model/User.php:validation
 msgid "maxLength"
-msgstr ""
+msgstr "maxLength"
 
 #: Model/Blog.php:validation for field enable
-#: Model/BlogCategory.php:validation Model/BlogContent.php:validation html
-#: Model/Contact.php:validation Model/FaqCategory.php:validation
-#: Model/FaqContent.php:validation Model/GalleryCategory.php:validation
+#: Model/BlogCategory.php:validation Model/Contact.php:validation
+#: Model/FaqCategory.php:validation Model/GalleryCategory.php:validation
 #: Model/GuestBook.php:validation Model/History.php:validation
 #: Model/Notice.php:validation Model/Portfolio.php:validation
-#: Model/Question.php:validation Model/Resource.php:validation
-#: Model/Setting.php:validation use_header
+#: Model/Question.php:validation Model/SettingController.php:validation
+#: Model/SettingGlobal.php:validation use_header
 msgid "boolean"
-msgstr ""
+msgstr "boolean"
 
 #: Model/User.php:validation for field email
 msgid "email must be unique"
-msgstr ""
-
-msgid "Password"
-msgstr "Password"
+msgstr "email must be unique"

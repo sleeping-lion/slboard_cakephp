@@ -4,7 +4,6 @@
 <?php $this -> assign('title', __('Gallery')) ?>
 
 <section id="sl_gallery_index">
-	<article class="table-responsive">	
 	<?php if(isset($galleryCategories)): ?>
 	<ol class="nav nav-tabs sl_categories">
 		<?php if(count($galleryCategories)): ?>			
@@ -16,7 +15,6 @@
 		<?php endif ?>
 	</ol>
 	<?php endif ?>
-	</article>
 	<article <?php if(isset($gallery)): ?>itemscope itemtype="http://schema.org/ImageObject"<?php endif ?>>
 	<?php if(isset($gallery)):  ?>
  	<div id="sl_gallery_left">

@@ -1,0 +1,36 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SLBoard\n"
+"POT-Creation-Date: 2015-03-07 19:29+0000\n"
+"PO-Revision-Date: 2015-03-09 00:04+0900\n"
+"Last-Translator: \n"
+"Language-Team: SL <admin@sleepinglion.pe.kr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Language: english\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: View/Elements/footer.ctp:4
+msgid "Address"
+msgstr "Africa Lion's Lair"
+
+#: View/Elements/jumbotron.ctp:2
+msgid "Main Title"
+msgstr "SLBoard(CakePHP CMS System)"
+
+#: View/Elements/jumbotron.ctp:3
+msgid "Main Description"
+msgstr "Use CakePHP-Boostrap CMS"
+
+#: View/Elements/jumbotron.ctp:4
+msgid "Now Download"
+msgstr "Now Download"
+
+#: View/Elements/jumbotron.ctp:5
+msgid "SLBoard Dream"
+msgstr "SLBoard's Dream"

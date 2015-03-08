@@ -26,7 +26,9 @@
 	<?php endforeach; ?>
 	<?php unset($blogs); ?>	
 	<?php else: ?>
-	<p><?php echo __('No Article') ?></p>				
+	<article>
+	<p><?php echo __('No Article') ?></p>
+	</article>
 	<?php endif ?>
 	<div id="sl_index_bottom_menu">
 		<?php echo $this -> App -> pagination($this -> Paginator); ?>
