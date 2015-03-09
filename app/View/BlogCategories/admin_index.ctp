@@ -25,7 +25,7 @@
     		<tr>
         		<td><?php echo $blogCategory['BlogCategory']['id']; ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'notices', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
+        			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'blog_categories', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
         		</td>
         		<td><?php echo $blogCategory['BlogCategory']['blogs_count'] ?></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
