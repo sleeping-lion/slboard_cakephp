@@ -23,11 +23,17 @@
 			<?php if(count($blogCategories)): ?>			
     	<?php foreach ($blogCategories as $blogCategory): ?>
     		<tr>
-        		<td><?php echo $blogCategory['BlogCategory']['id']; ?></td>
+        		<td><?php echo $blogCategory['BlogCategory']['id'] ?></td>
         		<td>
         			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'blog_categories', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
         		</td>
-        		<td><?php echo $blogCategory['BlogCategory']['blogs_count'] ?></td>
+        		<td>
+        			<?php if($blogCategory['BlogCategory']['leaf']): ?>
+        			<?php echo $blogCategory['BlogCategory']['blogs_count'] ?>
+        			<?php else: ?>
+        			<?php echo $blogCategory['BlogCategory']['blog_categories_count'] ?>
+        			<?php endif ?>
+        		</td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'

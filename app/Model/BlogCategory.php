@@ -27,6 +27,7 @@ class BlogCategory extends SlModel {
 		'blog_type_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
+				'unique' => array('rule' => 'isUnique', 'message' => 'title must be unique')				
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -71,7 +72,7 @@ class BlogCategory extends SlModel {
  *
  * @var array
  */
-	//public $belongsTo = array('BlogCategory'=>array('counterCache' =>  'blog_categoires_count'));
+ public $belongsTo = array('ParentBlogCategory'=>array('table'=>'blog_categories','className' => 'BlogCategory', 'foreignKey' => 'blog_category_id','counterCache' =>  'blog_categories_count'));
 
 /**
  * hasMany associations

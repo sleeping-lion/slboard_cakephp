@@ -25,6 +25,7 @@ class GalleryCategory extends SlModel {
 		'title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
+				'unique' => array('rule' => 'isUnique', 'message' => 'title must be unique')
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

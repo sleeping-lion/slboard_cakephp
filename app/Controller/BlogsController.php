@@ -188,7 +188,7 @@ class BlogsController extends SlController {
 			$options = array('conditions' => array('Blog.' . $this -> Blog -> primaryKey => $id));
 			$this -> request -> data = $this -> Blog -> find('first', $options);
 
-			$this -> _getCategory();
+			$this -> _getCategoriedCategory();
 		}
 	}
 

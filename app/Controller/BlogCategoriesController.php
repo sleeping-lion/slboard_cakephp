@@ -8,7 +8,22 @@ App::uses('SlController', 'Controller');
  * @property SessionComponent $Session
  */
 class BlogCategoriesController extends SlController {
+	protected function _getCategory() {
+		$this -> loadModel('BlogCategory');
+		$blogCategories = $this -> BlogCategory -> find('list', array('conditions' => array('leaf' => false,'enable'=>true), 'recursive' => -1));
 
+		if (isset($this -> request -> query['blog_category_id'])) {
+			if (!$this -> BlogCategory -> exists($this -> request -> query['blog_category_id']))
+				throw new NotFoundException(__('Invalid post'));
+
+			$blog_category_id = $this -> request -> query['blog_category_id'];
+		} else {
+			$blog_category_id = key($blogCategories);
+		}
+		$this -> set('blogCategories', $blogCategories);
+		$this -> set('blogCategoryId', $blog_category_id);
+		return $blogCategories;
+	}
 	/**
 	 * index method
 	 *
@@ -16,6 +31,7 @@ class BlogCategoriesController extends SlController {
 	 */
 	public function index() {
 		$this -> BlogCategory -> recursive = -1;
+		$this -> Paginator -> settings = array('paramType' => 'querystring', 'limit' => 10, 'order' => array('blog_category_id' => 'desc','leaf'=>'asc','id'=>'desc'));
 		$this -> set('blogCategories', $this -> Paginator -> paginate());
 	}
 
@@ -42,12 +58,20 @@ class BlogCategoriesController extends SlController {
 	public function add() {
 		if ($this -> request -> is('post')) {
 			$this -> BlogCategory -> create();
+			if(!empty($this -> request -> data['BlogCategory']['blog_category_id'])) {
+				$this -> request -> data['BlogCategory']['leaf']=true;
+			}
 			if ($this -> BlogCategory -> save($this -> request -> data)) {
+				if(empty($this -> request -> data['BlogCategory']['blog_category_id'])) {
+					$this -> BlogCategory->saveField('blog_category_id',$this->BlogCategory->getLastInsertId());
+				}
 				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
 				return $this -> redirect(array('action' => 'index'));
 			} else {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}
+		} else {
+			$this->_getCategory();
 		}
 	}
 
@@ -64,7 +88,13 @@ class BlogCategoriesController extends SlController {
 		}
 		if ($this -> request -> is(array('post', 'put'))) {
 			$this -> BlogCategory -> id = $id;
+			if(!empty($this -> request -> data['BlogCategory']['blog_category_id'])) {
+				$this -> request -> data['BlogCategory']['leaf']=true;
+			}			
 			if ($this -> BlogCategory -> save($this -> request -> data)) {
+				if(empty($this -> request -> data['BlogCategory']['blog_category_id'])) {
+					$this -> BlogCategory->saveField('blog_category_id',$this->BlogCategory->getLastInsertId());
+				}				
 				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
 				return $this -> redirect(array('action' => 'index'));
 			} else {
@@ -73,6 +103,7 @@ class BlogCategoriesController extends SlController {
 		} else {
 			$options = array('conditions' => array('BlogCategory.' . $this -> BlogCategory -> primaryKey => $id));
 			$this -> request -> data = $this -> BlogCategory -> find('first', $options);
+			$this->_getCategory();			
 		}
 	}
 
