@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SLBoard\n"
 "POT-Creation-Date: 2015-03-08 14:23+0000\n"
-"PO-Revision-Date: 2015-03-08 23:54+0900\n"
+"PO-Revision-Date: 2015-03-09 13:33+0900\n"
 "Last-Translator: \n"
 "Language-Team: SL <admin@sleepinglion>\n"
 "MIME-Version: 1.0\n"
@@ -396,7 +396,7 @@ msgstr "조회"
 #: View/Questions/view.ctp:10 View/Resources/admin_view.ctp:11
 #: View/Users/admin_view.ctp:18
 msgid "Created_at"
-msgstr "작성이"
+msgstr "작성일"
 
 #: View/Blogs/view.ctp:22 View/CkeditorAssets/index.ctp:30
 #: View/Faqs/index.ctp:31;41;52 View/Galleries/index.ctp:29
