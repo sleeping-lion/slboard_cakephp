@@ -177,7 +177,7 @@ class BlogsController extends SlController {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		if ($this -> request -> is(array('post', 'put'))) {
-			$this -> request -> data['Blog']['id'] = $id;
+			$this -> Blog -> id = $id;
 			if ($this -> Blog -> saveAll($this -> request -> data)) {
 				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
 				return $this -> redirect(array('action' => 'index'));

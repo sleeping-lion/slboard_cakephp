@@ -3,9 +3,9 @@
 <section id="sl_guest_book_index" class="table-responsive">
 	<table width="100%" cellpadding="0" cellspacing="0" class="table slboard_list">
 		<colgroup>
-			<col width="50px" />
 			<col />
-			<col width="100px" />
+			<col />
+			<col />
 			<col />
 			<col />			
 		</colgroup>

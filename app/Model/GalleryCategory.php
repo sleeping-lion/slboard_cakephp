@@ -1,11 +1,11 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlModel', 'Model');
 /**
  * GalleryCategory Model
  *
  * @property Gallery $Gallery
  */
-class GalleryCategory extends AppModel {
+class GalleryCategory extends SlModel {
 	public $actsAs = array(
   	'Translate' => array('title')
 	);

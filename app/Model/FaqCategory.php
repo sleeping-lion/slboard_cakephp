@@ -1,11 +1,11 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlModel', 'Model');
 /**
  * FaqCategory Model
  *
  * @property Faq $Faq
  */
-class FaqCategory extends AppModel {
+class FaqCategory extends SlModel {
 	public $actsAs = array(
   	'Translate' => array('title')
 	);

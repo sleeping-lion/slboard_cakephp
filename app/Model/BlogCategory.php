@@ -1,5 +1,5 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlModel', 'Model');
 /**
  * BlogCategory Model
  *
@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
  * @property BlogCategoryRel $BlogCategoryRel
  * @property Blog $Blog
  */
-class BlogCategory extends AppModel {
+class BlogCategory extends SlModel {
 	public $actsAs = array(
   	'Translate' => array('title')
 	);
