@@ -48,11 +48,14 @@ class SlController extends AppController {
 				$search_model_condition = array($modelAilas . '.enable' => true);
 			}
 		}
-
-		if (isset($this -> request -> query['search_type']) AND isset($this -> request -> query['search_text'])) {
+		
+		if(isset($this -> request -> query['search_type']))
 			$search_type = $this -> request -> query['search_type'];
+		
+		if(isset($this -> request -> query['search_text']))
 			$search_text = $this -> request -> query['search_text'];
-
+			
+		if (isset($this -> request -> query['search_type']) AND isset($this -> request -> query['search_text'])) {
 			switch($search_type) {
 				case 'title' :
 					$this -> Paginator -> settings = array('conditions' => array_merge($search_model_condition, $this -> searchTitleCondition($modelAilas, $search_text)), 'paramType' => 'querystring', 'limit' => 10, 'order' => array('id' => 'desc'));

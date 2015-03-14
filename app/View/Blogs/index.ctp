@@ -1,3 +1,4 @@
+<?php $this -> Html -> script(array('plugin/jquery.uri.js','boards/search.js'), false) ?>
 <?php $this->Html->addCrumb(__('Blog'), array('controller' => 'blogs', 'action' => 'index')) ?>
 <?php $this -> assign('title', __('Blog')) ?>
 <section id="sl_blog_index" itemscope itemprop="blogPosts" itemtype="http://schema.org/Blog">
@@ -24,7 +25,8 @@
 		</div>
 	</article>
 	<?php endforeach; ?>
-	<?php unset($blogs); ?>	
+	<?php unset($blogs) ?>
+	<?php unset($blog) ?>	
 	<?php else: ?>
 	<article>
 	<p><?php echo __('No Article') ?></p>

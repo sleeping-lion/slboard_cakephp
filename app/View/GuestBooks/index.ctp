@@ -1,3 +1,4 @@
+<?php $this -> Html -> script(array('plugin/jquery.uri.js','boards/search.js'), false) ?>
 <?php $this -> Html -> addCrumb(__('Guest Book'), array('controller' => 'guest_books', 'action' => 'index')) ?>
 <?php $this -> assign('title', __('Guest Book')) ?>
 <section id="sl_guest_book_index">
@@ -23,16 +24,17 @@
 			<?php if(count($guestBooks)): ?>
     	<?php foreach ($guestBooks as $guestBook): ?>
     		<tr>
-        		<td><?php echo $guestBook['GuestBook']['id']; ?></td>
-        		<td>
+        		<td class="sl_t_id"><?php echo $guestBook['GuestBook']['id']; ?></td>
+        		<td class="sl_t_title">
             		<?php echo $this -> Html -> link($this->Text->truncate($guestBook['GuestBook']['title'],50).$this->App->getFormatCommentCount($guestBook['GuestBook']['guest_book_comments_count']), array('controller' => 'guest_books', 'action' => 'view', $guestBook['GuestBook']['id'])); ?>
         		</td>
-        		<td><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></td>
+        		<td class="sl_t_name"><?php if($guestBook['GuestBook']['user_id']): ?><?php echo $guestBook['User']['name'] ?><?php else: ?><?php echo $guestBook['GuestBook']['name'] ?><?php endif ?></td>
         		<!-- <td><?php echo $guestBook['GuestBook']['count'] ?></td> -->
-        		<td><p class="sl_registered_date"><?=$this -> App -> getFormatDate($guestBook['GuestBook']['created_at'], 3); ?></p></td>
+        		<td class="sl_t_created_at"><?=$this -> App -> getFormatDate($guestBook['GuestBook']['created_at'], 3) ?></td>
     		</tr>
-    		<?php endforeach; ?>
-    		<?php unset($guestBooks); ?>
+    		<?php endforeach ?>
+    		<?php unset($guestBooks) ?>
+    		<?php unset($guestBook) ?>	
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>
