@@ -9,7 +9,7 @@ final class HomeController extends SlController {
 		
 		if($this->Session->Read('Auth.User.group_id')==1) {
 			$this->Auth->allow('admin_index');	
-		}
+		} 
 	}
 
 	public function index() {

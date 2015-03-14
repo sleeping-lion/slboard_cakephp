@@ -12,7 +12,7 @@ class UsersController extends SlController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this -> Auth -> allow('admin_login', 'admin_logout', 'login', 'add', 'logout');
+		$this -> Auth -> allow('admin_login', 'admin_logout', 'login', 'add', 'logout','complete');
 
 		/*
 		 * 새로 권한 입력하려면 여기를 이용
@@ -196,12 +196,16 @@ class UsersController extends SlController {
 			$this -> User -> create();
 			if ($this -> User -> saveAll($this -> request -> data)) {
 				$this -> Session -> setFlash(__('The post has been saved.'), 'success');
-				return $this -> redirect(array('action' => 'index'));
+				return $this -> redirect(array('action' => 'complete'));
 			} else {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}
 		}
 	}
+	
+	public function complete() {
+
+	}	
 
 	/**
 	 * edit method

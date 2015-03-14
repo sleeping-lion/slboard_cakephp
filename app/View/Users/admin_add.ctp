@@ -1,5 +1,5 @@
-<?php $this -> Html -> addCrumb('User', array('controller' => 'users', 'action' => 'index')) ?>
-<?php $this -> Html -> addCrumb('Add User', array('controller' => 'users', 'action' => 'add')) ?>
+<?php $this -> Html -> addCrumb(__('User'), array('controller' => 'users', 'action' => 'index')) ?>
+<?php $this -> Html -> addCrumb(__('Add User'), array('controller' => 'users', 'action' => 'add')) ?>
 <?php $this -> assign('title', __('Add User')) ?>
 <?php
 echo $this -> Form -> create('User',array('type'=>'file'));
