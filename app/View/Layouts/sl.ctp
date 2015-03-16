@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />	
 	<title><?php echo __('Homepage Title') ?></title>
 	<?php
 		echo $this->Html->meta('icon');
