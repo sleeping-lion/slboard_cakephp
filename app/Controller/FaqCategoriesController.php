@@ -63,6 +63,7 @@ class FaqCategoriesController extends SlController {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+			$this -> request -> data['FaqCategory']['id'] = $id;
 			if ($this->FaqCategory->save($this->request->data)) {
 				$this->Session->setFlash(__('The post has been saved.'),'success');
 				return $this->redirect(array('action' => 'index'));
@@ -83,11 +84,12 @@ class FaqCategoriesController extends SlController {
  * @return void
  */
 	public function delete($id = null) {
-		$this->FaqCategory->id = $id;
+		$this->FaqCategory->id = $id;		
 		if (!$this->FaqCategory->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		$this->request->allowMethod('post', 'delete');
+				
 		if ($this->FaqCategory->delete()) {
 			$this->Session->setFlash(__('The post has been deleted.'),'success');
 		} else {

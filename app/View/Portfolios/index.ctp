@@ -1,3 +1,4 @@
+<?php $this -> Html -> script(array('plugin/jquery.uri.js','boards/search.js'), false) ?>
 <?php $this -> Html -> addCrumb(__('Portfolio'), array('controller' => 'portfolios', 'action' => 'index')); ?>
 <?php $this -> assign('title', __('Portfolio')); ?>
 <section id="sl_portfolio_index">
@@ -13,6 +14,8 @@
     </div>
   </article>
   <?php endforeach ?>
+  <?php unset($portfolios) ?>
+  <?php unset($portfolio) ?>  
   <?php else: ?>
   <p><?php echo __('No Article') ?></p>
   <?php endif ?>

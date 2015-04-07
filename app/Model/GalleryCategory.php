@@ -1,11 +1,11 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('SlModel', 'Model');
 /**
  * GalleryCategory Model
  *
  * @property Gallery $Gallery
  */
-class GalleryCategory extends AppModel {
+class GalleryCategory extends SlModel {
 	public $actsAs = array(
   	'Translate' => array('title')
 	);
@@ -25,6 +25,7 @@ class GalleryCategory extends AppModel {
 		'title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
+				'unique' => array('rule' => 'isUnique', 'message' => 'title must be unique')
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

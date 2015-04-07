@@ -7,7 +7,6 @@
       <h3 itemprop="name"><?php echo h($group['Group']['title']); ?></h3>
     </div>
     <div class="sl_content_main">
-     		<p class="sl_content_info"><?php echo _('label_name') ?> : <span  itemprop="author"><?php echo $group['Group']['name'] ?></span>&nbsp;&nbsp;&nbsp; 
      			<?php echo __('Created_at') ?> : <span itemprop="dateCreated"><?php echo $group['Group']['created_at']; ?></span>
      			<span class="none" itemprop="dateModified"><?php echo $group['Group']['updated_at'] ?></span></p>    	
       <div class="sl_content_text" itemprop="text"></div>

@@ -15,8 +15,7 @@
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
       <?php echo __('Intro') ?> <span class="caret"></span>
     </a>
-    <ul class="dropdown-menu" role="menu">
-			<li><?php echo $this->Html->link(__('Install'), array('controller' => 'pages','action'=>'install'))?></li>    	
+    <ul class="dropdown-menu" role="menu">  	
 			<li><?php echo $this->Html->link(__('Intro'), array('controller' => 'intro','action'=>'index'))?></li>
 			<li><?php echo $this->Html->link(__('History'), array('controller' => 'histories','action'=>'index'))?></li>			
     </ul>

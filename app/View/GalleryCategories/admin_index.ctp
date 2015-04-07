@@ -25,7 +25,7 @@
     		<tr>
         		<td><?php echo $galleryCategory['GalleryCategory']['id']; ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($galleryCategory['GalleryCategory']['title'], array('controller' => 'notices', 'action' => 'view', $galleryCategory['GalleryCategory']['id'])); ?>
+        			<?php echo $this -> Html -> link($galleryCategory['GalleryCategory']['title'], array('controller' => 'gallery_categories', 'action' => 'view', $galleryCategory['GalleryCategory']['id'])); ?>
         		</td>
         		<td><?php echo $galleryCategory['GalleryCategory']['galleries_count'] ?></td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($galleryCategory['GalleryCategory']['created_at'], 3); ?></p></td>

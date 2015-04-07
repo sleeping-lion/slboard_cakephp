@@ -8,6 +8,7 @@
       <col />
       <col />
       <col />
+      <col />
       <col />      
     </colgroup>
     <thead>
@@ -15,6 +16,7 @@
 				<th class="sl_t_id"><?php echo $this -> App -> getOrderLink($this -> Paginator,'id',__('Id')) ?></th>
        <th class="sl_t_title"><?php echo $this -> App -> getOrderLink($this -> Paginator,'title') ?></th>
        <th class="sl_t_count"><?php echo $this -> App -> getOrderLink($this -> Paginator,'blogs_count',__('Child Count')) ?></th>
+       <th class="sl_t_leaf"><?php echo __('Leaf') ?></th>       
        <th class="sl_t_created_at"><?php echo $this -> App -> getOrderLink($this -> Paginator,'created_at') ?></th>
        <th class="sl_t_manage"><?php echo __('Manage') ?></th>
 			</tr>
@@ -23,11 +25,24 @@
 			<?php if(count($blogCategories)): ?>			
     	<?php foreach ($blogCategories as $blogCategory): ?>
     		<tr>
-        		<td><?php echo $blogCategory['BlogCategory']['id']; ?></td>
+        		<td><?php echo $blogCategory['BlogCategory']['id'] ?></td>
         		<td>
-        			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'notices', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
+        			<?php echo $this -> Html -> link($blogCategory['BlogCategory']['title'], array('controller' => 'blog_categories', 'action' => 'view', $blogCategory['BlogCategory']['id'])); ?>
         		</td>
-        		<td><?php echo $blogCategory['BlogCategory']['blogs_count'] ?></td>
+        		<td>
+        			<?php if($blogCategory['BlogCategory']['leaf']): ?>
+        			<?php echo $blogCategory['BlogCategory']['blogs_count'] ?>
+        			<?php else: ?>
+        			<?php echo $blogCategory['BlogCategory']['blog_categories_count'] ?>
+        			<?php endif ?>
+        		</td>
+        		<td>
+        			<?php if($blogCategory['BlogCategory']['leaf']): ?>
+        			<?php echo __('Leaf') ?>
+        			<?php else: ?>
+        			<?php echo __('No Leaf') ?>
+        			<?php endif ?>        			
+        		</td>
         		<td><p class="sl_registered_date"><?php echo $this -> App -> getFormatDate($blogCategory['BlogCategory']['created_at'], 3); ?></p></td>
         		<td class="sl_t_manage">
 					<?php echo $this -> Html -> link('<span class="glyphicon glyphicon-pencil"></span>'
@@ -41,7 +56,8 @@
         		</td>           		
     		</tr>
     		<?php endforeach; ?>
-    		<?php unset($blogCategories); ?>
+    		<?php unset($blogCategories) ?>
+    		<?php unset($blogCategory) ?>    		
     		<?php else: ?>
     		<tr>
     			<td colspan="4"><?php echo __('No Article') ?></td>
@@ -55,5 +71,3 @@
 		<?php echo $this -> App -> pagination($this -> Paginator) ?>
 	</div>
 </section>
-
-

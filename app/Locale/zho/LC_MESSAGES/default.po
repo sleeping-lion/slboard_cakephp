@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SLBoard\n"
 "POT-Creation-Date: 2015-03-08 14:23+0000\n"
-"PO-Revision-Date: 2015-03-08 23:54+0900\n"
+"PO-Revision-Date: 2015-03-09 02:24+0900\n"
 "Last-Translator: \n"
 "Language-Team: SL <admin@sleepinglion>\n"
 "MIME-Version: 1.0\n"
@@ -624,7 +624,7 @@ msgstr "댓글 제출"
 
 #: View/Elements/LanguageSelector/default.ctp:7
 msgid "Change Language"
-msgstr "언어 바꾸기"
+msgstr "言語 變化"
 
 #: View/Elements/ThemeSelector/default.ctp:7
 msgid "Change Theme"

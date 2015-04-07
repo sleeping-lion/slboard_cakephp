@@ -15,7 +15,7 @@ class LanguageSelectController extends SlController {
 	 */
 	public function index() {
 		if (empty($this -> params -> query['language']) OR $this -> params -> query['language'] == 'kor') {
-			$this -> Session -> delete('Config.language');
+			$this -> Session -> write('Config.language','kor');
 		} else {
 			$this -> Session -> write('Config.language', $this -> params -> query['language']);
 		}
