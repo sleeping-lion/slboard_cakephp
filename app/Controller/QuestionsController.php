@@ -55,6 +55,8 @@ class QuestionsController extends SlAnonController {
 			if ($this -> Session -> read('Auth.User') OR $this -> Recaptcha -> verify()) {
 				$this -> Question -> create();
 				if ($this -> Question -> saveAll($this -> request -> data)) {
+					if(!$this -> Session -> check('Auth.User'))
+						$this->grantAnonAuth($this -> Question->id);
 					$this -> Session -> setFlash(__('The post has been saved.'), 'success');
 					return $this -> redirect(array('action' => 'index'));
 				} else {

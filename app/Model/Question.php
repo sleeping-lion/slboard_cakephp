@@ -64,7 +64,7 @@ class Question extends SlAnonModel {
 		$this -> data[$this -> alias]['user_id']=CakeSession::read('Auth.User.id');
 		
 		return parent::beforeSave($options);
-	}	
+	}
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
