@@ -118,7 +118,7 @@ class SlController extends AppController {
 			//	if($this->Impression->
 			return false;
 		} else {
-			if (!$this -> Impression -> save(array('impressionable_type' => $this -> modelClass, 'controller_name' => $this -> params['controller'], 'action_name' => $this -> params['action'], 'ip_address' => $this -> request -> clientIp(), 'impressionable_id' => $id, 'referrer' => $this -> request -> referer()))) {
+			if (!$this -> Impression -> save(array('impressionable_type' => $this -> modelClass, 'controller_name' => $this -> params['controller'], 'action_name' => $this -> params['action'], 'ip_address' => $this -> request -> clientIp(), 'impressionable_id' => $id,'request_hash'=>hash_hmac("sha512",time().rand(0,10000)), 'referrer' => $this -> request -> referer()))) {
 				$this -> Session -> setFlash(__('The post could not be saved. Please, try again.'), 'error');
 			}
 			return true;
