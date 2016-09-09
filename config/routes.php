@@ -39,7 +39,25 @@ use Cake\Routing\Route\DashedRoute;
  * Note that `Route` does not do any inflections on URLs which will result in
  * inconsistently cased URLs when used with `:plugin`, `:controller` and
  * `:action` markers.
- *
+ *Router::connect('/', array('controller' => 'home'));
+Router::connect('/admin', array('controller' => 'home', 'action' => 'index', 'admin' => true));
+Router::connect('/admin/:controller/:action/:id', array('admin' => true),array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/admin/login', array('controller' => 'users', 'action' => 'admin_login', 'admin' => true));
+Router::connect('/admin/logout', array('controller' => 'users', 'action' => 'admin_logout', 'admin' => true));
+
+
+Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
+Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
+Router::connect('/tags/:tag',array('controller'=>'blogs','action'=>'index'));
+Router::connect('/theme_select/:theme',array('controller'=>'theme_select','action'=>'view'),array('pass' => array('theme')));
+Router::connect('/language_select/:language',array('controller'=>'language_select','action'=>'view'),array('pass' => array('language')));
+
+Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+
+
+Router::connect('/:controller/check_password/:id', array('action' => 'check_password'),array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/:controller/confirm_delete/:id', array('action' => 'confirm_delete'),array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/:controller/change_status/:id', array('action' => 'change_status'),array('pass' => array('id'), 'id' => '[0-9]+'));
  */
 Router::defaultRouteClass(DashedRoute::class);
 
@@ -49,8 +67,13 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-
+    $routes->connect('/', ['controller' => 'home', 'action' => 'index', 'home']);
+	
+	$routes->connect('/notices',['controller' => 'Notices', 'action' => 'index']);
+	$routes->connect('/galleries',['controller' => 'Galleries', 'action' => 'index']);
+	$routes->connect('/questions',['controller' => 'Questions', 'action' => 'index']);	
+	
+	$routes->connect('/login',['controller' => 'Users', 'action' => 'login'],['_name' => 'login']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
